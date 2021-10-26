@@ -1,31 +1,51 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Python Checkers (Work in progress)
 
-Welcome dkelly255,
+Readme supporting Python Checkers application
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Intro Screen](readme/images/introscreen.png)
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+# UX Planes
+## Strategy
+### - User Stories
+## Scope
+### - Wireframes
+## Structure
+## Skeleton
+## Surface
+Section addressing design process & User Experience Planes
+# Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Intro Screen](readme/images/introscreen.png)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![Intro Screen](readme/images/setupmenu.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+![Intro Screen](readme/images/boardstandard.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+![Intro Screen](readme/images/boardlarge.png)
 
-Connect your GitHub repository and deploy as normal.
+![Intro Screen](readme/images/boardextralarge.png)
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+## Existing Features
+## Features Left To Implement
+Section describing features of the application
+# Testing
+## Generic Testing
+## Python Testing
+## Accessibility Testing
+Detail testing carried out for application development
+# Bugs
+## Resolved Bugs
+## Unresolved Bugs
+Detail bugs encountered during development - succesfully debugged & yet to be resolved
+# Deployment
+## Github
+## Heroku
+Explain deployment processes - local & global
+# Credits
+## Content
+## Code
+## Media
+List sources & resources used to develop the application 
