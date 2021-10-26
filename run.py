@@ -1,6 +1,32 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to e-pect a terminal of 80 characters wide and O4 rows high
+import keyboard
+from os import system, name
+from time import sleep
+
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+def select_game_mode():
+
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|************SELECT GAME MODE**************|")
+    print("|                                          |")
+    print("|                                          |")
+    print("|    A. Player1    vs.    Computer         |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|    B. Player1    vs.    Player2          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|            [PLEASE SELECT]               |")
+    print("|                                          |")
+    print("--------------------------------------------")
+    setup = input("Select option A or B: ")
 
 def welcome_screen():
     print("--------------------------------------------")
@@ -15,16 +41,20 @@ def welcome_screen():
     print("|                                          |")
     print("|                                          |")
     print("|                                          |")
-    print("|         [PRESS ANY KEY TO BEGIN]         |")
+    print("|         [PRESS ENTER TO BEGIN]           |")
     print("|                                          |")
     print("|                                          |")
     print("--------------------------------------------")
+    
 
 
 welcome_screen()
+input("")
+clear()
 
 
 def setup_screen():
+    
     print("--------------------------------------------")
     print("|                                          |")
     print("|************GAME SETUP MENU:**************|")
@@ -37,11 +67,19 @@ def setup_screen():
     print("|                                          |")
     print("|    D. VIEW RULES           [OPTIONAL]    |")
     print("|                                          |")
+    print("|    E. PLAY CHECKERS!       [LOCKED]      |")
     print("|                                          |")
     print("|         [PLEASE COMPLETE SETUP]          |")
     print("|                                          |")
     print("--------------------------------------------")
+    setup = input("Select option A to E: ")
 
+    if setup.upper() == "A":
+        clear()
+        sleep(0.5)
+        select_game_mode()
+    else:
+        print("Please make a valid choice")
 
 setup_screen()
 
@@ -67,7 +105,7 @@ def create_board_normal():
     print("                                      ")
 
 
-create_board_normal()
+# create_board_normal()
 
 
 def create_board_large():
@@ -92,7 +130,7 @@ def create_board_large():
     print("                                      ")
 
 
-create_board_large()
+# create_board_large()
 
 
 def create_board_extra_large():
@@ -118,4 +156,6 @@ def create_board_extra_large():
     print("                                      ")
 
 
-create_board_extra_large()
+# create_board_extra_large()
+
+
