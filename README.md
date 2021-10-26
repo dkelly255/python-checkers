@@ -16,7 +16,7 @@ Readme supporting Python Checkers application
 ## Surface
 Section addressing design process & User Experience Planes
 # Features
-
+## Existing Features:
 ![Intro Screen](readme/images/introscreen.png)
 
 ![Intro Screen](readme/images/setupmenu.png)
@@ -27,8 +27,6 @@ Section addressing design process & User Experience Planes
 
 ![Intro Screen](readme/images/boardextralarge.png)
 
-
-## Existing Features
 ## Features Left To Implement
 Section describing features of the application
 # Testing
