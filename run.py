@@ -11,6 +11,51 @@ def clear():
 # game_mode_status = "NOT DONE"
 # game_mode = "X"
 
+def start_game():
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|***************BEGIN GAME*****************|")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|           LET'S PLAY CHECKERS !          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|        [PRESS ENTER TO CONTINUE]         |")
+    print("--------------------------------------------")
+    input("")
+    clear()
+    setup_screen()
+
+
+def view_rules():
+    print("--------------------------------------------")
+    print("|****************GAME RULES****************|")
+    print("|                                          |")
+    print("| 1. Objective of the game is to capture   |")
+    print("|    all of the opposition's pieces        |")
+    print("|                                          |")
+    print("| 2. Pieces can normally only move one     |")
+    print("|    square - diagonally and forwards      |")
+    print("|                                          |")
+    print("| 3. An opposition piece is captured       |")
+    print("|    by jumping diagonally over it         |")
+    print("|                                          |")
+    print("| 4. The capture of an opposition piece    |")
+    print("|    is a compulsory move if possible      |")
+    print("|                                          |")
+    print("|        [PRESS ENTER TO CONTINUE]         |")
+    print("--------------------------------------------")
+    setup = input("")
+    clear()        
+    setup_screen()
+
+
 def side_selection():
     print("--------------------------------------------")
     print("|                                          |")
@@ -86,6 +131,7 @@ def side_selected_B():
     clear()
     setup_screen()
 
+
 def select_board_normal():
 
     print("                                      ")
@@ -110,6 +156,7 @@ def select_board_normal():
     input("")
     clear()
     setup_screen()
+
 
 def select_board_large():
 
@@ -194,10 +241,10 @@ def select_board_size():
         select_board_large()
     elif setup.upper() == "C":            
         clear()        
-        select_board_extralarge()
-        
+        select_board_extralarge()        
     else:
         print("Please make a valid choice")
+
 
 def select_game_mode():
 
@@ -325,6 +372,12 @@ def setup_screen():
     elif setup.upper() == "C":
         clear()
         side_selection()
+    elif setup.upper() == "D":
+        clear()
+        view_rules()
+    elif setup.upper() == "E":
+        clear()
+        start_game()
     else:
         print("Please make a valid choice")
 
