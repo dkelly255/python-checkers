@@ -14,25 +14,47 @@ team_selection = "PENDING"
 play_status = "LOCKED"
 
 def e_start_game():
-    print("--------------------------------------------")
-    print("|                                          |")
-    print("|***************BEGIN GAME*****************|")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|           LET'S PLAY CHECKERS !          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|        [PRESS ENTER TO CONTINUE]         |")
-    print("--------------------------------------------")
-    input("")
-    clear()
-    setup_screen()
+    global play_status
+    if play_status != "LOCKED":
+        print("--------------------------------------------")
+        print("|                                          |")
+        print("|***************BEGIN GAME*****************|")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|           LET'S PLAY CHECKERS !          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|        [PRESS ENTER TO CONTINUE]         |")
+        print("--------------------------------------------")
+        input("")
+        clear()
+        setup_screen()
+    else:
+        print("--------------------------------------------")
+        print("|                                          |")
+        print("|******** GAME LOCKED UNTIL SETUP *********|")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|           PLEASE COMPLETE GAME           |")
+        print("|              SETUP OPTIONS               |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|        [PRESS ENTER TO CONTINUE]         |")
+        print("--------------------------------------------")
+        input("")
+        clear()
+        setup_screen()
 
 def d_view_rules():
     print("--------------------------------------------")
@@ -110,6 +132,8 @@ def side_selected_A():
     setup_screen()
 
 def side_selected_B():
+    global team_selection 
+    team_selection = "CROSSES"
     print("                                      ")
     print("--------------------------------------------")
     print("        You have chosen Team Crosses        ")
@@ -133,7 +157,8 @@ def side_selected_B():
     setup_screen()
 
 def select_board_normal():
-
+    global board_size 
+    board_size = "DEFAULT"
     print("                                      ")
     print("--------------------------------------------")
     print("You have chosen Board Size: Standard (8 x 8)")
@@ -158,7 +183,8 @@ def select_board_normal():
     setup_screen()
 
 def select_board_large():
-
+    global board_size 
+    board_size = " LARGE "
     print("                                      ")
     print("-------------------------------------------")
     print("You have chosen Board Size: Large (9 x 9)  ")
@@ -184,7 +210,8 @@ def select_board_large():
     setup_screen()
 
 def select_board_extralarge():
-
+    global board_size 
+    board_size = "X-LARGE"
     print("                                         ")
     print("-------------------------------------------------")
     print("You have chosen Board Size: Extra-Large (10 x 10)")
@@ -339,7 +366,14 @@ input("")
 clear()
 
 def setup_screen():
-    
+    global play_status
+    global game_mode_status 
+    global board_size 
+    global team_selection 
+    if game_mode_status and board_size and team_selection != "PENDING":
+        play_status = "READY "
+    else: 
+        play_status = "LOCKED"
     print("--------------------------------------------")
     print("|                                          |")
     print("|************GAME SETUP MENU:**************|")
