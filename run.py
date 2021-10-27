@@ -13,6 +13,39 @@ board_size = "PENDING"
 team_selection = "PENDING"
 play_status = "LOCKED"
 
+def begin_game():
+    global board_size
+    if board_size == "DEFAULT":
+        display_board_normal()
+    elif board_size == " LARGE ":
+        display_board_large()
+    else: 
+        display_board_xlarge()
+
+def display_board_normal():
+    print("                                      ")
+    print("--------------------------------------------")
+    print(f"Game mode:{game_mode_status}, Board Size: {board_size}")
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|           A  B  C  D  E  F  G  H         |")
+    print("|                                          |")
+    print("|      0    O  -  &  -  O  -  0  -         |")
+    print("|      1    -  O  -  O  -  @  -  O         |")
+    print("|      2    O  -  O  -  O  -  O  -         |")
+    print("|      3    -  -  -  -  -  -  -  -         |")
+    print("|      4    -  -  -  -  -  -  -  -         |")
+    print("|      5    X  -  X  -  X  -  X  -         |")
+    print("|      6    -  X  -  X  -  X  -  X         |")
+    print("|      7    #  -  X  -  X  -  X  -         |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|__________________________________________|")
+    input("")
+    clear()
+    print("To Be Continued...")
+
 def e_start_game():
     global play_status
     if play_status != "LOCKED":
@@ -34,7 +67,7 @@ def e_start_game():
         print("--------------------------------------------")
         input("")
         clear()
-        setup_screen()
+        begin_game()
     else:
         print("--------------------------------------------")
         print("|                                          |")
@@ -371,7 +404,7 @@ def setup_screen():
     global board_size 
     global team_selection 
     if game_mode_status and board_size and team_selection != "PENDING":
-        play_status = "READY "
+        play_status = "READY!"
     else: 
         play_status = "LOCKED"
     print("--------------------------------------------")
