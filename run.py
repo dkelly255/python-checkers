@@ -11,6 +11,81 @@ def clear():
 # game_mode_status = "NOT DONE"
 # game_mode = "X"
 
+def side_selection():
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|***********PLEASE CHOOSE A SIDE***********|")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|             A. NOUGHTS [ O ]             |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|             B. CROSSES [ X ]             |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|             [PLEASE SELECT]              |")
+    print("|                                          |")
+    print("--------------------------------------------")
+    setup = input("Select option A or B: ")
+    if setup.upper() == "A":
+        clear()
+        side_selected_A()    
+    elif setup.upper() == "B":            
+        clear()        
+        side_selected_B()
+    else:
+        print("Please make a valid choice")
+
+
+def side_selected_A():
+    print("                                      ")
+    print("--------------------------------------------")
+    print("        You have chosen Team Noughts        ")
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|          TEAM NOUGHTS SELECTED           |")
+    print("|                                          |")
+    print("|                  [ O ]                   |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|        [PRESS ENTER TO CONTINUE]         |")
+    print("|__________________________________________|")
+    input("")
+    clear()
+    setup_screen()
+
+
+def side_selected_B():
+    print("                                      ")
+    print("--------------------------------------------")
+    print("        You have chosen Team Crosses        ")
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|          TEAM CROSSES SELECTED           |")
+    print("|                                          |")
+    print("|                  [ X ]                   |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|        [PRESS ENTER TO CONTINUE]         |")
+    print("|__________________________________________|")
+    input("")
+    clear()
+    setup_screen()
+
 def select_board_normal():
 
     print("                                      ")
@@ -247,6 +322,9 @@ def setup_screen():
     elif setup.upper() == "B":
         clear()
         select_board_size()
+    elif setup.upper() == "C":
+        clear()
+        side_selection()
     else:
         print("Please make a valid choice")
 
