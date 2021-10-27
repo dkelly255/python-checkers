@@ -8,10 +8,12 @@ def clear():
     else:
         _ = system('clear')
 
-# game_mode_status = "NOT DONE"
-# game_mode = "X"
+game_mode_status = "PENDING"
+board_size = "PENDING"
+team_selection = "PENDING"
+play_status = "LOCKED"
 
-def start_game():
+def e_start_game():
     print("--------------------------------------------")
     print("|                                          |")
     print("|***************BEGIN GAME*****************|")
@@ -32,8 +34,7 @@ def start_game():
     clear()
     setup_screen()
 
-
-def view_rules():
+def d_view_rules():
     print("--------------------------------------------")
     print("|****************GAME RULES****************|")
     print("|                                          |")
@@ -55,8 +56,7 @@ def view_rules():
     clear()        
     setup_screen()
 
-
-def side_selection():
+def c_side_selection():
     print("--------------------------------------------")
     print("|                                          |")
     print("|***********PLEASE CHOOSE A SIDE***********|")
@@ -83,8 +83,9 @@ def side_selection():
     else:
         print("Please make a valid choice")
 
-
 def side_selected_A():
+    global team_selection 
+    team_selection = "NOUGHTS"
     print("                                      ")
     print("--------------------------------------------")
     print("        You have chosen Team Noughts        ")
@@ -105,8 +106,8 @@ def side_selected_A():
     print("|__________________________________________|")
     input("")
     clear()
+    
     setup_screen()
-
 
 def side_selected_B():
     print("                                      ")
@@ -130,7 +131,6 @@ def side_selected_B():
     input("")
     clear()
     setup_screen()
-
 
 def select_board_normal():
 
@@ -157,7 +157,6 @@ def select_board_normal():
     clear()
     setup_screen()
 
-
 def select_board_large():
 
     print("                                      ")
@@ -183,7 +182,6 @@ def select_board_large():
     input("")
     clear()
     setup_screen()
-
 
 def select_board_extralarge():
 
@@ -213,8 +211,7 @@ def select_board_extralarge():
     clear()
     setup_screen()
 
-
-def select_board_size():
+def b_select_board_size():
 
     print("--------------------------------------------")
     print("|                                          |")
@@ -245,8 +242,7 @@ def select_board_size():
     else:
         print("Please make a valid choice")
 
-
-def select_game_mode():
+def a_select_game_mode():
 
     print("--------------------------------------------")
     print("|                                          |")
@@ -274,8 +270,9 @@ def select_game_mode():
     else:
         print("Please make a valid choice")
 
-
 def game_mode_A():
+    global game_mode_status 
+    game_mode_status = "P vs. C"
     print("--------------------------------------------")
     print("|                                          |")
     print("|************SELECT GAME MODE**************|")
@@ -297,6 +294,8 @@ def game_mode_A():
     setup_screen()
 
 def game_mode_B():
+    global game_mode_status 
+    game_mode_status = "P vs. P"
     print("--------------------------------------------")
     print("|                                          |")
     print("|************SELECT GAME MODE**************|")
@@ -317,7 +316,6 @@ def game_mode_B():
     clear()
     setup_screen()
 
-
 def welcome_screen():
     print("--------------------------------------------")
     print("|                                          |")
@@ -336,11 +334,9 @@ def welcome_screen():
     print("|                                          |")
     print("--------------------------------------------")    
 
-
 welcome_screen()
 input("")
 clear()
-
 
 def setup_screen():
     
@@ -348,15 +344,15 @@ def setup_screen():
     print("|                                          |")
     print("|************GAME SETUP MENU:**************|")
     print("|                                          |")
-    print("|    A. GAME MODE            [NOT DONE]    |")
+    print(f"|    A. GAME MODE            [{game_mode_status}]     |")
     print("|                                          |")
-    print("|    B. BOARD SIZE           [NOT DONE]    |")
+    print(f"|    B. BOARD SIZE           [{board_size}]     |")
     print("|                                          |")
-    print("|    C. SIDE SELECTION       [NOT DONE]    |")
+    print(f"|    C. SIDE SELECTION       [{team_selection}]     |")
     print("|                                          |")
     print("|    D. VIEW RULES           [OPTIONAL]    |")
     print("|                                          |")
-    print("|    E. PLAY CHECKERS!       [LOCKED]      |")
+    print(f"|    E. PLAY CHECKERS!       [{play_status}]      |")
     print("|                                          |")
     print("|         [PLEASE COMPLETE SETUP]          |")
     print("|                                          |")
@@ -365,19 +361,19 @@ def setup_screen():
 
     if setup.upper() == "A":
         clear()
-        select_game_mode()
+        a_select_game_mode()
     elif setup.upper() == "B":
         clear()
-        select_board_size()
+        b_select_board_size()
     elif setup.upper() == "C":
         clear()
-        side_selection()
+        c_side_selection()
     elif setup.upper() == "D":
         clear()
-        view_rules()
+        d_view_rules()
     elif setup.upper() == "E":
         clear()
-        start_game()
+        e_start_game()
     else:
         print("Please make a valid choice")
 
