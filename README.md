@@ -83,7 +83,8 @@ The application will return the user to the Main Menu after completing this setu
 ![Intro Screen](readme/images/choose-side-b.png)
 
 ### "Rules" Screen:
-This screen is view-only and is optional, i.e. not required in orer to unlock the ability to play the game. The screen displays a simple summary of the game rules and objectives to the user, and will return the user to the main menu after completing
+This screen is view-only and is optional, i.e. not required in orer to unlock the ability to play the game. The screen displays a simple summary of the game rules and objectives to the user, and will return the user to the main menu after completing.
+
 ![Intro Screen](readme/images/rules.png)
 
 ### "Game Locked" Screen:
