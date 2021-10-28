@@ -1,6 +1,6 @@
 # Python Checkers (Work in progress)
 
-Readme supporting Python Checkers application
+Readme documentation for Checkers game created using Python, played in the terminal
 
 ![Intro Screen](readme/images/introscreen.png)
 
@@ -8,16 +8,23 @@ Readme supporting Python Checkers application
 
 # UX Planes
 ## Strategy
-### - User Stories
+### User Stories
+As a user I would like to be able to:
+- Play a game of Checkers against the computer or against another user
+- Be able to play the game on boards of different sizes (standard, large and extra large)
+- View the rules, objectives & history of the game of Checkers 
+ 
 ## Scope
 ### - Wireframes
 ## Structure
 ## Skeleton
 ## Surface
-Section addressing design process & User Experience Planes
+
 # Features
 ## Existing Features:
 ### Welcome Screen:
+The welcome screen greets the user upon loading the game and will lead to the Main Menu upon pressing the "Enter" Key
+
 ![Intro Screen](readme/images/introscreen.png)
 
 ### Main Menu:
