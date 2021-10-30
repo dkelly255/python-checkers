@@ -1,5 +1,5 @@
 # import keyboard
-# from os import system, name
+from os import system, name
 # from time import sleep
 
 # def clear():
@@ -446,54 +446,96 @@
 
 # setup_screen()
 
-print("                                      \n--------------------------------------------")
-print("You have chosen Board Size: Standard (8 x 8)")
-print("--------------------------------------------")
-print("|                                          |")
-print("|           A  B  C  D  E  F  G  H         |")
-print("|                                          |")
-print("|      0    O  -  &  -  O  -  0  -         |")
-print("|      1    -  O  -  O  -  @  -  O         |")
-print("|      2    O  -  O  -  O  -  O  -         |")
-print("|      3    -  -  -  -  -  -  -  -         |")
-print("|      4    -  -  -  -  -  -  -  -         |")
-print("|      5    X  -  X  -  X  -  X  -         |")
-print("|      6    -  X  -  X  -  X  -  X         |")
-print("|      7    #  -  X  -  X  -  X  -         |")
-print("|                                          |")
-print("|                                          |")
-print("|        [PRESS ENTER TO CONTINUE]         |")
-print("|__________________________________________|")
-input("")
+# This Section workings for setting up game
+# print("                                      \n--------------------------------------------")
+# print("You have chosen Board Size: Standard (8 x 8)")
+# print("--------------------------------------------")
+# print("|                                          |")
+# print("|           A  B  C  D  E  F  G  H         |")
+# print("|                                          |")
+# print("|      0    O  -  &  -  O  -  0  -         |")
+# print("|      1    -  O  -  O  -  @  -  O         |")
+# print("|      2    O  -  O  -  O  -  O  -         |")
+# print("|      3    -  -  -  -  -  -  -  -         |")
+# print("|      4    -  -  -  -  -  -  -  -         |")
+# print("|      5    X  -  X  -  X  -  X  -         |")
+# print("|      6    -  X  -  X  -  X  -  X         |")
+# print("|      7    #  -  X  -  X  -  X  -         |")
+# print("|                                          |")
+# print("|                                          |")
+# print("|        [PRESS ENTER TO CONTINUE]         |")
+# print("|__________________________________________|")
+# input("")
 
-coordinates = []
-for x in range(10):
-    coordinates.append(x)
-print(f"coordinates={coordinates}")
+# coordinates = []
+# for x in range(10):
+#     coordinates.append(x)
+# print(f"coordinates={coordinates}")
 
-numbers=[]
-numbers = [x for x in range(10)]
-print(f"numbers={numbers}")
+# numbers=[]
+# numbers = [x for x in range(10)]
+# print(f"numbers={numbers}")
 
-board = []
+# board = []
 
-def make_row_1(display_lines):
-    row = ["|"]
-    row.extend([" "] * 4)
-    row.extend(["_"] * 8)
-    row.extend([" "] * 6)
-    row.extend(["|"])
-    display_lines.append(row)
-    return display_lines
+# def make_row_1(display_lines):
+#     row = ["|"]
+#     row.extend([" "] * 4)
+#     row.extend(["_"] * 8)
+#     row.extend([" "] * 6)
+#     row.extend(["|"])
+#     display_lines.append(row)
+#     return display_lines
 
-def create_board(display_lines):
-    make_row_1(display_lines)
-    return display_lines
+# def create_board(display_lines):
+#     make_row_1(display_lines)
+#     return display_lines
 
-create_board(board)
+# create_board(board)
 
-def print_board(display_lines):
-    for row in display_lines:
-        print("".join(row))
+# def print_board(display_lines):
+#     print(display_lines)
+#     for row in display_lines:
+#         print("".join(row))
 
-print_board(board)
+# print_board(board)
+
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+from random import choice
+
+word_list = ["try","to","setup","hangman","game","using","python"]
+print(word_list)
+
+answer = choice(word_list)
+print(f"#1 answer is: {answer}")
+print(f"#2 answer[2] = {answer[1]}")
+
+attempt = ["Guess This Word: "]
+print(f"#3 attempt pre-extension = {attempt}")
+attempt.extend(["_ "] * len(answer))
+print(f"#4 attempt post-extension = {attempt}")
+print("".join(attempt))
+
+guessed_letter = input("Please enter a letter:")
+
+if guessed_letter in answer:
+    index_list = []
+    for i in range(0,len(answer)):
+        if answer[i] == guessed_letter:
+            index_list.append(i)
+    for i in index_list:
+        j = i + 1
+        attempt[j] = guessed_letter + " "
+    clear()
+    print("Well done, this letter is in the answer")
+    print(f"#5 attempt now = {attempt}")
+    print("".join(attempt))
+    
+    
+else:
+    print("Sorry, this letter is not in the answer")
