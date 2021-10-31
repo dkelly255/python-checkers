@@ -639,10 +639,11 @@ while "_ " in attempt and guesses_remaining > 0:
 
     print("".join(previous_guesses))
     guessed_letter = input("\nPlease enter a letter:")
+
+    
     previous_guesses.append(guessed_letter + ", ")
     guesses_used += 1
-    guesses_remaining -= 1
-    
+    guesses_remaining -= 1        
 
     if guessed_letter in answer:
         index_list = []
