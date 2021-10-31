@@ -508,8 +508,8 @@ def clear():
 
 from random import choice
 
-def draw_gallows(guesses_remaining):
-    if guesses_remaining == 8:
+def draw_gallows(incorrect_guesses):
+    if incorrect_guesses == 0:
         print("   _________")
         print("   |")
         print("   |")
@@ -518,58 +518,58 @@ def draw_gallows(guesses_remaining):
         print("   |")
         print("   |")
         print("   |")
-        print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 7:
-        print("   _________")
-        print("   |       |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif guesses_remaining == 6:
+    elif incorrect_guesses == 1:
         print("   _________")
         print("   |       |")
-        print("   |       O")
         print("   |")
         print("   |")
         print("   |")
         print("   |")
         print("   |")
         print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 5:
+    elif incorrect_guesses == 2:
         print("   _________")
         print("   |       |")
         print("   |       O")
-        print("   |       |")
         print("   |")
         print("   |")
         print("   |")
         print("   |")
         print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 4:
+    elif incorrect_guesses == 3:
         print("   _________")
         print("   |       |")
         print("   |       O")
         print("   |       |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif incorrect_guesses == 4:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |       |")
         print("   |       |")
         print("   |")
         print("   |")
         print("   |")
-        print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 3:
+    elif incorrect_guesses == 5:
         print("   _________")
         print("   |       |")
         print("   |       O")
@@ -578,10 +578,10 @@ def draw_gallows(guesses_remaining):
         print("   |      /")
         print("   |")
         print("   |")
-        print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 2:
+    elif incorrect_guesses == 6:
         print("   _________")
         print("   |       |")
         print("   |       O")
@@ -590,10 +590,10 @@ def draw_gallows(guesses_remaining):
         print("   |      / \\")
         print("   |")
         print("   |")
-        print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 1:
+    elif incorrect_guesses == 7:
         print("   _________")
         print("   |       |")
         print("   |       O")
@@ -602,10 +602,10 @@ def draw_gallows(guesses_remaining):
         print("   |      / \\")
         print("   |")
         print("   |")
-        print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
-    elif guesses_remaining == 0:
+    elif incorrect_guesses == 8:
         print("   _________")
         print("   |       |")
         print("   |       O")
@@ -614,7 +614,7 @@ def draw_gallows(guesses_remaining):
         print("   |      / \\")
         print("   |")
         print("   |")
-        print("   |")
+        print("___|___________")
         print("XXXXXXXXXXXXXXX")
         print("    ")
 
@@ -622,13 +622,14 @@ word_list = ["try","to","setup","hangman","game","using","python"]
 answer = choice(word_list)
 guesses_used = 0
 guesses_remaining = 8
+incorrect_guesses = 0
 previous_guesses = ["Previous Guesses: "]
 attempt = ["Guess The Word: "]
 attempt.extend(["_ "] * len(answer))
 
 clear() 
 print(f"#1 answer is: {answer}")
-draw_gallows(guesses_remaining)
+draw_gallows(incorrect_guesses)
 print("".join(attempt))
 print(f"Guesses Used So Far: {guesses_used}")
 print(f"Guesses Remaining: {guesses_remaining}")
@@ -637,7 +638,7 @@ print(not ("_ " in attempt))
 while "_ " in attempt and guesses_remaining > 0:
 
     print("".join(previous_guesses))
-    guessed_letter = input("Please enter a letter:")
+    guessed_letter = input("\nPlease enter a letter:")
     previous_guesses.append(guessed_letter + ", ")
     guesses_used += 1
     guesses_remaining -= 1
@@ -652,7 +653,7 @@ while "_ " in attempt and guesses_remaining > 0:
             j = i + 1
             attempt[j] = guessed_letter + " "
         clear()
-        draw_gallows(guesses_remaining)
+        draw_gallows(incorrect_guesses)
         print(f"Well done! The letter '{guessed_letter}' is in the answer")
         print("".join(attempt))
         print(f"Guesses Used So Far: {guesses_used}")
@@ -660,7 +661,8 @@ while "_ " in attempt and guesses_remaining > 0:
         
     else:
         clear()
-        draw_gallows(guesses_remaining)
+        incorrect_guesses += 1
+        draw_gallows(incorrect_guesses)
         print(f"Sorry! The letter '{guessed_letter}' letter is not in the answer")
         print("".join(attempt))
         print(f"Guesses Used So Far: {guesses_used}")
@@ -671,8 +673,8 @@ while "_ " in attempt and guesses_remaining > 0:
         break
 
     if guesses_remaining == 0:
-        print("Sorry! No guesses remaining")
+        print("\nSorry! You have Lost - No guesses remaining")
         break
     
 
-input("Press any key to exit")
+input("\nPress any key to exit")
