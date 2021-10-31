@@ -509,33 +509,57 @@ def clear():
 from random import choice
 
 word_list = ["try","to","setup","hangman","game","using","python"]
-print(word_list)
-
 answer = choice(word_list)
-print(f"#1 answer is: {answer}")
-print(f"#2 answer[2] = {answer[1]}")
-
-attempt = ["Guess This Word: "]
-print(f"#3 attempt pre-extension = {attempt}")
+guesses_used = 0
+guesses_remaining = 8
+previous_guesses = ["Previous Guesses: "]
+attempt = ["Guess The Word: "]
 attempt.extend(["_ "] * len(answer))
-print(f"#4 attempt post-extension = {attempt}")
+
+clear() 
+print(f"#1 answer is: {answer}")
 print("".join(attempt))
+print(f"Guesses Used So Far: {guesses_used}")
+print(f"Guesses Remaining: {guesses_remaining}")
+print(not ("_ " in attempt))
 
-guessed_letter = input("Please enter a letter:")
+while "_ " in attempt and guesses_remaining > 0:
 
-if guessed_letter in answer:
-    index_list = []
-    for i in range(0,len(answer)):
-        if answer[i] == guessed_letter:
-            index_list.append(i)
-    for i in index_list:
-        j = i + 1
-        attempt[j] = guessed_letter + " "
-    clear()
-    print("Well done, this letter is in the answer")
-    print(f"#5 attempt now = {attempt}")
-    print("".join(attempt))
+    print("".join(previous_guesses))
+    guessed_letter = input("Please enter a letter:")
+    previous_guesses.append(guessed_letter + ", ")
+    guesses_used += 1
+    guesses_remaining -= 1
     
+
+    if guessed_letter in answer:
+        index_list = []
+        for i in range(0,len(answer)):
+            if answer[i] == guessed_letter:
+                index_list.append(i)
+        for i in index_list:
+            j = i + 1
+            attempt[j] = guessed_letter + " "
+        clear()
+        print(f"Well done! The letter '{guessed_letter}' is in the answer")
+        print("".join(attempt))
+        print(f"Guesses Used So Far: {guesses_used}")
+        print(f"Guesses Remaining: {guesses_remaining}")
+        
+    else:
+        clear()
+        print(f"Sorry! The letter '{guessed_letter}' letter is not in the answer")
+        print("".join(attempt))
+        print(f"Guesses Used So Far: {guesses_used}")
+        print(f"Guesses Remaining: {guesses_remaining}")
+
+    if not ("_ " in attempt):
+        print("Congratulations, You have won!")
+        break
+
+    if guesses_remaining == 0:
+        print("Sorry! No guesses remaining")
+        break
     
-else:
-    print("Sorry, this letter is not in the answer")
+
+input("Press any key to exit")
