@@ -621,6 +621,33 @@ def draw_gallows(incorrect_guesses):
         print("    ")
 
 
+
+
+def reset_variables():
+    global word_list
+    global answer
+    global guesses_used
+    global guesses_remaining
+    global incorrect_guesses
+    global previous_guesses
+    global attempt
+    
+    word_list = ["try","to","setup","hangman","game","using","python"]
+    answer = choice(word_list)
+    guesses_used = 0
+    guesses_remaining = 8
+    incorrect_guesses = 0
+    previous_guesses = ["Previous Guesses: "]
+    attempt = ["Guess The Word: "]
+    attempt.extend(["_ "] * len(answer))
+
+    clear() 
+    print(f"#1 answer is: {answer}")
+    draw_gallows(incorrect_guesses)
+    print("".join(attempt))
+    print(f"Guesses Used So Far: {guesses_used}")
+    print(f"Guesses Remaining: {guesses_remaining}")
+
 word_list = ["try","to","setup","hangman","game","using","python"]
 answer = choice(word_list)
 guesses_used = 0
@@ -637,64 +664,81 @@ print("".join(attempt))
 print(f"Guesses Used So Far: {guesses_used}")
 print(f"Guesses Remaining: {guesses_remaining}")        
 
-while "_ " in attempt and guesses_remaining > 0:
+def run_game():
+    global attempt
+    global guesses_used
+    global guesses_remaining
+    global incorrect_guesses
 
-    print("".join(previous_guesses))
-    guessed_letter = input("\nPlease enter a letter:")
-    
-    if not guessed_letter.isalpha() or len(guessed_letter) > 1:        
-        clear()
-        draw_gallows(incorrect_guesses)
-        print("Error: previous entry not a letter - please enter a letter\n")
-        print("".join(attempt))
-        print(f"Guesses Used So Far: {guesses_used}")
-        print(f"Guesses Remaining: {guesses_remaining}")
+    while "_ " in attempt and guesses_remaining > 0:
+
+        print("".join(previous_guesses))
+        guessed_letter = input("\nPlease enter a letter:")
         
-    else:
-        previous_guesses.append(guessed_letter + ", ")
-        guesses_used += 1
-        guesses_remaining -= 1        
-
-        if guessed_letter in answer:
-            index_list = []
-            for i in range(0,len(answer)):
-                if answer[i] == guessed_letter:
-                    index_list.append(i)
-            for i in index_list:
-                j = i + 1
-                attempt[j] = guessed_letter + " "
+        if not guessed_letter.isalpha() or len(guessed_letter) > 1:        
             clear()
             draw_gallows(incorrect_guesses)
-            print(f"Well done! The letter '{guessed_letter}' is in the answer\n")
+            print("Error: previous entry not a letter - please enter a letter\n")
             print("".join(attempt))
             print(f"Guesses Used So Far: {guesses_used}")
             print(f"Guesses Remaining: {guesses_remaining}")
             
         else:
-            clear()
-            incorrect_guesses += 1
-            draw_gallows(incorrect_guesses)
-            print(f"Sorry! The letter '{guessed_letter}' letter is not in the answer\n")
-            print("".join(attempt))
-            print(f"Guesses Used So Far: {guesses_used}")
-            print(f"Guesses Remaining: {guesses_remaining}")
+            previous_guesses.append(guessed_letter + ", ")
+            guesses_used += 1
+            guesses_remaining -= 1        
 
-        if not ("_ " in attempt):
-            print("Congratulations, You have won!")
-            break
+            if guessed_letter in answer:
+                index_list = []
+                for i in range(0,len(answer)):
+                    if answer[i] == guessed_letter:
+                        index_list.append(i)
+                for i in index_list:
+                    j = i + 1
+                    attempt[j] = guessed_letter + " "
+                clear()
+                draw_gallows(incorrect_guesses)
+                print(f"Well done! The letter '{guessed_letter}' is in the answer\n")
+                print("".join(attempt))
+                print(f"Guesses Used So Far: {guesses_used}")
+                print(f"Guesses Remaining: {guesses_remaining}")
+                
+            else:
+                clear()
+                incorrect_guesses += 1
+                draw_gallows(incorrect_guesses)
+                print(f"Sorry! The letter '{guessed_letter}' letter is not in the answer\n")
+                print("".join(attempt))
+                print(f"Guesses Used So Far: {guesses_used}")
+                print(f"Guesses Remaining: {guesses_remaining}")
 
-        if guesses_remaining == 0:
-            clear()
-            draw_gallows(incorrect_guesses)
-            print("Sorry! You have Lost - No guesses remaining\n")
-            print("".join(attempt))
-            print(f"Guesses Used So Far: {guesses_used}")
-            print(f"Guesses Remaining: {guesses_remaining}")
-            print("\nGame Over! You Have Lost :{")
-            break
+            if not ("_ " in attempt):
+                print("Congratulations, You have won!")
+                break
+
+            if guesses_remaining == 0:
+                clear()
+                draw_gallows(incorrect_guesses)
+                print("Sorry! You have Lost - No guesses remaining\n")
+                print("".join(attempt))
+                print(f"Guesses Used So Far: {guesses_used}")
+                print(f"Guesses Remaining: {guesses_remaining}")
+                print("\nGame Over! You Have Lost :{")
+                break
+
+run_game()
     
-    
+def end_game():
+    loop = True
+    while loop:
+        choice = input("\nPress 'E' to exit or Press Any Key Followed by 'Enter' to play again: ")
+        if choice.lower() == "e":
+            print("Goodbye")
+            loop = False
+        else:
+            reset_variables()
+            run_game()
 
 
+end_game()
 
-input("\nPress any key to exit")
