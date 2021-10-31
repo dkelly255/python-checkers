@@ -683,6 +683,15 @@ def run_game():
             print(f"Guesses Used So Far: {guesses_used}")
             print(f"Guesses Remaining: {guesses_remaining}")
             
+        if (guessed_letter + ", ") in previous_guesses:        
+            clear()
+            draw_gallows(incorrect_guesses)
+            print(f"Error: {guessed_letter} already guessed, please try again\n")
+            print("".join(attempt))
+            print(f"Guesses Used So Far: {guesses_used}")
+            print(f"Guesses Remaining: {guesses_remaining}")
+
+
         else:
             previous_guesses.append(guessed_letter + ", ")
             guesses_used += 1
@@ -713,7 +722,12 @@ def run_game():
                 print(f"Guesses Remaining: {guesses_remaining}")
 
             if not ("_ " in attempt):
-                print("Congratulations, You have won!")
+                clear()
+                draw_gallows(incorrect_guesses)
+                print("Congratulations, You have won!\n")
+                print(f"The Word was: '{answer}'")
+                print(f"Guesses Used: {guesses_used}")
+                print(f"Guesses Remaining: {guesses_remaining}")
                 break
 
             if guesses_remaining == 0:
@@ -731,7 +745,7 @@ run_game()
 def end_game():
     loop = True
     while loop:
-        choice = input("\nPress 'E' to exit or Press Any Key Followed by 'Enter' to play again: ")
+        choice = input("\nPress 'E' to exit,\nOr...\nPress Any Key Followed by 'Enter' to play again: ")
         if choice.lower() == "e":
             print("Goodbye")
             loop = False
