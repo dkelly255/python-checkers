@@ -1,3 +1,5 @@
+# Initial import statements to enable use of
+# external library functionality within game
 from os import system, name
 from time import sleep
 from random import choice
@@ -188,17 +190,28 @@ def reset_variables():
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
 
+# Provisional rev of "word-list" - the bank of words
+# from which the "answer" will be randomly chosen to
+# enable playing the game
 word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
+# Select a word at random from the word list
 answer = choice(word_list)
+# Set initial numeric guess counting variables - Guesses
+# used, guesses remaining & incorrect guesses
 guesses_used = 0
 guesses_remaining = 8
 incorrect_guesses = 0
+# Setting initial string word display variables - Previous
+# guesses, current attempt, and a joined version of "attempt"
+# for display purposes
 previous_guesses = ["Previous Guesses: "]
 attempt = ["Guess The Word: "]
 attempt.extend(["_ "] * len(answer))
 
+# Initial paint of game board area - display the early-stage
+# gallows, along with the pre-guess attempt at the answer
+# accompanied by a count of the guesses used and remaining
 clear()
-print(f"#1 answer is: {answer}")
 draw_gallows(incorrect_guesses)
 print("".join(attempt))
 print(f"Guesses Used So Far: {guesses_used}")
