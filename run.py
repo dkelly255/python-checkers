@@ -46,7 +46,7 @@ welcome_screen()
 
 def draw_gallows(incorrect_guesses):
     """
-    Build up the hangman "gallows" element by 
+    Build up the hangman "gallows" element by
     element based on number of incorrect guesses
     """
     if incorrect_guesses == 0:
@@ -162,7 +162,7 @@ def draw_gallows(incorrect_guesses):
 def reset_variables():
     """
     Resets all game variables to original/default
-    values - used in end_game function as part of 
+    values - used in end_game function as part of
     final game exit/play menu loop
     """
     global word_list
@@ -220,8 +220,8 @@ print(f"Guesses Remaining: {guesses_remaining}")
 
 def run_game():
     """
-    Main game function - takes input from user, 
-    validates the input, and matches the input 
+    Main game function - takes input from user,
+    validates the input, and matches the input
     to the answer, incrementing guess variables
     as the game progresses. Culminates in either
     winning or losing the game.
@@ -317,7 +317,7 @@ run_game()
 def end_game():
     """
     Final/closing loop menu to allow the user to either
-    exit the application, or play another game, by 
+    exit the application, or play another game, by
     choosing an appropriate key-strike
     """
     loop = True
