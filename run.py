@@ -4,6 +4,11 @@ from random import choice
 
 
 def welcome_screen():
+    """
+    Displays welcome screen to user upon loading
+    the application. Allows proceeding to play
+    the game upon pressing "Enter"
+    """
     clear()
     print("--------------------------------------------")
     print("|                                          |")
@@ -25,6 +30,9 @@ def welcome_screen():
 
 
 def clear():
+    """
+    Clears the terminal for formatting purposes
+    """
     if name == 'nt':
         _ = system('cls')
     else:
@@ -35,6 +43,10 @@ welcome_screen()
 
 
 def draw_gallows(incorrect_guesses):
+    """
+    Build up the hangman "gallows" element by 
+    element based on number of incorrect guesses
+    """
     if incorrect_guesses == 0:
         print("   _________")
         print("   |")
@@ -146,6 +158,11 @@ def draw_gallows(incorrect_guesses):
 
 
 def reset_variables():
+    """
+    Resets all game variables to original/default
+    values - used in end_game function as part of 
+    final game exit/play menu loop
+    """
     global word_list
     global answer
     global guesses_used
@@ -189,6 +206,13 @@ print(f"Guesses Remaining: {guesses_remaining}")
 
 
 def run_game():
+    """
+    Main game function - takes input from user, 
+    validates the input, and matches the input 
+    to the answer, incrementing guess variables
+    as the game progresses. Culminates in either
+    winning or losing the game.
+    """
     global attempt
     global guesses_used
     global guesses_remaining
@@ -278,6 +302,11 @@ run_game()
 
 
 def end_game():
+    """
+    Final/closing loop menu to allow the user to either
+    exit the application, or play another game, by 
+    choosing an appropriate key-strike
+    """
     loop = True
     while loop:
         choice = input(
