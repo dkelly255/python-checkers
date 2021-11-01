@@ -241,7 +241,7 @@ def run_game():
             clear()
             draw_gallows(incorrect_guesses)
             print(
-                f"Error: {guessed_letter} not a letter - please enter a letter
+                f"Error: {guessed_letter} is not a letter - please enter a letter\
                 \n")
             print("".join(attempt))
             print(f"Guesses Used So Far: {guesses_used}")
@@ -251,7 +251,7 @@ def run_game():
             clear()
             draw_gallows(incorrect_guesses)
             print(
-                f"Error: {guessed_letter} already guessed, please try again
+                f"Error: '{guessed_letter}' already guessed, please try again\
                 \n")
             print("".join(attempt))
             print(f"Guesses Used So Far: {guesses_used}")
@@ -273,7 +273,7 @@ def run_game():
                 clear()
                 draw_gallows(incorrect_guesses)
                 print(
-                    f"Well done! The letter '{guessed_letter}' is in the answer
+                    f"Well done! The letter '{guessed_letter}' is in the answer\
                     \n")
                 print("".join(attempt))
                 print(f"Guesses Used So Far: {guesses_used}")
@@ -284,8 +284,7 @@ def run_game():
                 incorrect_guesses += 1
                 draw_gallows(incorrect_guesses)
                 print(
-                    f"Sorry! The letter
-                    '{guessed_letter}' letter is not in the answer
+                    f"Sorry! The letter '{guessed_letter}' is not in the answer\
                     \n")
                 print("".join(attempt))
                 print(f"Guesses Used So Far: {guesses_used}")
@@ -324,7 +323,7 @@ def end_game():
     while loop:
         choice = input(
             "\nPress 'E' to exit,\nOr...\nPress Any Key Followed\
-                by 'Enter' to play again:")
+by 'Enter' to play again:")
         if choice.lower() == "e":
             print("Goodbye")
             loop = False
