@@ -184,7 +184,6 @@ def reset_variables():
     attempt.extend(["_ "] * len(answer))
 
     clear()
-    print(f"#1 answer is: {answer}")
     draw_gallows(incorrect_guesses)
     print("".join(attempt))
     print(f"Guesses Used So Far: {guesses_used}")
