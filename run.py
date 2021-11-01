@@ -1,7 +1,4 @@
 # import keyboard
-from os import system, name
-from time import sleep
-
 # def clear():
 #     if name == 'nt':
 #         _ = system('cls')
@@ -500,7 +497,29 @@ from time import sleep
 
 # print_board(board)
 
+from os import system, name
+from time import sleep
+from random import choice
 
+def welcome_screen():
+    clear()
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|                                          |")
+    print("|       W  E  L  C  O  M  E                |")
+    print("|                                          |")
+    print("|          T O                             |")
+    print("|                                          |")
+    print("|             P  Y  T  H  O  N             |")
+    print("|                                          |")
+    print("|                 H  A  N  G  M  A  N      |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|         [PRESS ENTER TO BEGIN]           |")
+    print("|                                          |")
+    print("--------------------------------------------")  
+    input()
 
 def clear():
     if name == 'nt':
@@ -508,7 +527,7 @@ def clear():
     else:
         _ = system('clear')
 
-from random import choice
+welcome_screen()
 
 def draw_gallows(incorrect_guesses):
     if incorrect_guesses == 0:
@@ -621,8 +640,6 @@ def draw_gallows(incorrect_guesses):
         print("    ")
 
 
-
-
 def reset_variables():
     global word_list
     global answer
@@ -633,6 +650,7 @@ def reset_variables():
     global attempt
     
     word_list = ["try","to","setup","hangman","game","using","python"]
+    
     answer = choice(word_list)
     guesses_used = 0
     guesses_remaining = 8
@@ -674,11 +692,12 @@ def run_game():
 
         print("".join(previous_guesses))
         guessed_letter = input("\nPlease enter a letter:")
+        guessed_letter = guessed_letter.lower()
         
         if not guessed_letter.isalpha() or len(guessed_letter) > 1:        
             clear()
             draw_gallows(incorrect_guesses)
-            print("Error: previous entry not a letter - please enter a letter\n")
+            print(f"Error: {guessed_letter} not a letter - please enter a letter\n")
             print("".join(attempt))
             print(f"Guesses Used So Far: {guesses_used}")
             print(f"Guesses Remaining: {guesses_remaining}")
@@ -739,6 +758,7 @@ def run_game():
                 print(f"Guesses Remaining: {guesses_remaining}")
                 print("\nGame Over! You Have Lost :{")
                 break
+
 
 run_game()
     
