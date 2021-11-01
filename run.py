@@ -683,7 +683,7 @@ def run_game():
             print(f"Guesses Used So Far: {guesses_used}")
             print(f"Guesses Remaining: {guesses_remaining}")
             
-        if (guessed_letter + ", ") in previous_guesses:        
+        elif (guessed_letter + ", ") in previous_guesses:        
             clear()
             draw_gallows(incorrect_guesses)
             print(f"Error: {guessed_letter} already guessed, please try again\n")
