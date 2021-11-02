@@ -321,7 +321,7 @@ def end_game():
     loop = True
     while loop:
         choice = input(
-            "\nPress 'E' to exit,\nOr...\nPress Any Key Followed\
+            "\nPress 'E' to exit,\nOr...\nPress Any Key Followed \
 by 'Enter' to play again:")
         if choice.lower() == "e":
             print("Goodbye")
