@@ -2,21 +2,42 @@
 
 Readme documentation for Hangman game created using Python, played in the terminal
 
-
-
 # Features
 ## Existing Features:
 ### Welcome Screen:
-The welcome screen greets the user upon loading the game and will lead to the Main Menu upon pressing the "Enter" Key
+The welcome screen greets the user upon loading the game and will load the actual game upon pressing the "Enter" Key
 
 ![Intro Screen](readme/images/hangman/welcome-screen.png)
 
-### Main Menu:
-The Main Menu is the central hub-screen of the game, and allows the user to setup the required options before playing. It contains five options, labelled A through E, each of which are detailed further below.
+### Main Game Screen:
+The Main Game screen is where the user will play the game of Hangman. It contains several sub-elements/features each of which are shown in more detail below:
 
-The menu screen will also display to the user how many of the requirements they have completed, and whether they have unlocked the ability to play the game.
+![Intro Screen](readme/images/hangman/main-game-screen.png)
 
-![Intro Screen](readme/images/setupmenu.png)
+### Gallows Feature:
+The Gallows sits at the top of the main game screen, and acts as a visual representation of the player's quantity of incorrect guesses:
+
+![Intro Screen](readme/images/hangman/gallows.png)
+
+### Answer Tracker:
+The Answer tracking section of the main game screen will display a placeholder area on which the player's guesses will be compared to the answer - each time the player guesses a letter correctly, one of the blank slots will be displaced by the correct letter, continuing until either the player has ran out of guesses, or until the player has correctly guessed all the letters in the word:
+
+![Intro Screen](readme/images/hangman/answer-tracker.png)
+
+### Guess Counters:
+There are two counting sections under the answer tracker, which will display to the user their progress in terms of how many guesses they have remaining, and how many guesses they have used in the game so far:
+
+![Intro Screen](readme/images/hangman/guess-counters.png)
+
+### Previous Guesses Recording:
+This feature will record each previous guess a player has entered, and display the previous guesses as a list of comma separated letters below the guess-counter section. This will aid the user in terms of avoiding double-guessing a letter, and not having to try remember a long list of previous guesses:
+
+![Intro Screen](readme/images/hangman/previous-guess-tracker.png)
+
+### Guess entry prompt:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/guess-entry-prompt.png)
 
 
 ## Features Left To Implement
