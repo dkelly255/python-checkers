@@ -1,18 +1,17 @@
 # Python Hangman (Work in progress)
 
-Readme documentation for Hangman game created using Python, played in the terminal
+This Readme documentation supports the application game "Hangman" created using Python, and played in the terminal
 
 # UX Planes
 ## Strategy
-### User Stories
-As a user I would like to be able to:
-- Play a game of Checkers against the computer or against another user
-- Be able to play the game on boards of different sizes (standard, large and extra large)
-- View the rules, objectives & history of the game of Checkers 
+In terms of User Stories - As a user I would like to be able to:
+- Play a game of Hangman against the computer 
+- Be able to see my progress through the game in terms of guesses used, guessed remaining and answer letters revelead
+- Have the option to either exit the game or play again upon completing a game
  
 ## Scope
+To facilitate & guide the design of the application, I created a flowchart using Microsoft Excel to map the flow control and activity sequencing throughout the game. The Flowchart below shows the overflow of the application logic & flow:
 ### - Wireframe & Flowchart
-To guide the design of the application, I created a flowchart using Microsoft Excel to map the flow control and activity sequencing throughout the game. The Flowchart below shows the overflow of the application logic & flow:
 
 ![Wireframe](readme/images/hangman/hangman-wireframe.png)
 
@@ -93,12 +92,19 @@ Upon conclusion of the game, this feature will provide the user with two options
 ![Exit Game Prompt](readme/images/hangman/exit-game-prompt.png)
 
 ## Features Left To Implement
-Section describing potential future features to be added to the application
+There were several additional features which could be added to the Hangman application - each of which are detailed below:
 
 ### Guess Word Functionality
+This would add a feature to the game whereby the user would have the option to "guess the word" at any point in the game, rather than continuing to guess individual letters. It would save the user time, and would add an element of risk to the game if accompanied by an "automatic fail" if the user guesses the wrong word, triggering the game lost screen.
+
 ### Add Phrases to Answer Pool 
+An additional feature that could be added in future is for the user to have the option to "guess a phrase" instead of the deafult option of "guessing a word". It would add an extra dimension to the game and would contribute to a positive User Experience
+
 ### Difficulty Level Settings
+Difficulty level setting could also be additional features in future - giving the user the ability to specifiy a difficulty level, which would be primarily be determined by the length of the word being guessed. For example - easier words would be of shorter length, with harder diffuclty words being longer in length.
+
 ### Guess limit extension/reduction
+The ability for the user to modify their guess limits would also be a potential future feature for the game - adding depth to the game by allowing higher and lower guess limits according to the user's personal choice.
 
 
 # Testing
