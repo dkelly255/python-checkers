@@ -2,11 +2,15 @@
 
 This Readme documentation supports the application game "Hangman" created using Python, and played in the terminal
 
+![Intro Screen](readme/images/hangman/welcome-screen.png)
+
 # UX Planes
+
+I have used the Five Planes of UX to design the application, and provide a description of the acitvities, connections, and flows through each of the UX Planes below:
 ## Strategy
 In terms of User Stories - As a user I would like to be able to:
 - Play a game of Hangman against the computer 
-- Be able to see my progress through the game in terms of guesses used, guessed remaining and answer letters revelead
+- Be able to see my progress through the game in terms of guesses used, guessed remaining and answer letters revealed
 - Have the option to either exit the game or play again upon completing a game
  
 ## Scope
