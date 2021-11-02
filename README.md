@@ -39,6 +39,35 @@ This is the key feature on the main game screen and is where the user will be pr
 
 ![Intro Screen](readme/images/hangman/guess-entry-prompt.png)
 
+### Notification Area - Correct Guess:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/notification-correct.png)
+
+### Notification Area - Incorrect Guess:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/notification-incorrect.png)
+
+### Notification Area - Non-Letter Warning:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/notification-non-letter.png)
+
+### Notification Area - Duplicate Guess Warning:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/notification-duplicate.png)
+
+### Game Won Notification:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/notification-won.png)
+
+### Exit Game Prompt:
+This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
+
+![Intro Screen](readme/images/hangman/exit-game-prompt.png)
 
 ## Features Left To Implement
 Section describing features of the application
