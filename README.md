@@ -93,7 +93,7 @@ Upon conclusion of the game, this feature will provide the user with two options
 ![Exit Game Prompt](readme/images/hangman/exit-game-prompt.png)
 
 ## Features Left To Implement
-Section describing features of the application
+Section describing potential future features to be added to the application
 
 ### Guess Word Functionality
 ### Add Phrases to Answer Pool 
@@ -104,6 +104,9 @@ Section describing features of the application
 # Testing
 ## Generic Testing
 ## Python Testing
+I have used the PEP8 Python code validation service to test my program and the code has passed without any errors, notifications or warnings as shown in screenshot below:
+
+![Exit Game Prompt](readme/images/hangman/pep8-hangman.png)
 ## Accessibility Testing
 Detail testing carried out for application development
 # Bugs
