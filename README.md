@@ -1,6 +1,8 @@
 # Python Hangman (Work in progress)
 
-This Readme documentation supports the application game "Hangman" created using Python, and played in the terminal
+This Readme documentation supports the application game "Hangman" created using Python, and played in the terminal 
+
+The application will allow the user to play a game of the popular word-guessing game "Hangman", and will include a gallows that will build up with each incorrect guess, as well as a guess-limit which the player must not exceed in order to win the game.
 
 ![Intro Screen](readme/images/hangman/welcome-screen.png)
 
@@ -8,22 +10,47 @@ This Readme documentation supports the application game "Hangman" created using 
 
 I have used the Five Planes of UX to design the application, and provide a description of the acitvities, connections, and flows through each of the UX Planes below:
 ## Strategy
-In terms of User Stories - As a user I would like to be able to:
-- Play a game of Hangman against the computer 
-- Be able to see my progress through the game in terms of guesses used, guessed remaining and answer letters revealed
-- Have the option to either exit the game or play again upon completing a game
+The strategy for the application's User Experience was developed around addressing the User Needs and User Stories below - users will wish to:
+- Have the ability to play a game of Hangman against the computer 
+- See their progress through the game in terms of guesses used, guessed remaining and answer letters revealed
+- Have the option to either exit the game or play again upon completion of an individual game
  
 ## Scope
-To facilitate & guide the design of the application, I created a flowchart using Microsoft Excel to map the flow control and activity sequencing throughout the game. The Flowchart below shows the overflow of the application logic & flow:
+The Scope of the application is informed by the Strategy above, in terms of the Functional Specifications and Requirements of the game - I wanted to ensure optimal scope to actualise the strategy by including content and interactivity that help enable the user stories.
+
+The site's scope encompasses the provision of a fully functional hangman game to the user, with features that would appropriately deliver the user experience - including a drawable gallows, guess tracking/counting functionality, an answer display, and a suite of situational notifications to help guide the user through the game experience
+
+I have also demarcated the original possible list of site scope into "existing features" and "features yet to implement" in the next section of this readme document - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
+
+## Structure
+
+The application is delivered via a simple 2-page structure, with the first page containing the welcome message that greets the user upon initialising the game, and the second page housing the actual game content & interface.
+
+As detailed further in the "Features" section below, the main game page is a one-stop-shop delivering all of the user needs in one self-contained area - including everything from the gallows displaying the game progress, to guess counters, to answer tracking and a notification area.
+
+Based upon the site Strategy & Scope laid out above, I felt that this simple but effective structure would represent the optimal way of delivering the User Experience in a positive and effective manner
+
+## Skeleton
+
+To facilitate & guide the design of the application and User Experience, I created a flowchart using Microsoft Excel to map the game's flow control and activity sequencing throughout the stages of play. 
+
+The Flowchart below shows the macro-level flow of the application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
 ### - Wireframe & Flowchart
 
 ![Wireframe](readme/images/hangman/hangman-wireframe.png)
 
-## Structure
-## Skeleton
 ## Surface
+Finally, the evolution of the first four Planes of User Experience above allowed the Surface Plane to take shape in terms of arriving at the visual look & feel of the application to be expereienced by the User
+
+The Application is delivered via the Python terminal, which immediately sets several structural boundaries & constraints in terms of screen length (24 rows) and screen width (80 characters) 
+
+Working within these boundaries I found that a simple series of border frames for the welcome screen, combined with appropriate line breaks & new lines on the main game screen would deliver the most visually pleasing surface Plane for the user's experience when playing. 
+
+These Surface elements are discussed & illustrated in further detail in the "Features" section below
+
 
 # Features
+The main features of the game application are discussed in detail below - I have segregated the features into two sections - "Existing Features" and "Features Left To Implement" with screenshots and narrative descriptions where appropriate:
 ## Existing Features:
 ### Welcome Screen:
 The welcome screen greets the user upon loading the game and will load the actual game upon pressing the "Enter" Key
@@ -112,7 +139,7 @@ The ability for the user to modify their guess limits would also be a potential 
 
 
 # Testing
-## Generic Testing
+
 ## Python Testing
 I have used the PEP8 Python code validation service to test my program and the code has passed without any errors, notifications or warnings as shown in screenshot below:
 
