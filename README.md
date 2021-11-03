@@ -1,4 +1,4 @@
-# Python Hangman (Work in progress)
+# Python Hangman 
 
 This Readme documentation supports the application game "Hangman" created using Python, and played in the terminal 
 
@@ -195,6 +195,13 @@ Deployment Tab:
 - Alternatively you can choose to  manually deploy using the "deploy branch" option
 - Finally, you will see the “App was successfully deployed” message  
 and a button for the deployed link. 
+
+## Local Deployment
+Additionally - if you would like to make a local copy of the Github repository, you can clone it by typing the following command in your IDE terminal:
+
+- `git clone https://github.com/dkelly255/python-checkers.git`
+
+Alternatively, if you use Gitpod, you can click [here](https://gitpod.io/#https://github.com/dkelly255/python-checkers) to generate a new workspace using this repository.
 
 # Credits
 ## Content
