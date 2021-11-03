@@ -143,7 +143,9 @@ The ability for the user to modify their guess limits would also be a potential 
 ## User Acceptance Testing (UAT)
 In order to thoroughly test the functionality of my application, I sought out resources online in terms of approaches & techniques for effective User Acceptance Testing.
 
-I found the below article from guru99 to be particularly applicable to my use-case scenario, and have modified their approach & template to better fit my specific application scenario 
+I found the below article from guru99 to be particularly applicable to my use-case scenario, and have modified their approach & template to better fit my specific application scenarios - with each test case detailed below
+
+![Exit Game Prompt](readme/images/hangman/hangman-testing.png)
 
 ## Validator Testing
 I have used the PEP8 Python code validation service to test my program and the code has passed without any errors, notifications or warnings as shown in screenshot below:
