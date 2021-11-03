@@ -143,7 +143,7 @@ The ability for the user to modify their guess limits would also be a potential 
 ## User Acceptance Testing (UAT)
 In order to thoroughly test the functionality of my application, I sought out resources online in terms of approaches & techniques for effective User Acceptance Testing.
 
-I found the below article from guru99 to be particularly applicable to my use-case scenario, and have modified their approach & template to better fit my specific application scenarios - with each test case detailed below
+I found the below article from [Guru99](https://www.guru99.com/download-sample-test-case-template-with-explanation-of-important-fields.html) to be particularly applicable to my use-case scenario, and have modified their approach & template to better fit my specific application scenarios - with each test case detailed below
 
 ![Exit Game Prompt](readme/images/hangman/hangman-testing.png)
 
@@ -153,9 +153,19 @@ I have used the PEP8 Python code validation service to test my program and the c
 ![Exit Game Prompt](readme/images/hangman/pep8-hangman.png)
 
 # Bugs
+The following section will provide detail & context in terms of the debugging exercises that were part of the development process.
+
 ## Resolved Bugs
+- Notification Area Display Spacing - Originally the notification area prompts were being punctuated by large blank spaces resulting in a bugged display to the user. Upon investigation I found that this was triggered partly by my reflection of the Initial round of PEP8 code validation feedback whereby I had extended code onto new lines without the accompanying new line separator - this resolved the bug & closed the issue
+
+- Incorrect Gallows build sequencing - Initially I found that the Gallows was building incorrectly for the user when they have logged an incorrect guess - following a debugging exercise I realised this was due to the gallows function being triggered by the number of guesses remaining, rather than by an incorrect guess & was able to resolve the bug.
+
+- Erroneous Previous guess logging - In the early stages of development, I found that the "Previous Guess" log section of the main game screen would collect up all guesses entered by the user, whether the guesses were valid or not - for example strings of text longer than one character, or numbers and numbers were all logged as previous guesses rather than prohibited. I was able to resolve this following a debugging exercise and improve the data entry validation & controls along with associated warning/error notifications.
+
 ## Unresolved Bugs
-Detail bugs encountered during development - succesfully debugged & yet to be resolved
+- There were no bugs of note left to report in the final version of the application deployed to Heroku (Details on the deployment are covered in the next section below)
+
+
 # Deployment
 ## Github
 ## Heroku
