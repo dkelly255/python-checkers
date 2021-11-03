@@ -1,7 +1,6 @@
 # Initial import statements to enable use of
 # external library functionality within game
 from os import system, name
-from time import sleep
 from random import choice
 
 

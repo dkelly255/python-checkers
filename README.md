@@ -167,11 +167,49 @@ The following section will provide detail & context in terms of the debugging ex
 
 
 # Deployment
+The application was deployed via the "Heroku" service, and the link to the live deployment can be found by clicking [here](https://python-checkers.herokuapp.com/)
+
+An extended list of detailed steps & instructions for deployment follows in the section below:
+
 ## Github
+Note - please ensure you have created a github repository prior to proceeding to the "Heroku" deployment section below to ensure no reqork or deployment issues
 ## Heroku
-Explain deployment processes - local & global
+The Steps for deployment to Heroku are as follows:
+- Navigate to [Heroku](https://id.heroku.com/login) and create an account
+- From the Heroku dashboard select the “Create new app” button.
+- Choose a name for the application - I have chosen Python-Hangman but please note that the name must be unique.
+- Select your region and then click “Create app” - this will trigger a page with all the information for setting up the app.
+
+Settings Tab:
+
+- Config Vars - It is important to get your settings section done before you deploy  your code, the first section being the "config vars" - also known as "environment variables", are where sensitive data that needs to be kept private is stored.
+
+- Buildpacks - The next step is to add buildpacks - These install further dependencies that we need. Click “Add buildpack”, add the Python buildpack first and then click “Save changes”. Then add the node.js Buildpack, to handle the mock terminal, again clicking “Save”. 
+Note - please make sure the buildpacks are in this  order, with Python on top, and node.js underneath. If they're the other way around you  can click and drag them to change the order.
+
+Deployment Tab: 
+
+- Select Github here, and then we  can confirm that we want to connect to Github & search for the equivalent Github repository name, followed by “Search”. 
+- Next, click “connect” to link up the Heroku app to our Github repository code, and scroll down to see two options - for manual or automatic deployment
+- If you choose to enable automatic deployment then Heroku will rebuild the app every time you push a new change to your code in Github. 
+- Alternatively you can choose to  manually deploy using the "deploy branch" option
+- Finally, you will see the “App was successfully deployed” message  
+and a button for the deployed link. 
+
 # Credits
 ## Content
 ## Code
+Clear Terminal function
+Hangman application example #1 - github
+Hangman application example #2 - youtube
+### Libraries Used
+To deliver the final application functionality, I made use of several of the Built-In Python Libraries - these are detailed below:
+
+OS Library
+From the Python OS library I imported the "system" and "name" functions to enable the "clear the terminal" function used at regular intervals throughout the game sequence
+
+Random Library
+The "Random" Python library provided one of the cornerstone functions within the application - the "choice" function which is used to pull a random word from the total array of words in the answer bank - allowing for a better user expereience & an element of unpredictability when playing the game.
+
 ## Media
 List sources & resources used to develop the application 
