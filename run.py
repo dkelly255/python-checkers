@@ -30,6 +30,9 @@ def welcome_screen():
     input()
 
 
+# Credits: As per readme credits section - this clear terminal function
+# is taken from the methods used by geeksforgeeks.org - see full details
+# and links in credits section of readme
 def clear():
     """
     Clears the terminal for formatting purposes
@@ -191,6 +194,11 @@ def reset_variables():
 # Provisional rev of "word-list" - the bank of words
 # from which the "answer" will be randomly chosen to
 # enable playing the game
+
+# Credits: As per readme credits section - this approach of having
+# the bank of wrods in a list was taken from the"Terminal Hangman 
+# in Python" repository and overview - the links and detail can 
+# be viewed in the "credits" section of readme
 word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
 # Select a word at random from the word list
 answer = choice(word_list)
