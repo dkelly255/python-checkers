@@ -196,8 +196,8 @@ def reset_variables():
 # enable playing the game
 
 # Credits: As per readme credits section - this approach of having
-# the bank of wrods in a list was taken from the"Terminal Hangman 
-# in Python" repository and overview - the links and detail can 
+# the bank of wrods in a list was taken from the "Terminal Hangman
+# in Python" repository and overview - the links and detail can
 # be viewed in the "credits" section of readme
 word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
 # Select a word at random from the word list
