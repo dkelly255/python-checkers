@@ -4,340 +4,345 @@ from os import system, name
 from random import choice
 
 
-def welcome_screen():
-    """
-    Displays welcome screen to user upon loading
-    the application. Allows proceeding to play
-    the game upon pressing "Enter"
-    """
-    clear()
-    print("--------------------------------------------")
-    print("|                                          |")
-    print("|                                          |")
-    print("|       W  E  L  C  O  M  E                |")
-    print("|                                          |")
-    print("|          T O                             |")
-    print("|                                          |")
-    print("|             P  Y  T  H  O  N             |")
-    print("|                                          |")
-    print("|                 H  A  N  G  M  A  N      |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|         [PRESS ENTER TO BEGIN]           |")
-    print("|                                          |")
-    print("--------------------------------------------")
-    input()
+def main():
+    def welcome_screen():
+        """
+        Displays welcome screen to user upon loading
+        the application. Allows proceeding to play
+        the game upon pressing "Enter"
+        """
+        clear()
+        print("--------------------------------------------")
+        print("|                                          |")
+        print("|                                          |")
+        print("|       W  E  L  C  O  M  E                |")
+        print("|                                          |")
+        print("|          T O                             |")
+        print("|                                          |")
+        print("|             P  Y  T  H  O  N             |")
+        print("|                                          |")
+        print("|                 H  A  N  G  M  A  N      |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|                                          |")
+        print("|         [PRESS ENTER TO BEGIN]           |")
+        print("|                                          |")
+        print("--------------------------------------------")
+        input()
 
 
-# Credits: As per readme credits section - this clear terminal function
-# is taken from the methods used by geeksforgeeks.org - see full details
-# and links in credits section of readme
-def clear():
-    """
-    Clears the terminal for formatting purposes
-    """
-    if name == 'nt':
-        _ = system('cls')
-    else:
-        _ = system('clear')
+    # Credits: As per readme credits section - this clear terminal function
+    # is taken from the methods used by geeksforgeeks.org - see full details
+    # and links in credits section of readme
+    def clear():
+        """
+        Clears the terminal for formatting purposes
+        """
+        if name == 'nt':
+            _ = system('cls')
+        else:
+            _ = system('clear')
 
 
-welcome_screen()
+    welcome_screen()
 
 
-def draw_gallows(incorrect_guesses):
-    """
-    Build up the hangman "gallows" element by
-    element based on number of incorrect guesses
-    """
-    if incorrect_guesses == 0:
-        print("   _________")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 1:
-        print("   _________")
-        print("   |       |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 2:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 3:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |       |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 4:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |       |")
-        print("   |       |")
-        print("   |")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 5:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |       |")
-        print("   |       |")
-        print("   |      /")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 6:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |       |")
-        print("   |       |")
-        print("   |      / \\")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 7:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |      /|")
-        print("   |       |")
-        print("   |      / \\")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
-    elif incorrect_guesses == 8:
-        print("   _________")
-        print("   |       |")
-        print("   |       O")
-        print("   |      /|\\")
-        print("   |       |")
-        print("   |      / \\")
-        print("   |")
-        print("   |")
-        print("___|___________")
-        print("XXXXXXXXXXXXXXX")
-        print("    ")
+    def draw_gallows(incorrect_guesses):
+        """
+        Build up the hangman "gallows" element by
+        element based on number of incorrect guesses
+        """
+        if incorrect_guesses == 0:
+            print("   _________")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 1:
+            print("   _________")
+            print("   |       |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 2:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 3:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |       |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 4:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |       |")
+            print("   |       |")
+            print("   |")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 5:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |       |")
+            print("   |       |")
+            print("   |      /")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 6:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |       |")
+            print("   |       |")
+            print("   |      / \\")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 7:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |      /|")
+            print("   |       |")
+            print("   |      / \\")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
+        elif incorrect_guesses == 8:
+            print("   _________")
+            print("   |       |")
+            print("   |       O")
+            print("   |      /|\\")
+            print("   |       |")
+            print("   |      / \\")
+            print("   |")
+            print("   |")
+            print("___|___________")
+            print("XXXXXXXXXXXXXXX")
+            print("    ")
 
 
-def reset_variables():
-    """
-    Resets all game variables to original/default
-    values - used in end_game function as part of
-    final game exit/play menu loop
-    """
-    global word_list
-    global answer
-    global guesses_used
-    global guesses_remaining
-    global incorrect_guesses
-    global previous_guesses
-    global attempt
+    def reset_variables(word_list, answer, guesses_used, guesses_remaining, incorrect_guesses, previous_guesses, attempt):
+        """
+        Resets all game variables to original/default
+        values - used in end_game function as part of
+        final game exit/play menu loop
+        """        
+        word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
 
+        answer = choice(word_list)
+        guesses_used = 0
+        guesses_remaining = 8
+        incorrect_guesses = 0
+        previous_guesses = ["Previous Guesses: "]
+        attempt = ["Guess The Word: "]
+        attempt.extend(["_ "] * len(answer))
+
+        clear()
+        draw_gallows(incorrect_guesses)
+        print("".join(attempt))
+        print(f"Guesses Used So Far: {guesses_used}")
+        print(f"Guesses Remaining: {guesses_remaining}")
+
+
+    # Provisional rev of "word-list" - the bank of words
+    # from which the "answer" will be randomly chosen to
+    # enable playing the game
+
+    # Credits: As per readme credits section - this approach of having
+    # the bank of wrods in a list was taken from the "Terminal Hangman
+    # in Python" repository and overview - the links and detail can
+    # be viewed in the "credits" section of readme
     word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
-
+    # Select a word at random from the word list
     answer = choice(word_list)
+    # Set initial numeric guess counting variables - Guesses
+    # used, guesses remaining & incorrect guesses
     guesses_used = 0
     guesses_remaining = 8
     incorrect_guesses = 0
+    # Setting initial string word display variables - Previous
+    # guesses, current attempt, and a joined version of "attempt"
+    # for display purposes
     previous_guesses = ["Previous Guesses: "]
     attempt = ["Guess The Word: "]
     attempt.extend(["_ "] * len(answer))
 
+    # Initial paint of game board area - display the early-stage
+    # gallows, along with the pre-guess attempt at the answer
+    # accompanied by a count of the guesses used and remaining
     clear()
     draw_gallows(incorrect_guesses)
     print("".join(attempt))
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
 
-# Provisional rev of "word-list" - the bank of words
-# from which the "answer" will be randomly chosen to
-# enable playing the game
 
-# Credits: As per readme credits section - this approach of having
-# the bank of wrods in a list was taken from the "Terminal Hangman
-# in Python" repository and overview - the links and detail can
-# be viewed in the "credits" section of readme
-word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
-# Select a word at random from the word list
-answer = choice(word_list)
-# Set initial numeric guess counting variables - Guesses
-# used, guesses remaining & incorrect guesses
-guesses_used = 0
-guesses_remaining = 8
-incorrect_guesses = 0
-# Setting initial string word display variables - Previous
-# guesses, current attempt, and a joined version of "attempt"
-# for display purposes
-previous_guesses = ["Previous Guesses: "]
-attempt = ["Guess The Word: "]
-attempt.extend(["_ "] * len(answer))
+    def run_game(attempt, guesses_used, guesses_remaining, incorrect_guesses, previous_guesses):
+        """
+        Main game function - takes input from user,
+        validates the input, and matches the input
+        to the answer, incrementing guess variables
+        as the game progresses. Culminates in either
+        winning or losing the game.
+        """
 
-# Initial paint of game board area - display the early-stage
-# gallows, along with the pre-guess attempt at the answer
-# accompanied by a count of the guesses used and remaining
-clear()
-draw_gallows(incorrect_guesses)
-print("".join(attempt))
-print(f"Guesses Used So Far: {guesses_used}")
-print(f"Guesses Remaining: {guesses_remaining}")
+        while "_ " in attempt and guesses_remaining > 0:
 
+            print("".join(previous_guesses))
+            guessed_letter = input("\nPlease enter a letter:")
+            guessed_letter = guessed_letter.lower()
 
-def run_game():
-    """
-    Main game function - takes input from user,
-    validates the input, and matches the input
-    to the answer, incrementing guess variables
-    as the game progresses. Culminates in either
-    winning or losing the game.
-    """
-    global attempt
-    global guesses_used
-    global guesses_remaining
-    global incorrect_guesses
-
-    while "_ " in attempt and guesses_remaining > 0:
-
-        print("".join(previous_guesses))
-        guessed_letter = input("\nPlease enter a letter:")
-        guessed_letter = guessed_letter.lower()
-
-        if not guessed_letter.isalpha() or len(guessed_letter) > 1:
-            clear()
-            draw_gallows(incorrect_guesses)
-            print(
-                f"Error: {guessed_letter} is not a letter - please enter a letter\
-                \n")
-            print("".join(attempt))
-            print(f"Guesses Used So Far: {guesses_used}")
-            print(f"Guesses Remaining: {guesses_remaining}")
-
-        elif (guessed_letter + ", ") in previous_guesses:
-            clear()
-            draw_gallows(incorrect_guesses)
-            print(
-                f"Error: '{guessed_letter}' already guessed, please try again\
-                \n")
-            print("".join(attempt))
-            print(f"Guesses Used So Far: {guesses_used}")
-            print(f"Guesses Remaining: {guesses_remaining}")
-
-        else:
-            previous_guesses.append(guessed_letter + ", ")
-            guesses_used += 1
-            guesses_remaining -= 1
-
-            if guessed_letter in answer:
-                index_list = []
-                for i in range(0, len(answer)):
-                    if answer[i] == guessed_letter:
-                        index_list.append(i)
-                for i in index_list:
-                    j = i + 1
-                    attempt[j] = guessed_letter + " "
+            if not guessed_letter.isalpha() or len(guessed_letter) > 1:
                 clear()
                 draw_gallows(incorrect_guesses)
                 print(
-                    f"Well done! The letter '{guessed_letter}' is in the answer\
+                    f"Error: {guessed_letter} is not a letter - please enter a letter\
+                    \n")
+                print("".join(attempt))
+                print(f"Guesses Used So Far: {guesses_used}")
+                print(f"Guesses Remaining: {guesses_remaining}")
+
+            elif (guessed_letter + ", ") in previous_guesses:
+                clear()
+                draw_gallows(incorrect_guesses)
+                print(
+                    f"Error: '{guessed_letter}' already guessed, please try again\
                     \n")
                 print("".join(attempt))
                 print(f"Guesses Used So Far: {guesses_used}")
                 print(f"Guesses Remaining: {guesses_remaining}")
 
             else:
+                previous_guesses.append(guessed_letter + ", ")
+                guesses_used += 1
+                guesses_remaining -= 1
+
+                if guessed_letter in answer:
+                    index_list = []
+                    for i in range(0, len(answer)):
+                        if answer[i] == guessed_letter:
+                            index_list.append(i)
+                            print(f"CHECK HERE{index_list}")
+                    for i in index_list:
+                        j = i + 1
+                        attempt[j] = guessed_letter + " "
+                    clear()
+                    draw_gallows(incorrect_guesses)
+                    print(
+                        f"Well done! The letter '{guessed_letter}' is in the answer\
+                        \n")
+                    print("".join(attempt))
+                    print(f"Guesses Used So Far: {guesses_used}")
+                    print(f"Guesses Remaining: {guesses_remaining}")
+
+                else:
+                    clear()
+                    incorrect_guesses += 1
+                    draw_gallows(incorrect_guesses)
+                    print(
+                        f"Sorry! The letter '{guessed_letter}' is not in the answer\
+                        \n")
+                    print("".join(attempt))
+                    print(f"Guesses Used So Far: {guesses_used}")
+                    print(f"Guesses Remaining: {guesses_remaining}")
+
+                if not ("_ " in attempt):
+                    clear()
+                    draw_gallows(incorrect_guesses)
+                    print("Congratulations, You have won!\n")
+                    print(f"The Word was: '{answer}'")
+                    print(f"Guesses Used: {guesses_used}")
+                    print(f"Guesses Remaining: {guesses_remaining}")
+                    break
+
+                if guesses_remaining == 0:
+                    clear()
+                    draw_gallows(incorrect_guesses)
+                    print("Sorry! You have Lost - No guesses remaining\n")
+                    print("".join(attempt))
+                    print(f"Guesses Used So Far: {guesses_used}")
+                    print(f"Guesses Remaining: {guesses_remaining}")
+                    print("\nGame Over! You Have Lost :{")
+                    break
+
+
+    run_game(attempt, guesses_used, guesses_remaining, incorrect_guesses, previous_guesses)
+
+
+    def end_game():
+        """
+        Final/closing loop menu to allow the user to either
+        exit the application, or play another game, by
+        choosing an appropriate key-strike
+        """
+        loop = True
+        while loop:
+            decision = input(
+                "\nPress 'E' to exit,\nOr...\nPress Any Key Followed \
+            by 'Enter' to play again:")
+            if decision.lower() == "e":
+                print("Goodbye")
+                loop = False
+            else:
+                word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
+                answer = choice(word_list)
+                guesses_used = 0
+                guesses_remaining = 8
+                incorrect_guesses = 0
+                previous_guesses = ["Previous Guesses: "]
+                attempt = ["Guess The Word: "]
+                attempt.extend(["_ "] * len(answer))
                 clear()
-                incorrect_guesses += 1
                 draw_gallows(incorrect_guesses)
-                print(
-                    f"Sorry! The letter '{guessed_letter}' is not in the answer\
-                    \n")
                 print("".join(attempt))
                 print(f"Guesses Used So Far: {guesses_used}")
                 print(f"Guesses Remaining: {guesses_remaining}")
+                run_game(attempt, guesses_used, guesses_remaining, incorrect_guesses, previous_guesses)
+    end_game()
 
-            if not ("_ " in attempt):
-                clear()
-                draw_gallows(incorrect_guesses)
-                print("Congratulations, You have won!\n")
-                print(f"The Word was: '{answer}'")
-                print(f"Guesses Used: {guesses_used}")
-                print(f"Guesses Remaining: {guesses_remaining}")
-                break
+main()
 
-            if guesses_remaining == 0:
-                clear()
-                draw_gallows(incorrect_guesses)
-                print("Sorry! You have Lost - No guesses remaining\n")
-                print("".join(attempt))
-                print(f"Guesses Used So Far: {guesses_used}")
-                print(f"Guesses Remaining: {guesses_remaining}")
-                print("\nGame Over! You Have Lost :{")
-                break
-
-
-run_game()
-
-
-def end_game():
-    """
-    Final/closing loop menu to allow the user to either
-    exit the application, or play another game, by
-    choosing an appropriate key-strike
-    """
-    loop = True
-    while loop:
-        choice = input(
-            "\nPress 'E' to exit,\nOr...\nPress Any Key Followed \
-by 'Enter' to play again:")
-        if choice.lower() == "e":
-            print("Goodbye")
-            loop = False
-        else:
-            reset_variables()
-            run_game()
-
-end_game()
 
 # import keyboard
 # def clear():
@@ -837,4 +842,6 @@ end_game()
 #         print("".join(row))
 
 # print_board(board)
+
+
 
