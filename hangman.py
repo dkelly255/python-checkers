@@ -2,6 +2,15 @@
 from os import system, name
 from random import choice
 
+def clear():
+        """
+        Clears the terminal for formatting purposes
+        """
+        if name == 'nt':
+            _ = system('cls')
+        else:
+            _ = system('clear')
+
 
 def welcome_screen():
         """
@@ -27,16 +36,8 @@ def welcome_screen():
         print("|                                          |")
         print("--------------------------------------------")
         input()
+        clear()
 
-
-def clear():
-        """
-        Clears the terminal for formatting purposes
-        """
-        if name == 'nt':
-            _ = system('cls')
-        else:
-            _ = system('clear')
 
 
 def game_won():
@@ -190,11 +191,12 @@ gallows_stage = 0
 # for indice, letter in enumerate(answer, start=1):
 #     print(indice, letter)
 
-if not ("_ " in answer_hidden):
-    game_won()
+def initial_checks():
+    if not ("_ " in answer_hidden):
+        game_won()
 
-if not (guesses_remaining > 0):
-    game_lost()
+    if not (guesses_remaining > 0):
+        game_lost()
 
 # Display main game screen
 # clear()
@@ -205,10 +207,6 @@ def main_game_screen():
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
     print("".join(previous_guesses))
-    
-
-main_game_screen()
-draw_gallows(gallows_stage)
 
 
 def validate_guess():
@@ -225,7 +223,6 @@ def validate_guess():
         print("Guess must be a single character only, please try again")
 
 
-user_guess = validate_guess()
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
     
@@ -238,12 +235,12 @@ def reveal_letter_in_answer(user_guess, answer, answer_hidden):
 
 def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden):
         
-    previous_guesses.append(user_guess)
+    previous_guesses.append(user_guess + ", ") 
     guesses_used += 1
 
     if user_guess in answer:
         display_correct_guess_notification()
-        # reveal_letter_in_answer(user_guess, answer, answer_hidden)
+        reveal_letter_in_answer(user_guess, answer, answer_hidden)
     else:
         display_incorrect_guess_notification()
         gallows_stage += 1
@@ -252,6 +249,23 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
     return user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden
 
 
-user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
 
-reveal_letter_in_answer(user_guess, answer, answer_hidden)
+while "_ " in answer_hidden:
+    if gallows_stage == 8:
+        break
+    else:
+        clear()
+        main_game_screen()
+        draw_gallows(gallows_stage)
+        user_guess = validate_guess()
+        user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
+        clear()
+    main_game_screen()
+    draw_gallows(gallows_stage)
+    
+    if gallows_stage == 8:
+        print(f"Sorry You Lost - the answer was {answer}")
+    else:
+        print(f"Congratulations You Won - the answer was {answer}")
+
+
