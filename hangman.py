@@ -2,6 +2,26 @@
 from os import system, name
 from random import choice
 
+def initialise_variables():
+    # Initialise key variables
+    # Answer bank & Word variables
+    word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
+    answer = choice(word_list)
+    answer_hidden = ["Guess The Word: "]
+    answer_hidden.extend(["_ "] * len(answer))
+    # Guess variables
+    guesses_remaining = 8
+    guesses_used = 0
+    incorrect_guesses = 0
+    previous_guesses = ["Previous Guesses: "]
+    # Gallows variables
+    gallows_stage = 0
+    return word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage
+
+
+word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
+
+
 def clear():
         """
         Clears the terminal for formatting purposes
@@ -37,15 +57,6 @@ def welcome_screen():
         print("--------------------------------------------")
         input()
         clear()
-
-
-
-def game_won():
-    print("You have won")
-
-
-def game_lost():
-    print("You have won")
 
 
 def draw_gallows(gallows_stage):
@@ -171,36 +182,6 @@ def display_incorrect_guess_notification():
     print("INCORRECT GUESS NOTIFICATION PLACEHOLDER")
 
 
-welcome_screen()
-
-# Initialise key variables
-# Answer bank & Word variables
-word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
-answer = choice(word_list)
-answer_hidden = ["Guess The Word: "]
-answer_hidden.extend(["_ "] * len(answer))
-# Guess variables
-guesses_remaining = 8
-guesses_used = 0
-incorrect_guesses = 0
-previous_guesses = ["Previous Guesses: "]
-print_previous_guesses = "".join(previous_guesses)
-# Gallows variables
-gallows_stage = 0
-
-# for indice, letter in enumerate(answer, start=1):
-#     print(indice, letter)
-
-def initial_checks():
-    if not ("_ " in answer_hidden):
-        game_won()
-
-    if not (guesses_remaining > 0):
-        game_lost()
-
-# Display main game screen
-# clear()
-# draw_gallows(incorrect_guesses)
 def main_game_screen():
     print("*Main Game Screen*\n")
     print("".join(answer_hidden))
@@ -221,7 +202,6 @@ def validate_guess():
             print("Guess must be a letter, please try again")
             continue
         print("Guess must be a single character only, please try again")
-
 
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
@@ -249,7 +229,6 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
     return user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden
 
 
-
 def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden):
     while "_ " in answer_hidden:
         if gallows_stage == 8:
@@ -269,6 +248,7 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
         else:
             print(f"Congratulations You Won - the answer was {answer}\n")
 
+welcome_screen()
 play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
 
 while True:
@@ -277,16 +257,7 @@ while True:
         print("GOODBYE")
         break
     elif stop_go == "y":
-        word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
-        answer = choice(word_list)
-        answer_hidden = ["Guess The Word: "]
-        answer_hidden.extend(["_ "] * len(answer))
-        guesses_remaining = 8
-        guesses_used = 0
-        incorrect_guesses = 0
-        previous_guesses = ["Previous Guesses: "]
-        print_previous_guesses = "".join(previous_guesses)
-        gallows_stage = 0
+        word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
         play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
     else:
         print("Please enter a valid choice - e to exit or y to play again: ")
