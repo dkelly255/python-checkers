@@ -1,3 +1,4 @@
+# Attempted rebuild from scratch
 from os import system, name
 from random import choice
 
@@ -38,29 +39,208 @@ def clear():
             _ = system('clear')
 
 
+def game_won():
+    print("You have won")
+
+
+def game_lost():
+    print("You have won")
+
+
+def draw_gallows(gallows_stage):
+    """
+    Build up the hangman "gallows" element by
+    element based on number of incorrect guesses
+    """
+    if gallows_stage == 0:
+        print("   _________")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 1:
+        print("   _________")
+        print("   |       |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 2:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 3:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |       |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 4:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |       |")
+        print("   |       |")
+        print("   |")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 5:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |       |")
+        print("   |       |")
+        print("   |      /")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 6:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |       |")
+        print("   |       |")
+        print("   |      / \\")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 7:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |      /|")
+        print("   |       |")
+        print("   |      / \\")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+    elif gallows_stage == 8:
+        print("   _________")
+        print("   |       |")
+        print("   |       O")
+        print("   |      /|\\")
+        print("   |       |")
+        print("   |      / \\")
+        print("   |")
+        print("   |")
+        print("___|___________")
+        print("XXXXXXXXXXXXXXX")
+        print("    ")
+
+
+def display_correct_guess_notification():
+    print("CORRECT GUESS NOTIFICATION PLACEHOLDER")
+
+
+def display_incorrect_guess_notification():
+    print("INCORRECT GUESS NOTIFICATION PLACEHOLDER")
+
+
 welcome_screen()
 
 # Initialise key variables
-# Word variables
+# Answer bank & Word variables
 word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
-answer_unhidden = choice(word_list)
+answer = choice(word_list)
 answer_hidden = ["Guess The Word: "]
-answer_hidden.extend(["_ "] * len(answer_unhidden))
+answer_hidden.extend(["_ "] * len(answer))
 # Guess variables
 guesses_remaining = 8
 guesses_used = 0
 incorrect_guesses = 0
 previous_guesses = ["Previous Guesses: "]
+print_previous_guesses = "".join(previous_guesses)
+# Gallows variables
+gallows_stage = 0
 
-print(word_list)
-print(answer_unhidden)
-print(answer_hidden)
+# for indice, letter in enumerate(answer, start=1):
+#     print(indice, letter)
 
+if not ("_ " in answer_hidden):
+    game_won()
 
+if not (guesses_remaining > 0):
+    game_lost()
 
 # Display main game screen
 # clear()
 # draw_gallows(incorrect_guesses)
-print("".join(answer_hidden))
-print(f"Guesses Used So Far: {guesses_used}")
-print(f"Guesses Remaining: {guesses_remaining}")
+def main_game_screen():
+    print("*Main Game Screen*\n")
+    print("".join(answer_hidden))
+    print(f"Guesses Used So Far: {guesses_used}")
+    print(f"Guesses Remaining: {guesses_remaining}")
+    print("".join(previous_guesses))
+    
+
+main_game_screen()
+draw_gallows(gallows_stage)
+
+def validate_guess():
+    while True:
+        user_guess = input("Please guess a letter: ").lower()    
+        if len(user_guess) == 1:
+            if user_guess.isalpha():
+                if not (user_guess in previous_guesses):
+                    return user_guess
+                print("You have already guessed this letter")
+                continue
+            print("Guess must be a letter, please try again")
+            continue
+        print("Guess must be a single character only, please try again")
+
+
+user_guess = validate_guess()
+
+def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer):
+        
+    previous_guesses.append(user_guess)
+    guesses_used += 1
+
+    if user_guess in answer:
+        display_correct_guess_notification()
+    else:
+        display_incorrect_guess_notification()
+        gallows_stage += 1
+        incorrect_guesses += 1
+
+    return user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer
+
+
+user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer)
+
+
