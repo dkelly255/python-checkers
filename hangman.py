@@ -250,22 +250,43 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
 
 
 
-while "_ " in answer_hidden:
-    if gallows_stage == 8:
-        break
-    else:
-        clear()
+def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden):
+    while "_ " in answer_hidden:
+        if gallows_stage == 8:
+            break
+        else:
+            clear()
+            main_game_screen()
+            draw_gallows(gallows_stage)
+            user_guess = validate_guess()
+            user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
+            clear()
         main_game_screen()
         draw_gallows(gallows_stage)
-        user_guess = validate_guess()
-        user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
-        clear()
-    main_game_screen()
-    draw_gallows(gallows_stage)
-    
-    if gallows_stage == 8:
-        print(f"Sorry You Lost - the answer was {answer}")
+        
+        if gallows_stage == 8:
+            print(f"Sorry You Lost - the answer was {answer}\n")
+        else:
+            print(f"Congratulations You Won - the answer was {answer}\n")
+
+play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
+
+while True:
+    stop_go = input("press y to play again or e to exit: ")
+    if stop_go == "e":
+        print("GOODBYE")
+        break
+    elif stop_go == "y":
+        word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
+        answer = choice(word_list)
+        answer_hidden = ["Guess The Word: "]
+        answer_hidden.extend(["_ "] * len(answer))
+        guesses_remaining = 8
+        guesses_used = 0
+        incorrect_guesses = 0
+        previous_guesses = ["Previous Guesses: "]
+        print_previous_guesses = "".join(previous_guesses)
+        gallows_stage = 0
+        play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
     else:
-        print(f"Congratulations You Won - the answer was {answer}")
-
-
+        print("Please enter a valid choice - e to exit or y to play again: ")
