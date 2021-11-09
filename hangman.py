@@ -210,6 +210,7 @@ def main_game_screen():
 main_game_screen()
 draw_gallows(gallows_stage)
 
+
 def validate_guess():
     while True:
         user_guess = input("Please guess a letter: ").lower()    
@@ -226,21 +227,31 @@ def validate_guess():
 
 user_guess = validate_guess()
 
-def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer):
+def reveal_letter_in_answer(user_guess, answer, answer_hidden):
+    
+    for index, value in enumerate(answer,start=1):
+        if user_guess == value:                    
+            answer_hidden[index] = user_guess
+    
+    return answer_hidden
+
+
+def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden):
         
     previous_guesses.append(user_guess)
     guesses_used += 1
 
     if user_guess in answer:
         display_correct_guess_notification()
+        # reveal_letter_in_answer(user_guess, answer, answer_hidden)
     else:
         display_incorrect_guess_notification()
         gallows_stage += 1
         incorrect_guesses += 1
 
-    return user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer
+    return user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden
 
 
-user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer)
+user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
 
-
+reveal_letter_in_answer(user_guess, answer, answer_hidden)
