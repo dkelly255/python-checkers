@@ -307,12 +307,12 @@ def run_game():
 
             if guesses_remaining == 0:
                 clear()
-                draw_gallows(incorrect_guesses)
+                draw_gallows(8)
                 print("Sorry! You have Lost - No guesses remaining\n")
-                print("".join(attempt))
-                print(f"Guesses Used So Far: {guesses_used}")
+                print(f"The Word was: '{answer}'")
+                print(f"Guesses Used: {guesses_used}")
                 print(f"Guesses Remaining: {guesses_remaining}")
-                print("\nGame Over! You Have Lost :{")
+                print("".join(previous_guesses))
                 break
 
 
@@ -328,8 +328,8 @@ def end_game():
     loop = True
     while loop:
         choice = input(
-            "\nPress 'E' to exit,\nOr...\nPress Any Key Followed \
-by 'Enter' to play again:")
+            "\nPress 'E' Followed by ENTER to exit,\nOr...\nPress ENTER to Play Again \
+     ")
         if choice.lower() == "e":
             print("Goodbye")
             loop = False

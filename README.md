@@ -172,7 +172,7 @@ The application was deployed via the "Heroku" service, and the link to the live 
 An extended list of detailed steps & instructions for deployment follows in the section below:
 
 ## Github
-Note - please ensure you have created a github repository prior to proceeding to the "Heroku" deployment section below to ensure no reqork or deployment issues
+Note - please ensure you have created a github repository prior to proceeding to the "Heroku" deployment section below to ensure no rework or deployment issues
 ## Heroku
 The Steps for deployment to Heroku are as follows:
 - Navigate to [Heroku](https://id.heroku.com/login) and create an account
@@ -201,8 +201,9 @@ Additionally - if you would like to make a local copy of the Github repository, 
 
 - `git clone https://github.com/dkelly255/python-checkers.git`
 
-Alternatively, if you use Gitpod, you can click [here](https://gitpod.io/#https://github.com/dkelly255/python-checkers) to generate a new workspace using this repository.
+Alternatively, if you use Gitpod, you can click the button below to generate a new workspace using this repository.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dkelly255/python-checkers)
 # Credits
 ## Content
 As part of the generic research & development process to enable building the application, I benchmarked several different sources providing fully functional Hangman Python Terminal applications - these are listed below:
