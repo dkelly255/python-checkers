@@ -182,11 +182,12 @@ def display_incorrect_guess_notification():
     print("INCORRECT GUESS NOTIFICATION PLACEHOLDER")
 
 
-def main_game_screen():
+def main_game_screen(guesses_used):
     print("*Main Game Screen*\n")
     print("".join(answer_hidden))
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
+    print(f"Incorrect Guesses: {incorrect_guesses}")
     print("".join(previous_guesses))
 
 
@@ -219,10 +220,10 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
     guesses_used += 1
 
     if user_guess in answer:
-        display_correct_guess_notification()
+        # display_correct_guess_notification()
         reveal_letter_in_answer(user_guess, answer, answer_hidden)
     else:
-        display_incorrect_guess_notification()
+        # display_incorrect_guess_notification()
         gallows_stage += 1
         incorrect_guesses += 1
 
@@ -232,21 +233,20 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
 def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden):
     while "_ " in answer_hidden:
         if gallows_stage == 8:
+            print(f"Sorry You Lost - the answer was '{answer}'\n")
             break
         else:
-            clear()
-            main_game_screen()
+            clear()            
+            main_game_screen(guesses_used)            
             draw_gallows(gallows_stage)
-            user_guess = validate_guess()
-            user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
-            clear()
-        main_game_screen()
+            user_guess = validate_guess()            
+            user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)            
+            clear()        
+        main_game_screen(guesses_used)        
         draw_gallows(gallows_stage)
         
-        if gallows_stage == 8:
-            print(f"Sorry You Lost - the answer was {answer}\n")
-        else:
-            print(f"Congratulations You Won - the answer was {answer}\n")
+        if not ("_ " in answer_hidden):               
+            print(f"Congratulations You Won - the answer was '{answer}'\n")
 
 welcome_screen()
 play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden)
