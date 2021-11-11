@@ -186,22 +186,35 @@ def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_
         print(f"Hurry!\nYou only have {guesses_remaining} guesses left - but there are {yet_to_guess} unguessed letters...\nTry guessing the word!\n")
 
 
-def validate_guess(previous_guesses):
+def validate_guess(previous_guesses, guesses_remaining):
     while True:
-        
-        guess_type = input("Please press 'W' to guess a word, or 'L' to guess a letter: ").lower()
-        if guess_type == "w":
-            user_guess = input("\nPlease guess a word: ").lower()
-            if len(user_guess) > 1:
-                if user_guess.isalpha():
-                    if not ((user_guess + ", ") in previous_guesses):
-                        return user_guess
-                    print(f"\nYou have already guessed the word '{user_guess}', please try again \n")
+        if guesses_remaining < answer_hidden.count("_ "):
+            guess_type = input("Please press 'W' to guess a word, or 'L' to guess a letter: ").lower()
+            if guess_type == "w":
+                user_guess = input("\nPlease guess a word: ").lower()
+                if len(user_guess) > 1:
+                    if user_guess.isalpha():
+                        if not ((user_guess + ", ") in previous_guesses):
+                            return user_guess
+                        print(f"\nYou have already guessed the word '{user_guess}', please try again \n")
+                        continue
+                    print(f"\nGuess must be a word, '{user_guess}' is not a word, please try again\n")
                     continue
-                print(f"\nGuess must be a word, '{user_guess}' is not a word, please try again\n")
-                continue
-            print(f"\The Word must not be a single character, '{user_guess}' is not valid, please try again\n")
-        elif guess_type == "l":  
+                print(f"\The Word must not be a single character, '{user_guess}' is not valid, please try again\n")
+            elif guess_type == "l":  
+                user_guess = input("\nPlease guess a letter: ").lower()
+                if len(user_guess) == 1:
+                    if user_guess.isalpha():
+                        if not ((user_guess + ", ") in previous_guesses):
+                            return user_guess
+                        print(f"\nYou have already guessed the letter '{user_guess}', please try again \n")
+                        continue
+                    print(f"\nGuess must be a letter, '{user_guess}' is not a letter, please try again\n")
+                    continue
+                print(f"\nGuess must be a single character only, '{user_guess}' is not valid, please try again\n")
+            else:
+                print(f"Sorry, '{guess_type}' is not a valid input, please try again")
+        else:
             user_guess = input("\nPlease guess a letter: ").lower()
             if len(user_guess) == 1:
                 if user_guess.isalpha():
@@ -212,8 +225,6 @@ def validate_guess(previous_guesses):
                 print(f"\nGuess must be a letter, '{user_guess}' is not a letter, please try again\n")
                 continue
             print(f"\nGuess must be a single character only, '{user_guess}' is not valid, please try again\n")
-        else:
-            print(f"Sorry, '{guess_type}' is not a valid input, please try again")
 
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
@@ -266,7 +277,7 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
             clear()            
             draw_gallows(gallows_stage)
             main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)                        
-            user_guess = validate_guess(previous_guesses)                     
+            user_guess = validate_guess(previous_guesses, guesses_remaining)                     
             user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)            
             clear()
         draw_gallows(gallows_stage)
