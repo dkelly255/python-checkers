@@ -1,6 +1,7 @@
 # Attempted rebuild from scratch
 from os import system, name
 from random import choice
+from time import sleep
 
 
 def initialise_variables():
@@ -175,13 +176,11 @@ def draw_gallows(gallows_stage):
         print("    ")
 
 
-def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses):
-    print("*Main Game Screen*\n")
+def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses):    
     print("".join(answer_hidden))
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
-    print(f"Incorrect Guesses: {incorrect_guesses}")
-    print("".join(previous_guesses))
+    print("".join(previous_guesses) + "\n")
 
 
 def validate_guess(previous_guesses):
@@ -191,11 +190,11 @@ def validate_guess(previous_guesses):
             if user_guess.isalpha():
                 if not ((user_guess + ", ") in previous_guesses):
                     return user_guess
-                print("You have already guessed this letter")
+                print(f"\nYou have already guessed the letter '{user_guess}', please try again \n")
                 continue
-            print("Guess must be a letter, please try again")
+            print(f"\nGuess must be a letter, '{user_guess}' is not a letter, please try again\n")
             continue
-        print("Guess must be a single character only, please try again")
+        print(f"\nGuess must be a single character only, '{user_guess}' is not valid, please try again\n")
 
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
@@ -215,7 +214,11 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
 
     if user_guess in answer:
         reveal_letter_in_answer(user_guess, answer, answer_hidden)
+        print(f"\nCorrect! '{user_guess}' is in the answer")
+        sleep(1)
     else:
+        print(f"\nSorry! '{user_guess}' is not in the answer")
+        sleep(0.75)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 9 - gallows_stage
@@ -230,15 +233,13 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
             break
         else:
             clear()            
-            main_game_screen(guesses_used, guesses_remaining, incorrect_guesses)            
             draw_gallows(gallows_stage)
-            print(f"1. Previous guesses = {previous_guesses}") 
-            user_guess = validate_guess(previous_guesses)
-            print(f"2. Previous guesses = {previous_guesses}")            
+            main_game_screen(guesses_used, guesses_remaining, incorrect_guesses)                        
+            user_guess = validate_guess(previous_guesses)                     
             user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)            
             clear()
-        main_game_screen(guesses_used, guesses_remaining, incorrect_guesses)                    
         draw_gallows(gallows_stage)
+        main_game_screen(guesses_used, guesses_remaining, incorrect_guesses)                           
         
         if not ("_ " in answer_hidden):               
             print(f"Congratulations You Won - the answer was '{answer}'\n")
@@ -247,15 +248,15 @@ welcome_screen()
 play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
 
 while True:
-    stop_go = input("press y to play again or e to exit: ")
+    stop_go = input("Please press 'y' to play again, or press 'e' to exit: ").lower()
     if stop_go == "e":
-        print("GOODBYE")
+        print("\nThank you for playing Python Hangman - Goodbye!")
         break
     elif stop_go == "y":
         word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
         play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
     else:
-        print("Please enter a valid choice - e to exit or y to play again: ")
+        print("\nPlease enter a valid choice - e to exit or y to play again: ")
 
 
 # import keyboard
