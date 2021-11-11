@@ -3,11 +3,13 @@ from os import system, name
 from random import choice
 from time import sleep
 
+content = open('words.txt').read().split()
 
 def initialise_variables():
     # Initialise key variables
     # Answer bank & Word variables
-    word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
+    # word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
+    word_list = content
     answer = choice(word_list)
     answer_hidden = ["Guess The Word: "]
     answer_hidden.extend(["_ "] * len(answer))
@@ -17,7 +19,7 @@ def initialise_variables():
     previous_guesses = ["Previous Guesses: "]
     # Gallows variables
     gallows_stage = 0
-    guesses_remaining = 9 - gallows_stage
+    guesses_remaining = 8 - gallows_stage
     return word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage
 
 
@@ -182,8 +184,8 @@ def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_
     print(f"Guesses Remaining: {guesses_remaining}")
     print("".join(previous_guesses) + "\n")
     yet_to_guess = answer_hidden.count("_ ")
-    if yet_to_guess > guesses_remaining:
-        print(f"Hurry!\nYou only have {guesses_remaining} guesses left - but there are {yet_to_guess} unguessed letters...\nTry guessing the word!\n")
+    if yet_to_guess > guesses_remaining and guesses_remaining != 0:
+        print(f"Hurry!\nYou only have {guesses_remaining} lives left - and there are still {yet_to_guess} unguessed letters...\nTry guessing the word!\n")
 
 
 def validate_guess(previous_guesses, guesses_remaining):
@@ -195,23 +197,26 @@ def validate_guess(previous_guesses, guesses_remaining):
                 if len(user_guess) > 1:
                     if user_guess.isalpha():
                         if not ((user_guess + ", ") in previous_guesses):
-                            return user_guess
-                        print(f"\nYou have already guessed the word '{user_guess}', please try again \n")
+                            if len(user_guess) == len(answer):
+                                return user_guess
+                            print(f"Sorry, {user_guess} is {len(user_guess)} characters long, but the answer is {len(answer)} characters long, please try again")
+                            continue
+                        print(f"\nSorry, You have already guessed the word '{user_guess}', please try again \n")
                         continue
-                    print(f"\nGuess must be a word, '{user_guess}' is not a word, please try again\n")
+                    print(f"\nSorry, Your guess must be a word, '{user_guess}' is not a word, please try again\n")
                     continue
-                print(f"\The Word must not be a single character, '{user_guess}' is not valid, please try again\n")
+                print(f"Sorry, The Word must not be a single character, '{user_guess}' is not valid, please try again\n")
             elif guess_type == "l":  
                 user_guess = input("\nPlease guess a letter: ").lower()
                 if len(user_guess) == 1:
                     if user_guess.isalpha():
                         if not ((user_guess + ", ") in previous_guesses):
                             return user_guess
-                        print(f"\nYou have already guessed the letter '{user_guess}', please try again \n")
+                        print(f"\nSorry, You have already guessed the letter '{user_guess}', please try again \n")
                         continue
-                    print(f"\nGuess must be a letter, '{user_guess}' is not a letter, please try again\n")
+                    print(f"\nSorry, Your guess must be a letter, '{user_guess}' is not a letter, please try again\n")
                     continue
-                print(f"\nGuess must be a single character only, '{user_guess}' is not valid, please try again\n")
+                print(f"\nSorry, Your guess must be a single character only, '{user_guess}' is not valid, please try again\n")
             else:
                 print(f"Sorry, '{guess_type}' is not a valid input, please try again")
         else:
@@ -220,11 +225,11 @@ def validate_guess(previous_guesses, guesses_remaining):
                 if user_guess.isalpha():
                     if not ((user_guess + ", ") in previous_guesses):
                         return user_guess
-                    print(f"\nYou have already guessed the letter '{user_guess}', please try again \n")
+                    print(f"\nSorry, You have already guessed the letter '{user_guess}', please try again \n")
                     continue
-                print(f"\nGuess must be a letter, '{user_guess}' is not a letter, please try again\n")
+                print(f"\nSorry, Your guess must be a letter, '{user_guess}' is not a letter, please try again\n")
                 continue
-            print(f"\nGuess must be a single character only, '{user_guess}' is not valid, please try again\n")
+            print(f"\nSorry, Your Guess must be a single character only, '{user_guess}' is not valid, please try again\n")
 
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
@@ -257,13 +262,13 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
         sleep(1.25)
         gallows_stage += 1
         incorrect_guesses += 1
-        guesses_remaining = 9 - gallows_stage
+        guesses_remaining = 8 - gallows_stage
     else:
         print(f"\nSorry! '{user_guess}' is not in the answer")
         sleep(1.25)
         gallows_stage += 1
         incorrect_guesses += 1
-        guesses_remaining = 9 - gallows_stage
+        guesses_remaining = 8 - gallows_stage
 
     return user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining
 
@@ -271,6 +276,9 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
 def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining):
     while "_ " in answer_hidden:
         if gallows_stage == 8:
+            clear()
+            draw_gallows(gallows_stage)
+            main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)
             print(f"Sorry You Lost - the answer was '{answer}'\n")
             break
         else:
@@ -304,7 +312,7 @@ while True:
         word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
         play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
     else:
-        print("\nPlease enter a valid choice - e to exit or y to play again: ")
+        print("\nPlease enter a valid choice - press 'e' to exit or press 'y' to play again: ")
 
 
 # import keyboard
