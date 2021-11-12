@@ -1110,11 +1110,11 @@ while True:
         Financial Projections:         |     Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue} {revenue_delta}      |      {shareholders}\
-            {shareholder_delta}    \n\
+            {shareholder_delta}    \
         Expenses:  €{expenses} {expense_delta}       |      {customers}\
-            {customer_delta}    \n\
+            {customer_delta}    \
         Profits:   €{profits} {profit_delta}       |      {employees}\
-            {employee_delta}    \n\
+            {employee_delta}    \
         ------------------------------------------------------------\n"
 
         intro = f"- The Year is 2021...\
