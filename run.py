@@ -1123,11 +1123,11 @@ while True:
         \n3. Employee Engagement\n\
         \n- You will receive one point for each improvement in stakeholder\
         \nstatus\
-        \n- You will lose one point for each decline in stakeholder status\n\
+        \n- You will lose one point for each decline in stakeholder status\
         \n- Navigate the following series of business decisions, and their\
-    \nrespective stakeholder impacts\n\
+    \nrespective stakeholder impacts\
         \n- Your performance will be displayed on a dashboard in the format\
-            below: \n"
+    below: \n"
 
         main_menu()
         typewriter(intro, 0.0001)
