@@ -112,8 +112,8 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
             break
     scenario_1_answer_1 = "\nYou have chosen Option A\n \n    - Increasing Selling Prices by ~5% has resulted in a decrease in projected\n\
     units sold, with customers choosing competitor alternatives\n\
-        \n- Unfortunately overall Revenue projections have declined\n\
-        \n- With expenses unchanged, profit projections have fallen as a result\n"
+    \n    - Unfortunately overall Revenue projections have declined\n\
+    \n    - With expenses unchanged, profit projections have fallen as a result\n"
     scenario_1_answer_2 = "\nYou have chosen Option B\n \n    - Maintaining Current Selling Prices has resulted in no change to projected\n\
     units sold\n\
     - Overall Revenue projections are unchanged\n\
@@ -375,9 +375,9 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
     - Yearly Revenue projections remain unchanged as a result\n\
     - With expenditure forecasts unchanged, Profit projections remained static\n"
     scenario_3_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the material supply rate by ~5% has resulted in a decrease in\n\
-        projected unit costs\n\
-    - Yearly Revenue projections are unchanged, however cost projections have\n\
-        decreased\
+      projected unit costs\n\
+    \n- Yearly Revenue projections are unchanged, however cost projections have\n\
+      decreased\
     - Profit projections for the year have improved as a result\n"
 
     
