@@ -419,19 +419,26 @@ def question_3(
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_3_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the Material Supplier rate by ~5% has resulted in an increase in material\n\
-    quality, without increasing units sold\n\
-    - Yearly Revenue projections are unchanged, whilst expense projections have slightly increased\n\
+    scenario_3_answer_1 = "\nYou have chosen Option A\
+    \n \n\
+    - Increasing the Material Supplier rate by ~5% has resulted in increased\n\
+    material quality and cost, without increasing units sold\n\
+    - Yearly Revenue projections are unchanged, whilst expense projections\n\
+    have slightly increased\n\
     - Profit projections have slightly decreased for the year as a result\n"
-    scenario_3_answer_2 = "\nYou have chosen Option B\n \n    - Retaining current material supply rates has resulted in flat projected\n\
+    scenario_3_answer_2 = "\nYou have chosen Option B\
+    \n \n\
+    - Retaining current material supply rates has resulted in flat projected\n\
     unit costs and unit sales\n\
     - Yearly Revenue projections remain unchanged as a result\n\
-    - With expenditure forecasts unchanged, Profit projections remained static\n"
-    scenario_3_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the material supply rate by ~5% has resulted in a decrease in\n\
-      projected unit costs\n\
-        - Yearly Revenue projections are unchanged, however cost projections have\n\
-      decreased\n\
-    \n- Profit projections for the year have improved as a result\n"
+    - With expenditure forecasts unchanged, Profit projections remain static\n"
+    scenario_3_answer_3 = "\nYou have chosen Option C\
+    \n \n\
+    - Decreasing the material supply rate has resulted in a decrease in\n\
+    projected unit costs\n\
+    - Yearly Revenue projections are unchanged, however cost projections \n\
+    have decreased\n\
+    - Profit projections for the year have improved as a result\n"
 
     if input1 == "A":
         revenue_delta3 = 0
@@ -441,7 +448,8 @@ def question_3(
         profit_delta3 = revenue_delta3 - expense_delta3
         profits3 = revenue3 - expenses3
         shareholder_delta3 = shareholder_delta2 + 0
-        shareholders3 = "Shareholders:      " + emoji_assignment(shareholder_delta3)
+        shareholders3 = \
+            "Shareholders:      " + emoji_assignment(shareholder_delta3)
         customer_delta3 = customer_delta2 + 1
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
         employee_delta3 = employee_delta2 + 1
@@ -449,15 +457,18 @@ def question_3(
         revenue_plug = formatting_plug(revenue3, revenue_delta3)
         expense_plug = formatting_plug(expenses3, expense_delta3)
         profit_plug = formatting_plug(profits3, profit_delta3)
-
-        dashboard_3 = f"\n        ------------------------------------------------------------\n\
-        Financial Projections:      |    Stakeholder Sentiment :  \n\
-        ------------------------------------------------------------\n\
-        Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}  {shareholder_delta3}    \n\
-        Expenses:  €{expenses3} €{expense_delta3}{expense_plug}|   {customers3}  {customer_delta3}    \n\
-        Profits:   €{profits3} €{profit_delta3}{profit_plug}|   {employees3}  {employee_delta3}    \n\
-        ------------------------------------------------------------\n\
-                                            Total Points: {(shareholder_delta3 + customer_delta3 + employee_delta3)}\n"
+        points = shareholder_delta3 + customer_delta3 + employee_delta3
+        dashboard_3 = f"\n    ------------------------------------------------------------\n\
+    Financial Projections:      |    Stakeholder Sentiment :  \n\
+    ------------------------------------------------------------\n\
+    Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}\
+  {shareholder_delta3}    \n\
+    Expenses:  €{expenses3} €{expense_delta3}{expense_plug}|   {customers3}\
+  {customer_delta3}    \n\
+    Profits:   €{profits3} €{profit_delta3}{profit_plug}|   {employees3}\
+  {employee_delta3}    \n\
+    ------------------------------------------------------------\n\
+                                            Total Points: {points}\n"
         clear()
         print(scenario_3_answer_1)
         print(dashboard_3)
@@ -471,7 +482,8 @@ def question_3(
         profit_delta3 = revenue_delta3 - expense_delta3
         profits3 = revenue3 - expenses3
         shareholder_delta3 = shareholder_delta2 + 0
-        shareholders3 = "Shareholders:      " + emoji_assignment(shareholder_delta3)
+        shareholders3 = \
+            "Shareholders:      " + emoji_assignment(shareholder_delta3)
         customer_delta3 = customer_delta2 + 0
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
         employee_delta3 = employee_delta2 + 0
@@ -479,15 +491,18 @@ def question_3(
         revenue_plug = formatting_plug(revenue3, revenue_delta3)
         expense_plug = formatting_plug(expenses3, expense_delta3)
         profit_plug = formatting_plug(profits3, profit_delta3)
-
-        dashboard_3 = f"\n        ------------------------------------------------------------\n\
-        Financial Projections:      |    Stakeholder Sentiment :  \n\
-        ------------------------------------------------------------\n\
-        Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}  {shareholder_delta3}    \n\
-        Expenses:  €{expenses3} €{expense_delta3}{expense_plug}|   {customers3}  {customer_delta3}    \n\
-        Profits:   €{profits3} €{profit_delta3}{profit_plug}|   {employees3}  {employee_delta3}    \n\
-        ------------------------------------------------------------\n\
-                                            Total Points: {(shareholder_delta3 + customer_delta3 + employee_delta3)}\n"
+        points = shareholder_delta3 + customer_delta3 + employee_delta3
+        dashboard_3 = f"\n    ------------------------------------------------------------\n\
+    Financial Projections:      |    Stakeholder Sentiment :  \n\
+    ------------------------------------------------------------\n\
+    Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}\
+  {shareholder_delta3}    \n\
+    Expenses:  €{expenses3} €{expense_delta3}{expense_plug}|   {customers3}\
+  {customer_delta3}    \n\
+    Profits:   €{profits3} €{profit_delta3}{profit_plug}|   {employees3}\
+  {employee_delta3}    \n\
+    ------------------------------------------------------------\n\
+                                            Total Points: {points}\n"
         clear()
         print(scenario_3_answer_2)
         print(dashboard_3)
@@ -501,7 +516,8 @@ def question_3(
         profit_delta3 = revenue_delta3 - expense_delta3
         profits3 = revenue3 - expenses3
         shareholder_delta3 = shareholder_delta2 + 1
-        shareholders3 = "Shareholders:      " + emoji_assignment(shareholder_delta3)
+        shareholders3 = \
+            "Shareholders:      " + emoji_assignment(shareholder_delta3)
         customer_delta3 = customer_delta2 + -1
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
         employee_delta3 = employee_delta2 + 0
@@ -509,24 +525,32 @@ def question_3(
         revenue_plug = formatting_plug(revenue3, revenue_delta3)
         expense_plug = formatting_plug(expenses3, expense_delta3)
         profit_plug = formatting_plug(profits3, profit_delta3)
-
-        dashboard_3 = f"\n        ------------------------------------------------------------\n\
-        Financial Projections:      |    Stakeholder Sentiment :  \n\
-        ------------------------------------------------------------\n\
-        Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}  {shareholder_delta3}    \n\
-        Expenses:  €{expenses3} €{expense_delta3}{expense_plug}|   {customers3}  {customer_delta3}    \n\
-        Profits:   €{profits3} €{profit_delta3}{profit_plug}|   {employees3}  {employee_delta3}    \n\
-        ------------------------------------------------------------\n\
-                                            Total Points: {(shareholder_delta3 + customer_delta3 + employee_delta3)}\n"
+        points = shareholder_delta3 + customer_delta3 + employee_delta3
+        dashboard_3 = f"\n    ------------------------------------------------------------\n\
+    Financial Projections:      |    Stakeholder Sentiment :  \n\
+    ------------------------------------------------------------\n\
+    Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}\
+  {shareholder_delta3}    \n\
+    Expenses:  €{expenses3} €{expense_delta3}{expense_plug}|   {customers3}\
+  {customer_delta3}    \n\
+    Profits:   €{profits3} €{profit_delta3}{profit_plug}|   {employees3}\
+  {employee_delta3}    \n\
+    ------------------------------------------------------------\n\
+                                            Total Points: {points}\n"
         clear()
         print(scenario_3_answer_3)
         print(dashboard_3)
         input("\nPress Enter To Proceed to Next Scenario")
 
-    return revenue3, revenue_delta3, expenses3, expense_delta3, profits3, profit_delta3, shareholders3, shareholder_delta3, customers3, customer_delta3, employees3, employee_delta3, dashboard_3
+    return revenue3, revenue_delta3, expenses3, expense_delta3, profits3,\
+        profit_delta3, shareholders3, shareholder_delta3, customers3,\
+        customer_delta3, employees3, employee_delta3, dashboard_3
 
 
-def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, profit_delta3, shareholders3, shareholder_delta3, customers3, customer_delta3, employees3, employee_delta3, dashboard_3):
+def question_4(
+    revenue3, revenue_delta3, expenses3, expense_delta3, profits3,
+        profit_delta3, shareholders3, shareholder_delta3, customers3,
+        customer_delta3, employees3, employee_delta3, dashboard_3):
 
     clear()
     print(dashboard_3)
