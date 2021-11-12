@@ -1080,17 +1080,21 @@ while True:
         welcome_screen()
         play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
         while True:
-            stop_go = input("Please press 'y' to play again, or press 'e' to exit: ").lower()
+            stop_go = input("\nPlease press 'y' to play again, or press 'e' to exit: ").lower()
             if stop_go == "e":
                 print("\nThank you for playing Python Hangman - Goodbye!")
                 sleep(0.5)
                 clear()
                 break
             elif stop_go == "y":
-                word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
-                play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
+                word_list, answer, answer_hidden, guesses_remaining,
+                guesses_used, incorrect_guesses, previous_guesses,
+                gallows_stage = initialise_variables()
+                play_game(previous_guesses, gallows_stage, incorrect_guesses,
+                guesses_used, answer, answer_hidden, guesses_remaining)
             else:
-                print("\nPlease enter a valid choice - press 'e' to exit or press 'y' to play again: ")
+                print("\nPlease enter a valid choice - press 'e' to exit or\
+                    press 'y' to play again: ")
     elif game == "b":
         clear()
         revenue = 1000000
@@ -1115,7 +1119,7 @@ while True:
         {customer_delta}    \
         Profits:   €{profits} {profit_delta}       |      {employees}\
             {employee_delta}    \
-        ------------------------------------------------------------\n"
+    ------------------------------------------------------------\n"
 
         intro = f"- The Year is 2021...\
         \n- FictionalCorp have hired you as their new CEO\
