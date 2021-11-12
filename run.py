@@ -376,8 +376,8 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
     - With expenditure forecasts unchanged, Profit projections remained static\n"
     scenario_3_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the material supply rate by ~5% has resulted in a decrease in\n\
       projected unit costs\n\
-    \n- Yearly Revenue projections are unchanged, however cost projections have\n\
-      decreased\
+        - Yearly Revenue projections are unchanged, however cost projections have\n\
+      decreased\n\
     \n- Profit projections for the year have improved as a result\n"
 
     
@@ -502,10 +502,12 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
     unit costs\n\
     - Yearly Revenue projections remain unchanged\n\
     - With expenditure forecasts unchanged, Profit projections remain static\n"
-    scenario_4_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the employee payroll budget has resulted in a decrease in projected\n\
-    unit costs\n\
-    - Yearly Revenue projections are unchanged, however cost projections have decreased\n\
-    - Profit projections for the year have improved as a result - however - employees are not happy!\n"
+    scenario_4_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the employee payroll budget has resulted in a decrease in\n\
+        projected unit costs\n\
+    - Yearly Revenue projections are unchanged, however cost projections have\n\
+        decreased\
+    - Profit projections for the year have improved as a result - however -\n\
+        employees are not happy!\"
 
     
     if input1 == "A":        
