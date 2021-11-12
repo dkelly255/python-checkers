@@ -1110,14 +1110,14 @@ while True:
 
         intro = f"- The Year is 2021...\n- FictionalCorp have hired you as their new CEO\
         \n- You have been tasked with improving their performance on three fronts:\n\
-            \n1. Shareholder Sentiment\
-            \n2. Customer Confidence\
-            \n3. Employee Engagement\n\
-            \n- You will receive one point for each improvement in stakeholder status\
-            - You will lose one point for each decline in stakeholder status\n\
-            - Navigate the following series of business decisions, and their respective\
-            stakeholder impacts\n\
-            \n- Your performance will be displayed on a dashboard in the format below:\n" 
+        \n1. Shareholder Sentiment\
+        \n2. Customer Confidence\
+        \n3. Employee Engagement\n\
+        \n- You will receive one point for each improvement in stakeholder status\
+        \n- You will lose one point for each decline in stakeholder status\n\
+        \n- Navigate the following series of business decisions, and their respective\
+        \nstakeholder impacts\n\
+        \n- Your performance will be displayed on a dashboard in the format below:\n" 
 
         main_menu()
         typewriter(intro, 0.015)
