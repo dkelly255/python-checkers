@@ -98,27 +98,27 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
     
     clear()
     typewriter(dashboard_0, 0.003)
-    scenario_1 = "\nScenario 1: You must decide at what level the selling price for \n\
+    scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
     FictonalCorp's leading product should be set for the coming year:\n\
-    \nA. Increase Current Selling Price\n\
+    \n    A. Increase Current Selling Price\n\
     B. Maintain Current Selling Price \n\
     C. Reduce Current Selling Price\n"
     typewriter(scenario_1, 0.015)
     while True:
-        input1 = input("\nPlease Select an option - A, B or C: ").upper()
+        input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_1_answer_1 = "\nYou have chosen Option A\n \n- Increasing Selling Prices by ~5% has resulted in a decrease in projected\n\
+    scenario_1_answer_1 = "\nYou have chosen Option A\n \n    - Increasing Selling Prices by ~5% has resulted in a decrease in projected\n\
     units sold, with customers choosing competitor alternatives\n\
     - Unfortunately overall Revenue projections have declined\n\
     - With expenses unchanged, profit projections have fallen as a result\n"
-    scenario_1_answer_2 = "\nYou have chosen Option B\n \n- Maintaining Current Selling Prices has resulted in no change to projected\n\
+    scenario_1_answer_2 = "\nYou have chosen Option B\n \n    - Maintaining Current Selling Prices has resulted in no change to projected\n\
     units sold\n\
     - Overall Revenue projections are unchanged\n\
     - With expenses flat, profit projections have remained static as a result\n"
-    scenario_1_answer_3 = "\nYou have chosen Option C\n \n- Reducing Selling Prices by ~5% has resulted in an increase in projected\n\
+    scenario_1_answer_3 = "\nYou have chosen Option C\n \n    - Reducing Selling Prices by ~5% has resulted in an increase in projected\n\
     units sold, with several new customers interested\n\
     - Overall Revenue projections have increased as a result\n\
     - With expenses unchanged, profit projections have increased\n"
@@ -143,7 +143,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         expense_plug = formatting_plug(expenses1, expense_delta1) 
         profit_plug = formatting_plug(profits1, profit_delta1)
 
-        dashboard_1 = f"\n------------------------------------------------------------\n\
+        dashboard_1 = f"\n        ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
     Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
@@ -176,7 +176,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         expense_plug = formatting_plug(expenses1, expense_delta1) 
         profit_plug = formatting_plug(profits1, profit_delta1)
 
-        dashboard_1 = f"\n------------------------------------------------------------\n\
+        dashboard_1 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
@@ -209,7 +209,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         expense_plug = formatting_plug(expenses1, expense_delta1) 
         profit_plug = formatting_plug(profits1, profit_delta1)
 
-        dashboard_1 = f"\n------------------------------------------------------------\n\
+        dashboard_1 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
@@ -229,27 +229,27 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
     
     clear()
     print(dashboard_1)
-    scenario_2 = "\nScenario 2: You must decide at what level the marketing budget \n\
+    scenario_2 = "\n    Scenario 2: You must decide at what level the marketing budget \n\
     should be set for the coming year:\n\
-    \nA. Increase Marketing Expenditure \n\
+    \n    A. Increase Marketing Expenditure \n\
     B. Maintain Marketing Expenditure \n\
     C. Decrease Marketing Expenditure \n"
     print(scenario_2)
     while True:
-        input1 = input("\nPlease Select an option - A, B or C: ").upper()
+        input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_2_answer_1 = "\nYou have chosen Option A\n \n- Increasing the Marketing Budget by ~5% has resulted in an increase in projected\n\
+    scenario_2_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the Marketing Budget by ~5% has resulted in an increase in projected\n\
     units sold, with increasing customer interest\n\
     - Yearly Revenue projection increases run ahead of equivalent expenditure increase projections\n\
     - Profit projections have increased as a result\n"
-    scenario_2_answer_2 = "\nYou have chosen Option B\n \n- Retaining current marketing expenditure levels has resulted in flat projected\n\
+    scenario_2_answer_2 = "\nYou have chosen Option B\n \n    - Retaining current marketing expenditure levels has resulted in flat projected\n\
     unit sales\n\
     - Yearly Revenue projections remain unchanged as a result\n\
     - With expenditure forecasts unchanged, Profit projections remained static\n"
-    scenario_2_answer_3 = "\nYou have chosen Option C\n \n- Decreasing the Marketing Budget by ~5% has resulted in a decrease in projected\n\
+    scenario_2_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the Marketing Budget by ~5% has resulted in a decrease in projected\n\
     units sold, with cusotmers choosing competitor alternatives\n\
     - Yearly Revenue projection decreases are exceeding the equivalent reductions in expenditure projections\n\
     - Profit projections have decreased as a result\n"
@@ -273,7 +273,7 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         profit_plug = formatting_plug(profits2, profit_delta2)
         
 
-        dashboard_2 = f"\n------------------------------------------------------------\n\
+        dashboard_2 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue2} €{revenue_delta2}{revenue_plug}|   {shareholders2}  {shareholder_delta2}    \n\
@@ -304,7 +304,7 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         profit_plug = formatting_plug(profits2, profit_delta2)
         
 
-        dashboard_2 = f"\n------------------------------------------------------------\n\
+        dashboard_2 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue2} €{revenue_delta2}{revenue_plug}|   {shareholders2}  {shareholder_delta2}    \n\
@@ -334,7 +334,7 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         expense_plug = formatting_plug(expenses2, expense_delta2) 
         profit_plug = formatting_plug(profits2, profit_delta2)        
 
-        dashboard_2 = f"\n------------------------------------------------------------\n\
+        dashboard_2 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue2} €{revenue_delta2}{revenue_plug}|   {shareholders2}  {shareholder_delta2}    \n\
@@ -354,27 +354,27 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
     
     clear()
     print(dashboard_2)
-    scenario_3 = "\nScenario 3: You must Choose the new material supplier rate \n\
+    scenario_3 = "\n    Scenario 3: You must Choose the new material supplier rate \n\
     for the coming year:\n\
-    \nA. Premium rate - Increase Expenditure \n\
+    \n    A. Premium rate - Increase Expenditure \n\
     B. Maintain Rate - Maintain Expenditure \n\
     C. Low Cost Rate - Decrease Expenditure \n"
     print(scenario_3)
     while True:
-        input1 = input("\nPlease Select an option - A, B or C: ").upper()
+        input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_3_answer_1 = "\nYou have chosen Option A\n \n- Increasing the Material Supplier rate by ~5% has resulted in an increase in material\n\
+    scenario_3_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the Material Supplier rate by ~5% has resulted in an increase in material\n\
     quality, without increasing units sold\n\
     - Yearly Revenue projections are unchanged, whilst expense projections have slightly increased\n\
     - Profit projections have slightly decreased for the year as a result\n"
-    scenario_3_answer_2 = "\nYou have chosen Option B\n \n- Retaining current material supply rates has resulted in flat projected\n\
+    scenario_3_answer_2 = "\nYou have chosen Option B\n \n    - Retaining current material supply rates has resulted in flat projected\n\
     unit costs and unit sales\n\
     - Yearly Revenue projections remain unchanged as a result\n\
     - With expenditure forecasts unchanged, Profit projections remained static\n"
-    scenario_3_answer_3 = "\nYou have chosen Option C\n \n- Decreasing the material supply rate by ~5% has resulted in a decrease in projected\n\
+    scenario_3_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the material supply rate by ~5% has resulted in a decrease in projected\n\
     unit costs\n\
     - Yearly Revenue projections are unchanged, however cost projections have decreased\n\
     - Profit projections for the year have improved as a result\n"
@@ -398,7 +398,7 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         profit_plug = formatting_plug(profits3, profit_delta3)
         
 
-        dashboard_3 = f"\n------------------------------------------------------------\n\
+        dashboard_3 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}  {shareholder_delta3}    \n\
@@ -429,7 +429,7 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         profit_plug = formatting_plug(profits3, profit_delta3)
         
 
-        dashboard_3 = f"\n------------------------------------------------------------\n\
+        dashboard_3 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}  {shareholder_delta3}    \n\
@@ -460,7 +460,7 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         profit_plug = formatting_plug(profits3, profit_delta3)
         
 
-        dashboard_3 = f"\n------------------------------------------------------------\n\
+        dashboard_3 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue3} €{revenue_delta3}{revenue_plug}|   {shareholders3}  {shareholder_delta3}    \n\
@@ -480,27 +480,27 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
     
     clear()
     print(dashboard_3)
-    scenario_4 = "\nScenario 4: You must now help set the employee payroll budget \n\
+    scenario_4 = "\n    Scenario 4: You must now help set the employee payroll budget \n\
     for the coming year:\n\
-    \nA. Increase Payroll Budget (Increasing Expenditure) \n\
+    \n    A. Increase Payroll Budget (Increasing Expenditure) \n\
     B. Maintain Payroll Budget - (Maintaining Expenditure) \n\
     C. Reduce Payroll Budget - (Decreasing Expenditure) \n"
     print(scenario_4)
     while True:
-        input1 = input("\nPlease Select an option - A, B or C: ").upper()
+        input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_4_answer_1 = "\nYou have chosen Option A\n \n- Increasing the payroll budget has resulted in an increase in yearly\n\
+    scenario_4_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the payroll budget has resulted in an increase in yearly\n\
     expenditure projections, without increasing units sold\n\
     - Yearly Revenue projections are unchanged, whilst expense projections have slightly increased\n\
     - Profit projections have slightly decreased for the year as a result\n"
-    scenario_4_answer_2 = "\nYou have chosen Option B\n \n- Retaining current employee payroll budget has resulted in flat projected\n\
+    scenario_4_answer_2 = "\nYou have chosen Option B\n \n    - Retaining current employee payroll budget has resulted in flat projected\n\
     unit costs\n\
     - Yearly Revenue projections remain unchanged\n\
     - With expenditure forecasts unchanged, Profit projections remain static\n"
-    scenario_4_answer_3 = "\nYou have chosen Option C\n \n- Decreasing the employee payroll budget has resulted in a decrease in projected\n\
+    scenario_4_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the employee payroll budget has resulted in a decrease in projected\n\
     unit costs\n\
     - Yearly Revenue projections are unchanged, however cost projections have decreased\n\
     - Profit projections for the year have improved as a result - however - employees are not happy!\n"
@@ -524,7 +524,7 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         profit_plug = formatting_plug(profits4, profit_delta4)
         
 
-        dashboard_4 = f"\n------------------------------------------------------------\n\
+        dashboard_4 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue4} €{revenue_delta4}{revenue_plug}|   {shareholders4}  {shareholder_delta4}    \n\
@@ -555,7 +555,7 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         profit_plug = formatting_plug(profits4, profit_delta4)
         
 
-        dashboard_4 = f"\n------------------------------------------------------------\n\
+        dashboard_4 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue4} €{revenue_delta4}{revenue_plug}|   {shareholders4}  {shareholder_delta4}    \n\
@@ -586,7 +586,7 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         profit_plug = formatting_plug(profits4, profit_delta4)
         
 
-        dashboard_4 = f"\n------------------------------------------------------------\n\
+        dashboard_4 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue4} €{revenue_delta4}{revenue_plug}|   {shareholders4}  {shareholder_delta4}    \n\
@@ -606,27 +606,27 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
     
     clear()
     print(dashboard_4)
-    scenario_5 = "\nScenario 5: You must now choose a 'Workplace Improvement Strategy' expenditure level \n\
+    scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy' expenditure level \n\
     for the coming year:\n\
-    \nA. Increase (Increasing Expenditure) \n\
+    \n    A. Increase (Increasing Expenditure) \n\
     B. Maintain - (Maintaining Expenditure) \n\
     C. Reduce - (Decreasing Expenditure) \n"
     print(scenario_5)
     while True:
-        input1 = input("\nPlease Select an option - A, B or C: ").upper()
+        input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_5_answer_1 = "\nYou have chosen Option A\n \n- Increasing the Workplace Improvement budget has resulted in an increase in yearly\n\
+    scenario_5_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the Workplace Improvement budget has resulted in an increase in yearly\n\
     expenditure projections, without increasing units sold\n\
     - Yearly Revenue projections are unchanged, whilst expense projections have slightly increased\n\
     - Profit projections have slightly decreased for the year as a result\n"
-    scenario_5_answer_2 = "\nYou have chosen Option B\n \n- Retaining the current Workplace Improvement budget has resulted in flat projected\n\
+    scenario_5_answer_2 = "\nYou have chosen Option B\n \n    - Retaining the current Workplace Improvement budget has resulted in flat projected\n\
     unit costs\n\
     - Yearly Revenue projections remain unchanged\n\
     - With expenditure forecasts unchanged, Profit projections remain static\n"
-    scenario_5_answer_3 = "\nYou have chosen Option C\n \n- Decreasing the Workplace Improvement budget has resulted in a decrease in projected\n\
+    scenario_5_answer_3 = "\nYou have chosen Option C\n \n    - Decreasing the Workplace Improvement budget has resulted in a decrease in projected\n\
     unit costs\n\
     - Yearly Revenue projections are unchanged, however cost projections have decreased\n\
     - Profit projections for the year have improved as a result - however - employees are not happy!\n"
@@ -650,7 +650,7 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         profit_plug = formatting_plug(profits5, profit_delta5)
         
 
-        dashboard_5 = f"\n------------------------------------------------------------\n\
+        dashboard_5 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue5} €{revenue_delta5}{revenue_plug}|   {shareholders5}  {shareholder_delta5}    \n\
@@ -682,7 +682,7 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         profit_plug = formatting_plug(profits5, profit_delta5)
         
 
-        dashboard_5 = f"\n------------------------------------------------------------\n\
+        dashboard_5 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue5} €{revenue_delta5}{revenue_plug}|   {shareholders5}  {shareholder_delta5}    \n\
@@ -714,7 +714,7 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         profit_plug = formatting_plug(profits5, profit_delta5)
         
 
-        dashboard_5 = f"\n------------------------------------------------------------\n\
+        dashboard_5 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue5} €{revenue_delta5}{revenue_plug}|   {shareholders5}  {shareholder_delta5}    \n\
@@ -1053,7 +1053,23 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
             sleep(1.25)
             
 while True:
-    game = input("A for Hangman, B for Text Adventure, C to exit: ").lower()
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|      PLEASE SELECT A GAME TO PLAY:       |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|    A. HANGMAN                            |")
+    print("|                                          |")
+    print("|    B. ACCOUNTING ADVENTURES              |")
+    print("|                                          |")
+    print("|    C. EXIT APPLICATION                   |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|            [PLEASE SELECT]               |")
+    print("|                                          |")
+    print("--------------------------------------------")    
+    game = input("Select option A, B or C: ").lower()
     if game == "a":
         word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
         welcome_screen()
@@ -1070,6 +1086,7 @@ while True:
             else:
                 print("\nPlease enter a valid choice - press 'e' to exit or press 'y' to play again: ")
     elif game == "b":
+        clear()
         revenue = 1000000
         revenue_delta = "     "
         expenses = 700000
@@ -1083,7 +1100,7 @@ while True:
         employees = "Employees:         😐"
         employee_delta = "  "
 
-        dashboard_0 = f"\n------------------------------------------------------------\n\
+        dashboard_0 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:         |     Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
         Revenue:   €{revenue} {revenue_delta}      |      {shareholders} {shareholder_delta}    \n\
@@ -1111,6 +1128,9 @@ while True:
     elif game == "c":
         print("Goodbye")
         break
+    else:
+        clear()
+        print("Please enter a valid input - A, B or C")
 
 
 # import keyboard
