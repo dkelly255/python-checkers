@@ -158,7 +158,7 @@ def question_1(
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
-
+        points = shareholder_delta1 + customer_delta1 + employee_delta1
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -169,7 +169,7 @@ def question_1(
     Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}\
   {employee_delta1}    \n\
     ------------------------------------------------------------\n\
-                                            Total Points: {(shareholder_delta1 + customer_delta1 + employee_delta1)}\n"
+                                            Total Points: {points}\n"
         clear()
         typewriter(scenario_1_answer_1, 0.0015)
         typewriter(dashboard_1, 0.0003)
@@ -186,7 +186,8 @@ def question_1(
         profit_delta1 = revenue_delta1 - expense_delta1
         profits1 = revenue1 - expenses1
         shareholder_delta1 = 0
-        shareholders1 = "Shareholders:      " + emoji_assignment(shareholder_delta1)
+        shareholders1 = \
+            "Shareholders:      " + emoji_assignment(shareholder_delta1)
         customer_delta1 = 0
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
         employee_delta1 = 0
@@ -194,15 +195,18 @@ def question_1(
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
-
-        dashboard_1 = f"\n        ------------------------------------------------------------\n\
-        Financial Projections:      |    Stakeholder Sentiment :  \n\
-        ------------------------------------------------------------\n\
-        Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
-        Expenses:  €{expenses1} €{expense_delta1}{expense_plug}|   {customers1}  {customer_delta1}    \n\
-        Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}  {employee_delta1}    \n\
-        ------------------------------------------------------------\n\
-                                            Total Points: {(shareholder_delta1 + customer_delta1 + employee_delta1)}\n"
+        points = shareholder_delta1 + customer_delta1 + employee_delta1
+        dashboard_1 = f"\n    ------------------------------------------------------------\n\
+    Financial Projections:      |    Stakeholder Sentiment :  \n\
+    ------------------------------------------------------------\n\
+    Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}\
+  {shareholder_delta1}    \n\
+    Expenses:  €{expenses1} €{expense_delta1}{expense_plug}|   {customers1}\
+  {customer_delta1}    \n\
+    Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}\
+  {employee_delta1}    \n\
+    ------------------------------------------------------------\n\
+                                            Total Points: {points}\n"
         clear()
         print(scenario_1_answer_2)
         print(dashboard_1)
@@ -219,7 +223,8 @@ def question_1(
         profit_delta1 = revenue_delta1 - expense_delta1
         profits1 = revenue1 - expenses1
         shareholder_delta1 = 1
-        shareholders1 = "Shareholders:      " + emoji_assignment(shareholder_delta1)
+        shareholders1 = \
+            "Shareholders:      " + emoji_assignment(shareholder_delta1)
         customer_delta1 = 0
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
         employee_delta1 = 0
@@ -227,21 +232,26 @@ def question_1(
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
-
-        dashboard_1 = f"\n        ------------------------------------------------------------\n\
-        Financial Projections:      |    Stakeholder Sentiment :  \n\
-        ------------------------------------------------------------\n\
-        Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
-        Expenses:  €{expenses1} €{expense_delta1}{expense_plug}|   {customers1}  {customer_delta1}    \n\
-        Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}  {employee_delta1}    \n\
-        ------------------------------------------------------------\n\
-                                            Total Points: {(shareholder_delta1 + customer_delta1 + employee_delta1)}\n"
+        points = shareholder_delta1 + customer_delta1 + employee_delta1
+        dashboard_1 = f"\n    ------------------------------------------------------------\n\
+    Financial Projections:      |    Stakeholder Sentiment :  \n\
+    ------------------------------------------------------------\n\
+    Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}\
+  {shareholder_delta1}    \n\
+    Expenses:  €{expenses1} €{expense_delta1}{expense_plug}|   {customers1}\
+  {customer_delta1}    \n\
+    Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}\
+  {employee_delta1}    \n\
+    ------------------------------------------------------------\n\
+                                            Total Points: {points}\n"
         clear()
         print(scenario_1_answer_3)
         print(dashboard_1)
         input("\nPress Enter To Proceed to Next Scenario\n")
 
-    return revenue1, revenue_delta1, expenses1, expense_delta1, profits1, profit_delta1, shareholders1, shareholder_delta1, customers1, customer_delta1, employees1, employee_delta1, dashboard_1
+    return revenue1, revenue_delta1, expenses1, expense_delta1, profits1,\
+        profit_delta1, shareholders1, shareholder_delta1, customers1,\
+        customer_delta1, employees1, employee_delta1, dashboard_1
 
 
 def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, profit_delta1, shareholders1, shareholder_delta1, customers1, customer_delta1, employees1, employee_delta1, dashboard_1):
