@@ -7,6 +7,8 @@ import sys
 # Credits: As per readme credits section - this clear terminal function
 # is taken from the methods used by geeksforgeeks.org - see full details
 # and links in credits section of readme
+
+
 def clear():
     """
     Clears the terminal for formatting purposes
@@ -35,15 +37,16 @@ def emoji_assignment(delta):
     return emoji
 
 
-def formatting_plug(a,b):
+def formatting_plug(a, b):
     """
-    Plug spaces to visually align dashboard segregation on terminal display depending on length of variables
+    Plug spaces to visually align dashboard segregation on terminal display
+    depending on length of variables
     """
     plug = (14 - (len(str(a)) + len(str(b)))) * " "
     return plug
 
 
-def final_score(a,b,c):
+def final_score(a, b, c):
     """
     Calculates player's total score upon conclusion of the final answer
     """
@@ -55,47 +58,50 @@ def main_menu():
     """
     Displays main menu screen upon game load
     """
-    print("\n----------------------------------------------------------------------")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                   W E L C O M E                                    |")
-    print("|                                                                    |")
-    print("|                       T O                                          |")
-    print("|                                                                    |")
-    print("|                         P Y T H O N                                |")
-    print("|                                                                    |")
-    print("|                            T E X T                                 |")
-    print("|                                                                    |")
-    print("|                               A D V E N T U R E                    |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                     [ PRESS ENTER TO BEGIN ]                       |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("|                                                                    |")
-    print("----------------------------------------------------------------------")
+    print("\n-----------------------------------------------------------------")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                   W E L C O M E                                |")
+    print("|                                                                |")
+    print("|                       T O                                      |")
+    print("|                                                                |")
+    print("|                         P Y T H O N                            |")
+    print("|                                                                |")
+    print("|                            T E X T                             |")
+    print("|                                                                |")
+    print("|                               A D V E N T U R E                |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                     [ PRESS ENTER TO BEGIN ]                   |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("|                                                                |")
+    print("------------------------------------------------------------------")
     input()
     clear()
 
 
-# Credits: This function was sourced from the article below and adapted for my project needs:
-# Credits: https://www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal
+# Credits: This function was sourced from the article below and adapted for my
+# project needs:
+# Credits:
+# www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal
 def typewriter(text, delay):
     """
-    Function for presenting text with a delayed/typewriter effect to add to game UX
+    Function for presenting text with a delayed/typewriter effect to add to
+    game User Experience UX
     """
     for letter in text:
-        sleep(delay) 
+        sleep(delay)
         sys.stdout.write(letter)
         sys.stdout.flush()
 
 
 def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_delta, shareholders, shareholder_delta, customers, customer_delta, employees, employee_delta, dashboard_0):
-    
+
     clear()
     typewriter(dashboard_0, 0.0003)
     scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
@@ -122,25 +128,25 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
     units sold, with several new customers interested\n\
     - Overall Revenue projections have increased as a result\n\
     - With expenses unchanged, profit projections have increased\n"
-    
-    if input1 == "A":        
+
+    if input1 == "A":
         revenue_delta1 = -50000
         revenue1 = revenue + revenue_delta1
         expense_delta1 = 0
         try:
             expenses1 = expenses + expense_delta
         except TypeError:
-            expenses1 = expenses 
+            expenses1 = expenses
         profit_delta1 = revenue_delta1 - expense_delta1
-        profits1 = revenue1 - expenses1        
+        profits1 = revenue1 - expenses1
         shareholder_delta1 = -1
         shareholders1 = "Shareholders:      " + emoji_assignment(shareholder_delta1)
         customer_delta1 = -1
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
         employee_delta1 = 0
-        employees1 = "Employees:         " + emoji_assignment(employee_delta1)       
-        revenue_plug = formatting_plug(revenue1, revenue_delta1) 
-        expense_plug = formatting_plug(expenses1, expense_delta1) 
+        employees1 = "Employees:         " + emoji_assignment(employee_delta1)
+        revenue_plug = formatting_plug(revenue1, revenue_delta1)
+        expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
 
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
@@ -155,7 +161,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         typewriter(scenario_1_answer_1, 0.0015)
         typewriter(dashboard_1, 0.0003)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     elif input1 == "B":
         revenue_delta1 = 0
         revenue1 = revenue + revenue_delta1
@@ -163,7 +169,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         try:
             expenses1 = expenses + expense_delta
         except TypeError:
-            expenses1 = expenses 
+            expenses1 = expenses
         profit_delta1 = revenue_delta1 - expense_delta1
         profits1 = revenue1 - expenses1
         shareholder_delta1 = 0
@@ -172,8 +178,8 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
         employee_delta1 = 0
         employees1 = "Employees:         " + emoji_assignment(employee_delta1)
-        revenue_plug = formatting_plug(revenue1, revenue_delta1) 
-        expense_plug = formatting_plug(expenses1, expense_delta1) 
+        revenue_plug = formatting_plug(revenue1, revenue_delta1)
+        expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
 
         dashboard_1 = f"\n        ------------------------------------------------------------\n\
@@ -196,7 +202,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         try:
             expenses1 = expenses + expense_delta
         except TypeError:
-            expenses1 = expenses 
+            expenses1 = expenses
         profit_delta1 = revenue_delta1 - expense_delta1
         profits1 = revenue1 - expenses1
         shareholder_delta1 = 1
@@ -205,8 +211,8 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
         employee_delta1 = 0
         employees1 = "Employees:         " + emoji_assignment(employee_delta1)
-        revenue_plug = formatting_plug(revenue1, revenue_delta1) 
-        expense_plug = formatting_plug(expenses1, expense_delta1) 
+        revenue_plug = formatting_plug(revenue1, revenue_delta1)
+        expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
 
         dashboard_1 = f"\n        ------------------------------------------------------------\n\
@@ -221,12 +227,12 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         print(scenario_1_answer_3)
         print(dashboard_1)
         input("\nPress Enter To Proceed to Next Scenario\n")
-    
+
     return revenue1, revenue_delta1, expenses1, expense_delta1, profits1, profit_delta1, shareholders1, shareholder_delta1, customers1, customer_delta1, employees1, employee_delta1, dashboard_1
 
 
 def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, profit_delta1, shareholders1, shareholder_delta1, customers1, customer_delta1, employees1, employee_delta1, dashboard_1):
-    
+
     clear()
     print(dashboard_1)
     scenario_2 = "\n    Scenario 2: You must decide at what level the marketing budget \n\
@@ -254,8 +260,7 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
     - Yearly Revenue projection decreases are exceeding the equivalent reductions in expenditure projections\n\
     - Profit projections have decreased as a result\n"
 
-    
-    if input1 == "A":        
+    if input1 == "A":
         revenue_delta2 = 100000
         revenue2 = revenue1 + revenue_delta2
         expense_delta2 = 50000
@@ -268,10 +273,9 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         customers2 = "Customers:         " + emoji_assignment(customer_delta2)
         employee_delta2 = 0
         employees2 = "Employees:         " + emoji_assignment(employee_delta2)
-        revenue_plug = formatting_plug(revenue2, revenue_delta2) 
-        expense_plug = formatting_plug(expenses2, expense_delta2) 
+        revenue_plug = formatting_plug(revenue2, revenue_delta2)
+        expense_plug = formatting_plug(expenses2, expense_delta2)
         profit_plug = formatting_plug(profits2, profit_delta2)
-        
 
         dashboard_2 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -285,7 +289,7 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         print(scenario_2_answer_1)
         print(dashboard_2)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     elif input1 == "B":
         revenue_delta2 = 0
         revenue2 = revenue1 + revenue_delta2
@@ -298,11 +302,10 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         customer_delta2 = customer_delta1 + 0
         customers2 = customers1
         employee_delta2 = 0
-        employees2 = employees1        
-        revenue_plug = formatting_plug(revenue2, revenue_delta2) 
-        expense_plug = formatting_plug(expenses2, expense_delta2) 
+        employees2 = employees1
+        revenue_plug = formatting_plug(revenue2, revenue_delta2)
+        expense_plug = formatting_plug(expenses2, expense_delta2)
         profit_plug = formatting_plug(profits2, profit_delta2)
-        
 
         dashboard_2 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -329,10 +332,10 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         customer_delta2 = customer_delta1 - 1
         customers2 = "Customers:         " + emoji_assignment(customer_delta2)
         employee_delta2 = 0
-        employees2 = "Employees:         " + emoji_assignment(employee_delta2)        
-        revenue_plug = formatting_plug(revenue2, revenue_delta2) 
-        expense_plug = formatting_plug(expenses2, expense_delta2) 
-        profit_plug = formatting_plug(profits2, profit_delta2)        
+        employees2 = "Employees:         " + emoji_assignment(employee_delta2)
+        revenue_plug = formatting_plug(revenue2, revenue_delta2)
+        expense_plug = formatting_plug(expenses2, expense_delta2)
+        profit_plug = formatting_plug(profits2, profit_delta2)
 
         dashboard_2 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -346,12 +349,12 @@ def question_2(revenue1, revenue_delta1, expenses1, expense_delta1, profits1, pr
         print(scenario_2_answer_3)
         print(dashboard_2)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     return revenue2, revenue_delta2, expenses2, expense_delta2, profits2, profit_delta2, shareholders2, shareholder_delta2, customers2, customer_delta2, employees2, employee_delta2, dashboard_2
 
 
 def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, profit_delta2, shareholders2, shareholder_delta2, customers2, customer_delta2, employees2, employee_delta2, dashboard_2):
-    
+
     clear()
     print(dashboard_2)
     scenario_3 = "\n    Scenario 3: You must Choose the new material supplier rate \n\
@@ -380,8 +383,7 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
       decreased\n\
     \n- Profit projections for the year have improved as a result\n"
 
-    
-    if input1 == "A":        
+    if input1 == "A":
         revenue_delta3 = 0
         revenue3 = revenue2 + revenue_delta2
         expense_delta3 = 50000
@@ -394,10 +396,9 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
         employee_delta3 = employee_delta2 + 1
         employees3 = "Employees:         " + emoji_assignment(employee_delta3)
-        revenue_plug = formatting_plug(revenue3, revenue_delta3) 
-        expense_plug = formatting_plug(expenses3, expense_delta3) 
+        revenue_plug = formatting_plug(revenue3, revenue_delta3)
+        expense_plug = formatting_plug(expenses3, expense_delta3)
         profit_plug = formatting_plug(profits3, profit_delta3)
-        
 
         dashboard_3 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -411,7 +412,7 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         print(scenario_3_answer_1)
         print(dashboard_3)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     elif input1 == "B":
         revenue_delta3 = 0
         revenue3 = revenue2 + revenue_delta2
@@ -425,10 +426,9 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
         employee_delta3 = employee_delta2 + 0
         employees3 = "Employees:         " + emoji_assignment(employee_delta3)
-        revenue_plug = formatting_plug(revenue3, revenue_delta3) 
-        expense_plug = formatting_plug(expenses3, expense_delta3) 
+        revenue_plug = formatting_plug(revenue3, revenue_delta3)
+        expense_plug = formatting_plug(expenses3, expense_delta3)
         profit_plug = formatting_plug(profits3, profit_delta3)
-        
 
         dashboard_3 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -456,10 +456,9 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
         employee_delta3 = employee_delta2 + 0
         employees3 = "Employees:         " + emoji_assignment(employee_delta3)
-        revenue_plug = formatting_plug(revenue3, revenue_delta3) 
-        expense_plug = formatting_plug(expenses3, expense_delta3) 
+        revenue_plug = formatting_plug(revenue3, revenue_delta3)
+        expense_plug = formatting_plug(expenses3, expense_delta3)
         profit_plug = formatting_plug(profits3, profit_delta3)
-        
 
         dashboard_3 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -473,12 +472,12 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
         print(scenario_3_answer_3)
         print(dashboard_3)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     return revenue3, revenue_delta3, expenses3, expense_delta3, profits3, profit_delta3, shareholders3, shareholder_delta3, customers3, customer_delta3, employees3, employee_delta3, dashboard_3
 
 
 def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, profit_delta3, shareholders3, shareholder_delta3, customers3, customer_delta3, employees3, employee_delta3, dashboard_3):
-    
+
     clear()
     print(dashboard_3)
     scenario_4 = "\n    Scenario 4: You must now help set the employee payroll budget \n\
@@ -509,8 +508,7 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
     - Profit projections for the year have improved as a result - however -\n\
         employees are not happy!\n"
 
-    
-    if input1 == "A":        
+    if input1 == "A":
         revenue_delta4 = 0
         revenue4 = revenue3 + revenue_delta4
         expense_delta4 = 50000
@@ -523,10 +521,9 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
         employee_delta4 = employee_delta3 + 1
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
-        revenue_plug = formatting_plug(revenue4, revenue_delta4) 
-        expense_plug = formatting_plug(expenses4, expense_delta4) 
+        revenue_plug = formatting_plug(revenue4, revenue_delta4)
+        expense_plug = formatting_plug(expenses4, expense_delta4)
         profit_plug = formatting_plug(profits4, profit_delta4)
-        
 
         dashboard_4 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -540,7 +537,7 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         print(scenario_4_answer_1)
         print(dashboard_4)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     elif input1 == "B":
         revenue_delta4 = 0
         revenue4 = revenue3 + revenue_delta4
@@ -554,10 +551,9 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
         employee_delta4 = employee_delta3 + 0
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
-        revenue_plug = formatting_plug(revenue4, revenue_delta4) 
-        expense_plug = formatting_plug(expenses4, expense_delta4) 
+        revenue_plug = formatting_plug(revenue4, revenue_delta4)
+        expense_plug = formatting_plug(expenses4, expense_delta4)
         profit_plug = formatting_plug(profits4, profit_delta4)
-        
 
         dashboard_4 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -585,10 +581,9 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
         employee_delta4 = employee_delta3 - 1
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
-        revenue_plug = formatting_plug(revenue4, revenue_delta4) 
-        expense_plug = formatting_plug(expenses4, expense_delta4) 
+        revenue_plug = formatting_plug(revenue4, revenue_delta4)
+        expense_plug = formatting_plug(expenses4, expense_delta4)
         profit_plug = formatting_plug(profits4, profit_delta4)
-        
 
         dashboard_4 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -602,12 +597,12 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
         print(scenario_4_answer_3)
         print(dashboard_4)
         input("\nPress Enter To Proceed to Next Scenario")
-    
+
     return revenue4, revenue_delta4, expenses4, expense_delta4, profits4, profit_delta4, shareholders4, shareholder_delta4, customers4, customer_delta4, employees4, employee_delta4, dashboard_4
 
 
 def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, profit_delta4, shareholders4, shareholder_delta4, customers4, customer_delta4, employees4, employee_delta4, dashboard_4):
-    
+
     clear()
     print(dashboard_4)
     scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy'\n\
@@ -636,8 +631,7 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
     - Yearly Revenue projections are unchanged, however cost projections have decreased\n\
     - Profit projections for the year have improved as a result - however - employees are not happy!\n"
 
-    
-    if input1 == "A":        
+    if input1 == "A":
         revenue_delta5 = 0
         revenue5 = revenue4 + revenue_delta5
         expense_delta5 = 50000
@@ -650,10 +644,9 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
         employee_delta5 = employee_delta4 + 1
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
-        revenue_plug = formatting_plug(revenue5, revenue_delta5) 
-        expense_plug = formatting_plug(expenses5, expense_delta5) 
+        revenue_plug = formatting_plug(revenue5, revenue_delta5)
+        expense_plug = formatting_plug(expenses5, expense_delta5)
         profit_plug = formatting_plug(profits5, profit_delta5)
-        
 
         dashboard_5 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -667,8 +660,7 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         print(scenario_5_answer_1)
         print(dashboard_5)
         input(f"\n This completes the final scenario - you have scored {final_score(shareholder_delta5, customer_delta5, employee_delta5)} Please Press Enter")
-        
-    
+
     elif input1 == "B":
         revenue_delta5 = 0
         revenue5 = revenue4 + revenue_delta5
@@ -682,10 +674,9 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
         employee_delta5 = employee_delta4 + 0
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
-        revenue_plug = formatting_plug(revenue5, revenue_delta5) 
-        expense_plug = formatting_plug(expenses5, expense_delta5) 
+        revenue_plug = formatting_plug(revenue5, revenue_delta5)
+        expense_plug = formatting_plug(expenses5, expense_delta5)
         profit_plug = formatting_plug(profits5, profit_delta5)
-        
 
         dashboard_5 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -699,7 +690,6 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         print(scenario_5_answer_2)
         print(dashboard_5)
         input(f"\n This completes the final scenario - you have scored {final_score(shareholder_delta5, customer_delta5, employee_delta5)} Please Press Enter")
-        
 
     elif input1 == "C":
         revenue_delta5 = 0
@@ -714,10 +704,9 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
         employee_delta5 = employee_delta4 - 1
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
-        revenue_plug = formatting_plug(revenue5, revenue_delta5) 
-        expense_plug = formatting_plug(expenses5, expense_delta5) 
+        revenue_plug = formatting_plug(revenue5, revenue_delta5)
+        expense_plug = formatting_plug(expenses5, expense_delta5)
         profit_plug = formatting_plug(profits5, profit_delta5)
-        
 
         dashboard_5 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -730,8 +719,8 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
         clear()
         print(scenario_5_answer_3)
         print(dashboard_5)
-        input(f"\n This completes the final scenario - you have scored {final_score(shareholder_delta5, customer_delta5, employee_delta5)} Please Press Enter")        
-    
+        input(f"\n This completes the final scenario - you have scored {final_score(shareholder_delta5, customer_delta5, employee_delta5)} Please Press Enter")
+
     return revenue5, revenue_delta5, expenses5, expense_delta5, profits5, profit_delta5, shareholders5, shareholder_delta5, customers5, customer_delta5, employees5, employee_delta5, dashboard_5
 
 
@@ -768,8 +757,8 @@ def initialise_variables():
     # word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
     word_list = open('words.txt').read().split()
     for words in word_list:
-        if len(words)<3:
-            word_list.remove(words)    
+        if len(words) < 3:
+            word_list.remove(words)
     answer = choice(word_list)
     answer_hidden = ["Guess The Word: "]
     answer_hidden.extend(["_ "] * len(answer))
@@ -935,7 +924,7 @@ def draw_gallows(gallows_stage):
         print("    ")
 
 
-def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden):    
+def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden):
     print("".join(answer_hidden))
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
@@ -964,7 +953,7 @@ def validate_guess(previous_guesses, guesses_remaining):
                     print(f"\nSorry, Your guess must be a word, '{user_guess}' is not a word, please try again\n")
                     continue
                 print(f"Sorry, The Word must not be a single character, '{user_guess}' is not valid, please try again\n")
-            elif guess_type == "l":  
+            elif guess_type == "l":
                 user_guess = input("\nPlease guess a letter: ").lower()
                 if len(user_guess) == 1:
                     if user_guess.isalpha():
@@ -991,21 +980,21 @@ def validate_guess(previous_guesses, guesses_remaining):
 
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
-    
+
     if user_guess == answer:
-        answer_hidden = ["Guess The Word: ", answer]     
+        answer_hidden = ["Guess The Word: ", answer]
     else:
-        for index, value in enumerate(answer,start=1):
-            if user_guess == value:                    
-                answer_hidden[index] = user_guess    
-    
-    return answer_hidden  
-    
+        for index, value in enumerate(answer, start=1):
+            if user_guess == value:
+                answer_hidden[index] = user_guess
+
+    return answer_hidden
+
 
 def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining):
-        
-    previous_guesses.append(user_guess + ", ") 
-    guesses_used += 1    
+
+    previous_guesses.append(user_guess + ", ")
+    guesses_used += 1
 
     if user_guess == answer:
         answer_hidden = reveal_letter_in_answer(user_guess, answer, answer_hidden)
@@ -1041,22 +1030,22 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
             print(f"Sorry You Lost - the answer was '{answer}'\n")
             break
         else:
-            clear()            
+            clear()
             draw_gallows(gallows_stage)
-            main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)                        
-            user_guess = validate_guess(previous_guesses, guesses_remaining)                     
-            user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)            
+            main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)
+            user_guess = validate_guess(previous_guesses, guesses_remaining)
+            user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining = answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
             clear()
         draw_gallows(gallows_stage)
-        main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)                           
-        
-        if not ("_ " in answer_hidden):               
+        main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)
+
+        if not ("_ " in answer_hidden):
             clear()
             draw_gallows(gallows_stage)
             main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)
             print(f"Congratulations You Won - the answer was '{answer}'\n")
             sleep(0.75)
-            
+
 while True:
     print("--------------------------------------------")
     print("|                                          |")
@@ -1073,27 +1062,32 @@ while True:
     print("|                                          |")
     print("|            [PLEASE SELECT]               |")
     print("|                                          |")
-    print("--------------------------------------------")    
+    print("--------------------------------------------")
     game = input("Select option A, B or C: ").lower()
     if game == "a":
         word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
         welcome_screen()
-        play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, answer, answer_hidden, guesses_remaining)
+        play_game(
+            previous_guesses, gallows_stage, incorrect_guesses,
+            guesses_used, answer, answer_hidden, guesses_remaining)
         while True:
-            stop_go = input("\nPlease press 'y' to play again, or press 'e' to exit: ").lower()
+            stop_go = input(
+                "Please press 'y' to play again, or press 'e' to exit: \
+").lower()
             if stop_go == "e":
                 print("\nThank you for playing Python Hangman - Goodbye!")
                 sleep(0.5)
                 clear()
                 break
             elif stop_go == "y":
-                word_list, answer, answer_hidden, guesses_remaining,
-                guesses_used, incorrect_guesses, previous_guesses,
-                gallows_stage = initialise_variables()
-                play_game(previous_guesses, gallows_stage, incorrect_guesses,
-                guesses_used, answer, answer_hidden, guesses_remaining)
+                word_list, answer, answer_hidden, guesses_remaining,\
+                    guesses_used, incorrect_guesses, previous_guesses,\
+                    gallows_stage = initialise_variables()
+                play_game(
+                    previous_guesses, gallows_stage, incorrect_guesses,
+                    guesses_used, answer, answer_hidden, guesses_remaining)
             else:
-                print("\nPlease enter a valid choice - press 'e' to exit or\
+                print("\nPlease enter a valid choice - press 'e' to exit or \
 press 'y' to play again: ")
     elif game == "b":
         clear()
