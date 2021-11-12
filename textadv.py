@@ -94,43 +94,43 @@ def typewriter(text, delay):
         sys.stdout.write(letter)
         sys.stdout.flush()
 
+if __name__ == '__main__':
+    revenue = 1000000
+    revenue_delta = "     "
+    expenses = 700000
+    expense_delta = "     "
+    profits = revenue - expenses
+    profit_delta = "     "
+    shareholders = "Shareholders:      😐"
+    shareholder_delta = "  "
+    customers = "Customers:         😐"
+    customer_delta = "  "
+    employees = "Employees:         😐"
+    employee_delta = "  "
 
-revenue = 1000000
-revenue_delta = "     "
-expenses = 700000
-expense_delta = "     "
-profits = revenue - expenses
-profit_delta = "     "
-shareholders = "Shareholders:      😐"
-shareholder_delta = "  "
-customers = "Customers:         😐"
-customer_delta = "  "
-employees = "Employees:         😐"
-employee_delta = "  "
+    dashboard_0 = f"\n------------------------------------------------------------\n\
+    Financial Projections:         |     Stakeholder Sentiment :  \n\
+    ------------------------------------------------------------\n\
+    Revenue:   €{revenue} {revenue_delta}      |      {shareholders} {shareholder_delta}    \n\
+    Expenses:  €{expenses} {expense_delta}       |      {customers} {customer_delta}    \n\
+    Profits:   €{profits} {profit_delta}       |      {employees} {employee_delta}    \n\
+    ------------------------------------------------------------\n"
 
-dashboard_0 = f"\n------------------------------------------------------------\n\
-Financial Projections:         |     Stakeholder Sentiment :  \n\
-------------------------------------------------------------\n\
-Revenue:   €{revenue} {revenue_delta}      |      {shareholders} {shareholder_delta}    \n\
-Expenses:  €{expenses} {expense_delta}       |      {customers} {customer_delta}    \n\
-Profits:   €{profits} {profit_delta}       |      {employees} {employee_delta}    \n\
-------------------------------------------------------------\n"
+    intro = f"- The Year is 2021...\n- FictionalCorp have hired you as their new CEO\
+    \n- You have been tasked with improving their performance on three fronts:\n\
+        \n1. Shareholder Sentiment\
+        \n2. Customer Confidence\
+        \n3. Employee Engagement\n\
+        \n- You will receive one point for each improvement in stakeholder status\
+        \n- You will lose one point for each decline in stakeholder status\n\
+        \n- Navigate the following series of business decisions, and their respective\
+        \nstakeholder impacts\n\
+        \n- Your performance will be displayed on a dashboard in the format below:\n" 
 
-intro = f"- The Year is 2021...\n- FictionalCorp have hired you as their new CEO\
-\n- You have been tasked with improving their performance on three fronts:\n\
-    \n1. Shareholder Sentiment\
-    \n2. Customer Confidence\
-    \n3. Employee Engagement\n\
-    \n- You will receive one point for each improvement in stakeholder status\
-    \n- You will lose one point for each decline in stakeholder status\n\
-    \n- Navigate the following series of business decisions, and their respective\
-    \nstakeholder impacts\n\
-    \n- Your performance will be displayed on a dashboard in the format below:\n" 
-
-main_menu()
-typewriter(intro, 0.015)
-typewriter(dashboard_0, 0.01)
-input("\n[Press Enter To Begin]")
+    main_menu()
+    typewriter(intro, 0.015)
+    typewriter(dashboard_0, 0.01)
+    input("\n[Press Enter To Begin]")
 
 
 def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_delta, shareholders, shareholder_delta, customers, customer_delta, employees, employee_delta, dashboard_0):
@@ -776,7 +776,7 @@ Profits:   €{profits5} €{profit_delta5}{profit_plug}|   {employees5}  {emplo
 
 
 
-def main():
+def run_textadv():
     """
     Main function containing questions for game execution
     """
@@ -787,8 +787,8 @@ def main():
     revenue5, revenue_delta5, expenses5, expense_delta5, profits5, profit_delta5, shareholders5, shareholder_delta5, customers5, customer_delta5, employees5, employee_delta5, dashboard_5 = question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, profit_delta4, shareholders4, shareholder_delta4, customers4, customer_delta4, employees4, employee_delta4, dashboard_4)
     return shareholder_delta5, customer_delta5, employee_delta5
 
-
-shareholder_delta5, customer_delta5, employee_delta5 = main()
+if __name__ == '__main__':
+    shareholder_delta5, customer_delta5, employee_delta5 = run_textadv()
 
 
 def finish_game():
@@ -803,7 +803,7 @@ def finish_game():
             print("Goodbye")
             loop = False
         else:
-            shareholder_delta5, customer_delta5, employee_delta5 = main()
+            shareholder_delta5, customer_delta5, employee_delta5 = run_textadv()
 
-
-finish_game()
+if __name__ == '__main__':
+    finish_game()
