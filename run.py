@@ -1113,8 +1113,8 @@ while True:
             {shareholder_delta}    \
     Expenses:  €{expenses} {expense_delta}       |      {customers}\
         {customer_delta}    \
-    Profits:   €{profits} {profit_delta}       |      {employees}\
-        {employee_delta}    \
+        Profits:   €{profits} {profit_delta}       |      {employees}\
+            {employee_delta}    \
         ------------------------------------------------------------\n"
 
         intro = f"- The Year is 2021...\
