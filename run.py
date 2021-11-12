@@ -1094,7 +1094,7 @@ while True:
                 guesses_used, answer, answer_hidden, guesses_remaining)
             else:
                 print("\nPlease enter a valid choice - press 'e' to exit or\
-                    press 'y' to play again: ")
+                press 'y' to play again: ")
     elif game == "b":
         clear()
         revenue = 1000000
