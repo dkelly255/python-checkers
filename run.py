@@ -112,8 +112,8 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
             break
     scenario_1_answer_1 = "\nYou have chosen Option A\n \n    - Increasing Selling Prices by ~5% has resulted in a decrease in projected\n\
     units sold, with customers choosing competitor alternatives\n\
-    - Unfortunately overall Revenue projections have declined\n\
-    - With expenses unchanged, profit projections have fallen as a result\n"
+    \n- Unfortunately overall Revenue projections have declined\n\
+    \n- With expenses unchanged, profit projections have fallen as a result\n"
     scenario_1_answer_2 = "\nYou have chosen Option B\n \n    - Maintaining Current Selling Prices has resulted in no change to projected\n\
     units sold\n\
     - Overall Revenue projections are unchanged\n\
