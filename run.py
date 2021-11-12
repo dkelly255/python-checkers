@@ -1111,7 +1111,7 @@ while True:
         ------------------------------------------------------------\n\
         Revenue:   €{revenue} {revenue_delta}      |      {shareholders}\
             {shareholder_delta}    \
-        Expenses:  €{expenses} {expense_delta}       |      {customers}\
+        \nExpenses:  €{expenses} {expense_delta}       |      {customers}\
             {customer_delta}    \
         Profits:   €{profits} {profit_delta}       |      {employees}\
             {employee_delta}    \
