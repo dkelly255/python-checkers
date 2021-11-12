@@ -1114,16 +1114,20 @@ while True:
         Profits:   €{profits} {profit_delta}       |      {employees} {employee_delta}    \n\
         ------------------------------------------------------------\n"
 
-        intro = f"- The Year is 2021...\n- FictionalCorp have hired you as their new CEO\
-        \n- You have been tasked with improving their performance on three fronts:\n\
+        intro = f"- The Year is 2021...\n- FictionalCorp have hired you as\
+        their new CEO
+        \n- You have been tasked with improving their performance on three\
+        fronts:
         \n1. Shareholder Sentiment\
         \n2. Customer Confidence\
         \n3. Employee Engagement\n\
-        \n- You will receive one point for each improvement in stakeholder status\
+        \n- You will receive one point for each improvement in stakeholder\
+        \nstatus
         \n- You will lose one point for each decline in stakeholder status\n\
-        \n- Navigate the following series of business decisions, and their respective\
-    \nstakeholder impacts\n\
-        \n- Your performance will be displayed on a dashboard in the format below:\n" 
+        \n- Navigate the following series of business decisions, and their\
+    \nrespective stakeholder impacts\n\
+        \n- Your performance will be displayed on a dashboard in the format\
+            below: \n"
 
         main_menu()
         typewriter(intro, 0.0001)
