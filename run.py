@@ -97,13 +97,13 @@ def typewriter(text, delay):
 def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_delta, shareholders, shareholder_delta, customers, customer_delta, employees, employee_delta, dashboard_0):
     
     clear()
-    typewriter(dashboard_0, 0.003)
+    typewriter(dashboard_0, 0.0003)
     scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
     FictonalCorp's leading product should be set for the coming year:\n\
     \n    A. Increase Current Selling Price\n\
     B. Maintain Current Selling Price \n\
     C. Reduce Current Selling Price\n"
-    typewriter(scenario_1, 0.015)
+    typewriter(scenario_1, 0.0015)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -143,7 +143,7 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         expense_plug = formatting_plug(expenses1, expense_delta1) 
         profit_plug = formatting_plug(profits1, profit_delta1)
 
-        dashboard_1 = f"\n        ------------------------------------------------------------\n\
+        dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
     Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
@@ -152,8 +152,8 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
     ------------------------------------------------------------\n\
                                             Total Points: {(shareholder_delta1 + customer_delta1 + employee_delta1)}\n"
         clear()
-        typewriter(scenario_1_answer_1, 0.015)
-        typewriter(dashboard_1, 0.003)
+        typewriter(scenario_1_answer_1, 0.0015)
+        typewriter(dashboard_1, 0.0003)
         input("\nPress Enter To Proceed to Next Scenario")
     
     elif input1 == "B":
@@ -1005,20 +1005,20 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
     if user_guess == answer:
         answer_hidden = reveal_letter_in_answer(user_guess, answer, answer_hidden)
         print(f"\nCorrect! Great guess - '{user_guess}' was the answer!")
-        sleep(1)
+        sleep(0.75)
     elif user_guess in answer:
         answer_hidden = reveal_letter_in_answer(user_guess, answer, answer_hidden)
         print(f"\nCorrect! '{user_guess}' is in the answer")
-        sleep(1)
+        sleep(0.75)
     elif len(user_guess) > 1:
         print(f"\nSorry! The word '{user_guess}' is not the answer")
-        sleep(1)
+        sleep(0.75)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 8 - gallows_stage
     else:
         print(f"\nSorry! '{user_guess}' is not in the answer")
-        sleep(1)
+        sleep(0.75)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 8 - gallows_stage
@@ -1050,20 +1050,20 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
             draw_gallows(gallows_stage)
             main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)
             print(f"Congratulations You Won - the answer was '{answer}'\n")
-            sleep(1.25)
+            sleep(0.75)
             
 while True:
     print("--------------------------------------------")
     print("|                                          |")
-    print("|      PLEASE SELECT A GAME TO PLAY:       |")
+    print("|           *** MAIN MENU ***              |")
     print("|                                          |")
+    print("|      PLEASE SELECT A GAME TO PLAY:       |")
     print("|                                          |")
     print("|    A. HANGMAN                            |")
     print("|                                          |")
     print("|    B. ACCOUNTING ADVENTURES              |")
     print("|                                          |")
     print("|    C. EXIT APPLICATION                   |")
-    print("|                                          |")
     print("|                                          |")
     print("|                                          |")
     print("|            [PLEASE SELECT]               |")
@@ -1078,7 +1078,8 @@ while True:
             stop_go = input("Please press 'y' to play again, or press 'e' to exit: ").lower()
             if stop_go == "e":
                 print("\nThank you for playing Python Hangman - Goodbye!")
-                sleep(1)
+                sleep(0.5)
+                clear()
                 break
             elif stop_go == "y":
                 word_list, answer, answer_hidden, guesses_remaining, guesses_used, incorrect_guesses, previous_guesses, gallows_stage = initialise_variables()
@@ -1120,8 +1121,8 @@ while True:
         \n- Your performance will be displayed on a dashboard in the format below:\n" 
 
         main_menu()
-        typewriter(intro, 0.015)
-        typewriter(dashboard_0, 0.01)
+        typewriter(intro, 0.0001)
+        typewriter(dashboard_0, 0.001)
         input("\n[Press Enter To Begin]")
         shareholder_delta5, customer_delta5, employee_delta5 = run_textadv()
         finish_game()
