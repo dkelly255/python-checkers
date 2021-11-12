@@ -1109,9 +1109,12 @@ while True:
         dashboard_0 = f"\n        ------------------------------------------------------------\n\
         Financial Projections:         |     Stakeholder Sentiment :  \n\
         ------------------------------------------------------------\n\
-        Revenue:   €{revenue} {revenue_delta}      |      {shareholders} {shareholder_delta}    \n\
-        Expenses:  €{expenses} {expense_delta}       |      {customers} {customer_delta}    \n\
-        Profits:   €{profits} {profit_delta}       |      {employees} {employee_delta}    \n\
+        Revenue:   €{revenue} {revenue_delta}      |      {shareholders}\
+            {shareholder_delta}    \n\
+        Expenses:  €{expenses} {expense_delta}       |      {customers}\
+            {customer_delta}    \n\
+        Profits:   €{profits} {profit_delta}       |      {employees}\
+            {employee_delta}    \n\
         ------------------------------------------------------------\n"
 
         intro = f"- The Year is 2021...\
