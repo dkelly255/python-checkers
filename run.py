@@ -507,7 +507,7 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
     - Yearly Revenue projections are unchanged, however cost projections have\n\
         decreased\
     - Profit projections for the year have improved as a result - however -\n\
-        employees are not happy!\"
+        employees are not happy!\n"
 
     
     if input1 == "A":        
