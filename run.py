@@ -1114,10 +1114,9 @@ while True:
         Profits:   €{profits} {profit_delta}       |      {employees} {employee_delta}    \n\
         ------------------------------------------------------------\n"
 
-        intro = f"- The Year is 2021...\n- FictionalCorp have hired you as\
-        their new CEO\
-        \n- You have been tasked with improving their performance on three\
-        fronts:\
+        intro = f"- The Year is 2021...\
+        \n- FictionalCorp have hired you as their new CEO\
+        \n- You have been tasked with improving their performance on 3x fronts\
         \n1. Shareholder Sentiment\
         \n2. Customer Confidence\
         \n3. Employee Engagement\n\
