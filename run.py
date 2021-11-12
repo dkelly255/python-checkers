@@ -378,7 +378,7 @@ def question_3(revenue2, revenue_delta2, expenses2, expense_delta2, profits2, pr
       projected unit costs\n\
     \n- Yearly Revenue projections are unchanged, however cost projections have\n\
       decreased\
-    - Profit projections for the year have improved as a result\n"
+    \n- Profit projections for the year have improved as a result\n"
 
     
     if input1 == "A":        
@@ -495,7 +495,8 @@ def question_4(revenue3, revenue_delta3, expenses3, expense_delta3, profits3, pr
             break
     scenario_4_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the payroll budget has resulted in an increase in yearly\n\
     expenditure projections, without increasing units sold\n\
-    - Yearly Revenue projections are unchanged, whilst expense projections have slightly increased\n\
+    - Yearly Revenue projections are unchanged, whilst expense projections have\n\
+      slightly increased\n\
     - Profit projections have slightly decreased for the year as a result\n"
     scenario_4_answer_2 = "\nYou have chosen Option B\n \n    - Retaining current employee payroll budget has resulted in flat projected\n\
     unit costs\n\
@@ -607,8 +608,8 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
     
     clear()
     print(dashboard_4)
-    scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy' expenditure level \n\
-    for the coming year:\n\
+    scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy'\n\
+        expenditure level for the coming year:\n\
     \n    A. Increase (Increasing Expenditure) \n\
     B. Maintain - (Maintaining Expenditure) \n\
     C. Reduce - (Decreasing Expenditure) \n"
@@ -619,9 +620,10 @@ def question_5(revenue4, revenue_delta4, expenses4, expense_delta4, profits4, pr
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_5_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the Workplace Improvement budget has resulted in an increase in yearly\n\
-    expenditure projections, without increasing units sold\n\
-    - Yearly Revenue projections are unchanged, whilst expense projections have slightly increased\n\
+    scenario_5_answer_1 = "\nYou have chosen Option A\n \n    - Increasing the Workplace Improvement budget has resulted in an increase\n\
+        in yearly expenditure projections, without increasing units sold\n\
+    - Yearly Revenue projections are unchanged, whilst expense projections have\n\
+        slightly increased\
     - Profit projections have slightly decreased for the year as a result\n"
     scenario_5_answer_2 = "\nYou have chosen Option B\n \n    - Retaining the current Workplace Improvement budget has resulted in flat projected\n\
     unit costs\n\
