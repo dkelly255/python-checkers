@@ -5,6 +5,10 @@ from time import sleep
 
 content = open('words.txt').read().split()
 
+for words in content:
+    if len(words)<3:
+        content.remove(words)
+
 def initialise_variables():
     # Initialise key variables
     # Answer bank & Word variables
@@ -183,15 +187,16 @@ def main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_
     print(f"Guesses Used So Far: {guesses_used}")
     print(f"Guesses Remaining: {guesses_remaining}")
     print("".join(previous_guesses) + "\n")
-    yet_to_guess = answer_hidden.count("_ ")
-    if yet_to_guess > guesses_remaining and guesses_remaining != 0:
-        print(f"Hurry!\nYou only have {guesses_remaining} lives left - and there are still {yet_to_guess} unguessed letters...\nTry guessing the word!\n")
+    if guesses_remaining == 1:
+        print(f"Final attempt!\nOne last chance to guess the word!\n")
+    elif guesses_remaining <= 3:
+        print(f"Hurry!\nYou only have {guesses_remaining} lives left...\nTry guessing the word!\n")
 
 
 def validate_guess(previous_guesses, guesses_remaining):
     while True:
-        if guesses_remaining < answer_hidden.count("_ "):
-            guess_type = input("Please press 'W' to guess a word, or 'L' to guess a letter: ").lower()
+        if guesses_remaining <= 3:
+            guess_type = input("Press 'W' to guess a word, or 'L' to guess a letter: ").lower()
             if guess_type == "w":
                 user_guess = input("\nPlease guess a word: ").lower()
                 if len(user_guess) > 1:
@@ -252,20 +257,20 @@ def answer_check(user_guess, previous_guesses, gallows_stage, incorrect_guesses,
     if user_guess == answer:
         answer_hidden = reveal_letter_in_answer(user_guess, answer, answer_hidden)
         print(f"\nCorrect! Great guess - '{user_guess}' was the answer!")
-        sleep(1.25)
+        sleep(1)
     elif user_guess in answer:
         answer_hidden = reveal_letter_in_answer(user_guess, answer, answer_hidden)
         print(f"\nCorrect! '{user_guess}' is in the answer")
-        sleep(1.25)
+        sleep(1)
     elif len(user_guess) > 1:
         print(f"\nSorry! The word '{user_guess}' is not the answer")
-        sleep(1.25)
+        sleep(1)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 8 - gallows_stage
     else:
         print(f"\nSorry! '{user_guess}' is not in the answer")
-        sleep(1.25)
+        sleep(1)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 8 - gallows_stage
@@ -278,6 +283,7 @@ def play_game(previous_guesses, gallows_stage, incorrect_guesses, guesses_used, 
         if gallows_stage == 8:
             clear()
             draw_gallows(gallows_stage)
+            answer_hidden = ["Guess The Word: ", answer]
             main_game_screen(guesses_used, guesses_remaining, incorrect_guesses, answer_hidden)
             print(f"Sorry You Lost - the answer was '{answer}'\n")
             break
