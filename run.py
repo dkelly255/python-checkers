@@ -58,7 +58,7 @@ def main_menu():
     """
     Displays main menu screen upon game load
     """
-    print("\n-----------------------------------------------------------------")
+    print("\n----------------------------------------------------------------")
     print("|                                                                |")
     print("|                                                                |")
     print("|                                                                |")
@@ -100,7 +100,10 @@ def typewriter(text, delay):
         sys.stdout.flush()
 
 
-def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_delta, shareholders, shareholder_delta, customers, customer_delta, employees, employee_delta, dashboard_0):
+def question_1(
+    revenue, revenue_delta, expenses, expense_delta,
+        profits, profit_delta, shareholders, shareholder_delta,
+        customers, customer_delta, employees, employee_delta, dashboard_0):
 
     clear()
     typewriter(dashboard_0, 0.0003)
@@ -116,15 +119,21 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
-    scenario_1_answer_1 = "\nYou have chosen Option A\n \n    - Increasing Selling Prices by ~5% has resulted in a decrease in projected\n\
-    units sold, with customers choosing competitor alternatives\n\
+    scenario_1_answer_1 = "\nYou have chosen Option A\
+    \n \n\
+    - Increasing Selling Prices by ~5% has resulted in a decrease in\n\
+    projected units sold, with customers choosing competitor alternatives\n\
     \n    - Unfortunately overall Revenue projections have declined\n\
-    \n    - With expenses unchanged, profit projections have fallen as a result\n"
-    scenario_1_answer_2 = "\nYou have chosen Option B\n \n    - Maintaining Current Selling Prices has resulted in no change to projected\n\
+    \n    - With expenses flat, profit projections have fallen as a result\n"
+    scenario_1_answer_2 = "\nYou have chosen Option B\
+    \n \n\
+    - Maintaining Current Selling Prices has had no effect on projected\n\
     units sold\n\
     - Overall Revenue projections are unchanged\n\
-    - With expenses flat, profit projections have remained static as a result\n"
-    scenario_1_answer_3 = "\nYou have chosen Option C\n \n    - Reducing Selling Prices by ~5% has resulted in an increase in projected\n\
+    - With expenses flat, profit projections are unchanged as a result\n"
+    scenario_1_answer_3 = "\nYou have chosen Option C\
+    \n \n\
+    - Reducing Selling Prices by ~5% results in an increase in projected\n\
     units sold, with several new customers interested\n\
     - Overall Revenue projections have increased as a result\n\
     - With expenses unchanged, profit projections have increased\n"
@@ -140,7 +149,8 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         profit_delta1 = revenue_delta1 - expense_delta1
         profits1 = revenue1 - expenses1
         shareholder_delta1 = -1
-        shareholders1 = "Shareholders:      " + emoji_assignment(shareholder_delta1)
+        shareholders1 = \
+            "Shareholders:      " + emoji_assignment(shareholder_delta1)
         customer_delta1 = -1
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
         employee_delta1 = 0
@@ -152,9 +162,12 @@ def question_1(revenue, revenue_delta, expenses, expense_delta, profits, profit_
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
-    Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}  {shareholder_delta1}    \n\
-    Expenses:  €{expenses1} €{expense_delta1}{expense_plug}|   {customers1}  {customer_delta1}    \n\
-    Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}  {employee_delta1}    \n\
+    Revenue:   €{revenue1} €{revenue_delta1}{revenue_plug}|   {shareholders1}\
+  {shareholder_delta1}    \n\
+    Expenses:  €{expenses1} €{expense_delta1}{expense_plug}|   {customers1}\
+  {customer_delta1}    \n\
+    Profits:   €{profits1} €{profit_delta1}{profit_plug}|   {employees1}\
+  {employee_delta1}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {(shareholder_delta1 + customer_delta1 + employee_delta1)}\n"
         clear()
