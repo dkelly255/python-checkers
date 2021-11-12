@@ -1116,7 +1116,7 @@ while True:
         \n- You will receive one point for each improvement in stakeholder status\
         \n- You will lose one point for each decline in stakeholder status\n\
         \n- Navigate the following series of business decisions, and their respective\
-        \nstakeholder impacts\n\
+    stakeholder impacts\n\
         \n- Your performance will be displayed on a dashboard in the format below:\n" 
 
         main_menu()
