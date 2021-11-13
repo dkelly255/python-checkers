@@ -1,8 +1,8 @@
-# Python Hangman 
+# Python Games Package 
 
-This Readme documentation supports the application game "Hangman" created using Python, and played in the terminal 
+This Readme documentation supports the application "Python Games Package" created using Python, and designed for being played in the terminal 
 
-The application will allow the user to play a game of the popular word-guessing game "Hangman", and will include a gallows that will build up with each incorrect guess, as well as a guess-limit which the player must not exceed in order to win the game.
+The application will allow the user the choice of playing either the popular word-guessing game "Hangman", or a text-adventure-style game called "Accounting Adeventures" where the user must navigate a series of business decisions as the new CEO of a fictional corporation
 
 ![Intro Screen](readme/images/hangman/welcome-screen.png)
 
