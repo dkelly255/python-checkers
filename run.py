@@ -61,17 +61,17 @@ def main_menu():
     print("\n----------------------------------------------------------------")
     print("|                                                                |")
     print("|                                                                |")
+    print("|                   A C C O U N T I N G                          |")
     print("|                                                                |")
-    print("|                   W E L C O M E                                |")
+    print("|                     A D V E N T U R E S                        |")
     print("|                                                                |")
-    print("|                       T O                                      |")
     print("|                                                                |")
-    print("|                         P Y T H O N                            |")
     print("|                                                                |")
-    print("|                            T E X T                             |")
+    print("|                   SHAREHOLDERS:  😀                            |")
     print("|                                                                |")
-    print("|                               A D V E N T U R E                |")
+    print("|                      CUSTOMERS:  😀                            |")
     print("|                                                                |")
+    print("|                      EMPLOYEES:  😀                            |")
     print("|                                                                |")
     print("|                                                                |")
     print("|                                                                |")
@@ -937,16 +937,6 @@ def initialise_variables():
         incorrect_guesses, previous_guesses, gallows_stage
 
 
-def clear():
-        """
-        Clears the terminal for formatting purposes
-        """
-        if name == 'nt':
-            _ = system('cls')
-        else:
-            _ = system('clear')
-
-
 def welcome_screen():
         """
         Displays welcome screen to user upon loading
@@ -954,22 +944,25 @@ def welcome_screen():
         the game upon pressing "Enter"
         """
         clear()
-        print("--------------------------------------------")
-        print("|                                          |")
-        print("|                                          |")
-        print("|       W  E  L  C  O  M  E                |")
-        print("|                                          |")
-        print("|          T O                             |")
-        print("|                                          |")
-        print("|             P  Y  T  H  O  N             |")
-        print("|                                          |")
-        print("|                 H  A  N  G  M  A  N      |")
-        print("|                                          |")
-        print("|                                          |")
-        print("|                                          |")
-        print("|         [PRESS ENTER TO BEGIN]           |")
-        print("|                                          |")
-        print("--------------------------------------------")
+        print("------------------------------------------------------")
+        print("|                                                    |")
+        print("|                P  Y  T  H  O  N                    |")
+        print("|                                                    |")
+        print("|                   H  A  N  G  M  A  N              |")
+        print("|                    _________                       |")
+        print("|                    |       |                       |")
+        print("|                    |       O                       |")
+        print("|                    |      /|\                      |")
+        print("|                    |       |                       |")
+        print("|                    |      / \                      |")
+        print("|                    |                               |")
+        print("|                    |                               |")
+        print("|                 ___|___________                    |")
+        print("|                 XXXXXXXXXXXXXXX                    |")
+        print("|                                                    |")
+        print("|               [PRESS ENTER TO BEGIN]               |")
+        print("|                                                    |")
+        print("------------------------------------------------------")
         input()
         clear()
 
@@ -1250,7 +1243,26 @@ def play_game(
             print(f"Congratulations You Won - the answer was '{answer}'\n")
             sleep(0.75)
 
+
 while True:
+    print("--------------------------------------------")
+    print("|                                          |")
+    print("|    W  E  L  C  O  M  E                   |")
+    print("|                                          |")
+    print("|       T O                                |")
+    print("|                                          |")
+    print("|          P  Y  T  H  O  N                |")
+    print("|                                          |")
+    print("|              G A M E S                   |")
+    print("|                                          |")
+    print("|                 P A C K A G E            |")
+    print("|                                          |")
+    print("|                                          |")
+    print("|         [PRESS ENTER TO BEGIN]           |")
+    print("|                                          |")
+    print("--------------------------------------------")
+    input()
+    clear()
     print("--------------------------------------------")
     print("|                                          |")
     print("|           *** MAIN MENU ***              |")
@@ -1278,8 +1290,8 @@ while True:
             guesses_used, answer, answer_hidden, guesses_remaining)
         while True:
             stop_go = input(
-                "Please press 'y' to play again, or press 'e' to exit: \
-").lower()
+                "Please press 'y' to play again, or press 'e' to exit: "
+                ).lower()
             if stop_go == "e":
                 print("\nThank you for playing Python Hangman - Goodbye!")
                 sleep(0.5)
@@ -1293,8 +1305,7 @@ while True:
                     previous_guesses, gallows_stage, incorrect_guesses,
                     guesses_used, answer, answer_hidden, guesses_remaining)
             else:
-                print("\nPlease enter a valid choice - press 'e' to exit or \
-press 'y' to play again: ")
+                print(f"\n'{stop_go}' is an invalid choice\n")
     elif game == "b":
         clear()
         revenue = 1000000
