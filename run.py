@@ -1096,7 +1096,9 @@ def main_game_screen(
         print(f"Guesses Used So Far: {guesses_used}")
         print(f"Guesses Remaining: {guesses_remaining}")
         print("".join(previous_guesses) + "\n")
-        if guesses_remaining == 1:
+        if not ("_ " in answer_hidden):
+            return
+        elif guesses_remaining == 1:
             print(f"Final attempt!\nOne last chance to guess the word!\n")
         elif guesses_remaining == 3 or guesses_remaining == 2:
             print(f"Hurry!\nYou only have {guesses_remaining} lives left...")
