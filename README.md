@@ -179,27 +179,32 @@ Upon conclusion of the game, this feature will provide the user with two options
 The following section details the features specific to the "FictCorp Adventures" component of the application:
 
 ## Welcome Screen
+The Welcome screen greets the user upon the initial load of the game and shows the game title along with some of the emojis used later to illustrate the different stakeholder sentiment levels - the user continues past this screen by pressing "enter"
+
 ![Welcome Screen](readme/images/fictcorp/welcomescreen.png)
 ## Game Rules
 
 ## Introductory Story Screen
-Typewriter effect
+The Typewriter effect is used to display the text on the introductory screen - this serves the purpose of both adding to the UX by giving the introduction a more cinematic feel, and also helps the user to visually parse the information by displaying it gradually/piecemeal rather than overwhelm the user with one large block of text:
 
-![Welcome Screen](readme/images/fictcorp/intro.png)
+![Intro screen](readme/images/fictcorp/intro.png)
+
 ## Performance Dashboard
-![Welcome Screen](readme/images/fictcorp/performancedashboard.png)
+An integral feature of the game is the performance dashboard. This feature is used to display to the user their progress, both in terms of the financial snapshot of the company's revenue, costs, and profits, as well as the key stakeholders and their current sentiment, represented via emojis on a scale of -2 to +2, with 0 being neutral
+
+![Overall dashboard](readme/images/fictcorp/performancedashboard.png)
 
 ### Financial Projections
-![Welcome Screen](readme/images/fictcorp/financials.png)
+![Financial Display](readme/images/fictcorp/financials.png)
 
 ### Stakeholder Sentiment
-![Welcome Screen](readme/images/fictcorp/stakeholders.png)
+![Stakeholder display](readme/images/fictcorp/stakeholders.png)
 
 ## Cumulative Score Tracking
-![Welcome Screen](readme/images/fictcorp/cumulativescores.png)
+![Score Tracking](readme/images/fictcorp/cumulativescores.png)
 
 ## Question 1
-![Welcome Screen](readme/images/fictcorp/q1.png)
+![Question 1](readme/images/fictcorp/q1.png)
 ### Answer A
 ![Welcome Screen](readme/images/fictcorp/q1a.png)
 ### Answer B
@@ -243,7 +248,7 @@ Typewriter effect
 ## Exit Game/Play Again Menu
 ![Welcome Screen](readme/images/fictcorp/exitgame.png)
 
-## Features Left To Implement
+## Features Left To Implement - Hangman
 There were several additional features which could be added to the Hangman application - each of which are detailed below:
 
 ### Guess Word Functionality
@@ -258,6 +263,7 @@ Difficulty level setting could also be additional features in future - giving th
 ### Guess limit extension/reduction
 The ability for the user to modify their guess limits would also be a potential future feature for the game - adding depth to the game by allowing higher and lower guess limits according to the user's personal choice.
 
+## Features Left To Implement - Fictcorp Adventures
 
 # Testing
 
