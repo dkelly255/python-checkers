@@ -1,27 +1,33 @@
 # Initial import of required external libraries & functions
+# Used at varying points by both games - Hangman & FictCorp Adventures
 from os import system, name
 from random import choice
 from time import sleep
 import sys
 
-# Credits: As per readme credits section - this clear terminal function
+# Credits: As per readme credits section - the clear terminal function
 # is taken from the methods used by geeksforgeeks.org - see full details
-# and links in credits section of readme
+# and links in credits section of readme - used extensively throughout
+# both applications
 
 
 def clear():
     """
-    Clears the terminal for formatting purposes
+    Clears the terminal for formatting purposes - used extensively
+    throughout both applications
     """
     if name == 'nt':
         _ = system('cls')
     else:
         _ = system('clear')
 
+# Note: ***FictCorp Adventures Section of Code Begins Here***
 
 def emoji_assignment(delta):
     """
     Assigns emoji to dashboard categories based on stakeholder sentiment score
+    Accepts a numeric delta as input parameter and returns the emoji for use 
+    in the stakeholder dashboard displays
     """
     if delta >= 2:
         emoji = "😀"
@@ -89,6 +95,8 @@ def main_menu():
 # project needs:
 # Credits:
 # www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal
+
+
 def typewriter(text, delay):
     """
     Function for presenting text with a delayed/typewriter effect to add to
@@ -104,7 +112,18 @@ def question_1(
     revenue, revenue_delta, expenses, expense_delta,
         profits, profit_delta, shareholders, shareholder_delta,
         customers, customer_delta, employees, employee_delta, dashboard_0):
+    """
+    First question of the game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user 
+    to choose an answer.
+    
+    Based on the answer, the function will display one of three possible outcomes
+    Each of which the function will reflect across the financial & stakeholder
+    dashboard displays, along with the total cumulative points scored
 
+    The function will then return the closing values for each variable to be 
+    passed on for use as arguments in the subsequent question
+    """
     clear()
     typewriter(dashboard_0, 0.0003)
     scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
@@ -258,7 +277,18 @@ def question_2(
     revenue1, revenue_delta1, expenses1, expense_delta1,
         profits1, profit_delta1, shareholders1, shareholder_delta1,
         customers1, customer_delta1, employees1, employee_delta1, dashboard_1):
+    """
+    Second question of the game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user 
+    to choose an answer.
+    
+    Based on the answer, the function will display one of three possible outcomes
+    Each of which the function will reflect across the financial & stakeholder
+    dashboard displays, along with the total cumulative points scored
 
+    The function will then return the closing values for each variable to be 
+    passed on for use as arguments in the subsequent question
+    """
     clear()
     print(dashboard_1)
     scenario_2 = "\n    Scenario 2: You must decide at what level the marketing \n\
@@ -404,7 +434,18 @@ def question_3(
     revenue2, revenue_delta2, expenses2, expense_delta2,
         profits2, profit_delta2, shareholders2, shareholder_delta2,
         customers2, customer_delta2, employees2, employee_delta2, dashboard_2):
+    """
+    Third question of the game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user 
+    to choose an answer.
+    
+    Based on the answer, the function will display one of three possible outcomes
+    Each of which the function will reflect across the financial & stakeholder
+    dashboard displays, along with the total cumulative points scored
 
+    The function will then return the closing values for each variable to be 
+    passed on for use as arguments in the subsequent question
+    """
     clear()
     print(dashboard_2)
     scenario_3 = "\n    Scenario 3: You must Choose the new material supplier rate \n\
@@ -551,7 +592,18 @@ def question_4(
     revenue3, revenue_delta3, expenses3, expense_delta3, profits3,
         profit_delta3, shareholders3, shareholder_delta3, customers3,
         customer_delta3, employees3, employee_delta3, dashboard_3):
+    """
+    Fourth question of the game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user 
+    to choose an answer.
+    
+    Based on the answer, the function will display one of three possible outcomes
+    Each of which the function will reflect across the financial & stakeholder
+    dashboard displays, along with the total cumulative points scored
 
+    The function will then return the closing values for each variable to be 
+    passed on for use as arguments in the subsequent question
+    """
     clear()
     print(dashboard_3)
     scenario_4 = "\n    Scenario 4: You must now help set the employee payroll budget \n\
@@ -699,7 +751,18 @@ def question_5(
     revenue4, revenue_delta4, expenses4, expense_delta4, profits4,
         profit_delta4, shareholders4, shareholder_delta4, customers4,
         customer_delta4, employees4, employee_delta4, dashboard_4):
+    """
+    Final question of the game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user 
+    to choose an answer.
+    
+    Based on the answer, the function will display one of three possible outcomes
+    Each of which the function will reflect across the financial & stakeholder
+    dashboard displays, along with the total cumulative points scored
 
+    The function will then return the closing values for each variable and will
+    also display to the user their final score
+    """
     clear()
     print(dashboard_4)
     scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy'\n\
@@ -855,6 +918,9 @@ def question_5(
 def run_textadv():
     """
     Main function containing questions for game execution
+    Sequenced to ensure the correct parameters and handed over from 
+    each question function to the next, and returns the final 
+    status for each of the 3x key stakeholders
     """
     revenue1, revenue_delta1, expenses1, expense_delta1, profits1,\
         profit_delta1, shareholders1, shareholder_delta1, customers1,\
@@ -900,7 +966,8 @@ def run_textadv():
 
 def finish_game():
     """
-    Closing game loop triggered post completion of final question
+    Closing game loop triggered post-completion of final question
+    Allows the user to either play again, or exit back to the main menu
     """
     loop = True
     while loop:
@@ -914,6 +981,7 @@ def finish_game():
             shareholder_delta5, customer_delta5, employee_delta5 = \
                 run_textadv()
 
+# Note: ***Hangman Section of Code Begins here***
 
 def initialise_variables():
     # Initialise key variables
