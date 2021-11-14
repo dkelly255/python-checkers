@@ -63,7 +63,7 @@ The game selection screen allows the user to either choose a game to play, or to
 
 ![Intro Screen](readme/images/gameselection.png)
 
-### Hangman Features:
+# Hangman - Existing Features:
 The following section details the features specific to the "Hangman" component of the application:
 
 ### Hangman Welcome Screen:
@@ -174,6 +174,74 @@ In the event that the player loses the game, the message below will be displayed
 Upon conclusion of the game, this feature will provide the user with two options - they can either exit the application by pressing the "e" or "E" key, or they can choose to play another game by pressing any other key followed by the "Enter" key:
 
 ![Exit Game Prompt](readme/images/hangman/exitgameprompt.png)
+
+# FictCorp Adventures - Existing Features:
+The following section details the features specific to the "FictCorp Adventures" component of the application:
+
+## Welcome Screen
+![Welcome Screen](readme/images/fictcorp/welcomescreen.png)
+## Game Rules
+
+## Introductory Story Screen
+Typewriter effect
+
+![Welcome Screen](readme/images/fictcorp/intro.png)
+## Performance Dashboard
+![Welcome Screen](readme/images/fictcorp/performancedashboard.png)
+
+### Financial Projections
+![Welcome Screen](readme/images/fictcorp/financials.png)
+
+### Stakeholder Sentiment
+![Welcome Screen](readme/images/fictcorp/stakeholders.png)
+
+## Cumulative Score Tracking
+![Welcome Screen](readme/images/fictcorp/cumulativescores.png)
+
+## Question 1
+![Welcome Screen](readme/images/fictcorp/q1.png)
+### Answer A
+![Welcome Screen](readme/images/fictcorp/q1a.png)
+### Answer B
+![Welcome Screen](readme/images/fictcorp/q1b.png)
+### Answer C
+![Welcome Screen](readme/images/fictcorp/q1c.png)
+## Question 2
+![Welcome Screen](readme/images/fictcorp/q2.png)
+### Answer A
+![Welcome Screen](readme/images/fictcorp/q2a.png)
+### Answer B
+![Welcome Screen](readme/images/fictcorp/q2b.png)
+### Answer C
+![Welcome Screen](readme/images/fictcorp/q2c.png)
+## Question 3
+![Welcome Screen](readme/images/fictcorp/q3.png)
+### Answer A
+![Welcome Screen](readme/images/fictcorp/q3a.png)
+### Answer B
+![Welcome Screen](readme/images/fictcorp/q3b.png)
+### Answer C
+![Welcome Screen](readme/images/fictcorp/q3c.png)
+## Question 4
+![Welcome Screen](readme/images/fictcorp/q4.png)
+### Answer A
+![Welcome Screen](readme/images/fictcorp/q4a.png)
+### Answer B
+![Welcome Screen](readme/images/fictcorp/q4b.png)
+### Answer C
+![Welcome Screen](readme/images/fictcorp/q4c.png)
+## Question 5
+![Welcome Screen](readme/images/fictcorp/q5.png)
+### Answer A
+![Welcome Screen](readme/images/fictcorp/q5a.png)
+### Answer B
+![Welcome Screen](readme/images/fictcorp/q5b.png)
+### Answer C
+![Welcome Screen](readme/images/fictcorp/q5c.png)
+## Final Score Display
+![Welcome Screen](readme/images/fictcorp/finalscore.png)
+## Exit Game/Play Again Menu
+![Welcome Screen](readme/images/fictcorp/exitgame.png)
 
 ## Features Left To Implement
 There were several additional features which could be added to the Hangman application - each of which are detailed below:
