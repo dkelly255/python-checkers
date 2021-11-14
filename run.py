@@ -1245,7 +1245,10 @@ try again")
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
     """
-    
+    - Replaces the blanks/underscores representing the unguessed letters of
+    the answer with the correct guesses from the user
+    - It requires 3x parameters as inputs, and returns the status of the 
+    answer in terms of guessed/unguessed letters
     """
     if user_guess == answer:
         answer_hidden = ["Guess The Word: ", answer]
@@ -1260,7 +1263,13 @@ def reveal_letter_in_answer(user_guess, answer, answer_hidden):
 def answer_check(
     user_guess, previous_guesses, gallows_stage, incorrect_guesses,
         guesses_used, answer, answer_hidden, guesses_remaining):
-
+    """
+    - checks whether the user's guess is correct (either is a letter
+    in the answer, or is a word that matches the answer) or incorrect
+    and notifies the user accordingly
+    - It requires 8x key parameters as inputs, and returns 8x values
+    for use as variables in downstream functions
+    """
     previous_guesses.append(user_guess + ", ")
     guesses_used += 1
 
@@ -1294,6 +1303,17 @@ def answer_check(
 def play_game(
     previous_guesses, gallows_stage, incorrect_guesses, guesses_used,
         answer, answer_hidden, guesses_remaining):
+    """
+    - Main game function: this will display to the user either a "game
+    lost" notification if the gallows is fully built resulting from 
+    8x incorrect guesses, or alternatively a game won notification if
+    the "answer_hidden" variable no longer contains any unguessed letters
+    - if the game has been neither won, nor lost, the game will still be
+    in progress, and in this case the function will run the main game
+    mechanics for the player
+    - The function requires 7x key parameters as inputs and does not 
+    return any values
+    """
     while "_ " in answer_hidden:
         if gallows_stage == 8:
             clear()
@@ -1333,6 +1353,9 @@ def play_game(
             sleep(0.75)
 
 
+# Main application loop - this will display the opening welcome screen
+# and progress into the "select game" screen allowing the user to choose
+# which game to play, or to exit the application
 while True:
     print("--------------------------------------------")
     print("|                                          |")
@@ -1369,6 +1392,8 @@ while True:
     print("|                                          |")
     print("--------------------------------------------")
     game = input("Select option A, B or C: ").lower()
+    # Option "A" selection will trigger the Hangman game to load
+    # The code below intialises the key variables and runs the game
     if game == "a":
         word_list, answer, answer_hidden, guesses_remaining,\
                     guesses_used, incorrect_guesses, previous_guesses,\
@@ -1377,6 +1402,10 @@ while True:
         play_game(
             previous_guesses, gallows_stage, incorrect_guesses,
             guesses_used, answer, answer_hidden, guesses_remaining)
+        # Game ending sequence - this will give the user the option
+        # to either play again, or to exit back to the main menu
+        # With input validation to ensure invalid input is handled
+        # elegantly as part of defensive design principles
         while True:
             stop_go = input(
                 "Please press 'y' to play again, or press 'e' to exit: "
@@ -1395,6 +1424,8 @@ while True:
                     guesses_used, answer, answer_hidden, guesses_remaining)
             else:
                 print(f"\n'{stop_go}' is an invalid choice\n")
+    # Option "B" selection will trigger the FictCorp Adventures game 
+    # The code below intialises the key variables and runs the game
     elif game == "b":
         clear()
         revenue = 1000000
@@ -1441,9 +1472,12 @@ while True:
         input("\n[Press Enter To Begin]")
         shareholder_delta5, customer_delta5, employee_delta5 = run_textadv()
         finish_game()
+    # Option C will trigger the closure of the application & exit for the user
     elif game == "c":
         print("Goodbye")
         break
+    # Input validation to ensure invalid data entry is dealt with elegantly as 
+    # part of defensive design principles
     else:
         clear()
         print("Please enter a valid input - A, B or C")
