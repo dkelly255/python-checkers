@@ -50,17 +50,31 @@ These Surface elements are discussed & illustrated in further detail in the "Fea
 
 
 # Features
-The main features of the game application are discussed in detail below - I have segregated the features into two sections - "Existing Features" and "Features Left To Implement" with screenshots and narrative descriptions where appropriate:
+The main features of the application are discussed in detail below - I have segregated the features into two sections - "Existing Features" and "Features Left To Implement" with screenshots and narrative descriptions where appropriate:
 ## Existing Features:
-### Welcome Screen:
-The welcome screen greets the user upon loading the game and will load the actual game upon pressing the "Enter" Key
 
-![Intro Screen](readme/images/hangman/welcome-screen.png)
+### Welcome Screen:
+The welcome screen greets the user upon loading the game and will load the game selection screen upon pressing the "Enter" Key
+
+![Intro Screen](readme/images/mainmenu.png)
+
+### Game Selection Screen:
+The game selection screen allows the user to either choose a game to play, or to exit the applciation and will load the user's choice based upon pressing either key "A", "B", or "C" followed by the "Enter" Key
+
+![Intro Screen](readme/images/gameselection.png)
+
+### Hangman Features:
+The following section details the features specific to the "Hangman" component of the application:
+
+### Hangman Welcome Screen:
+This is the initialintroductory screen greeting the user upon selection of the Hangman game from the game selection menu
+
+![Main screen](readme/images/hangman/hangmanwelcome.png)
 
 ### Main Game Screen:
 The Main Game screen is where the user will play the game of Hangman. It contains several sub-elements/features each of which are shown in more detail below:
 
-![Main screen](readme/images/hangman/main-game-screen.png)
+![Main screen](readme/images/hangman/mainscreen.png)
 
 ### Gallows Feature:
 The Gallows sits at the top of the main game screen, and acts as a visual representation of the player's quantity of incorrect guesses:
@@ -70,57 +84,96 @@ The Gallows sits at the top of the main game screen, and acts as a visual repres
 ### Answer Tracker:
 The Answer tracking section of the main game screen will display a placeholder area on which the player's guesses will be compared to the answer - each time the player guesses a letter correctly, one of the blank slots will be displaced by the correct letter, continuing until either the player has ran out of guesses, or until the player has correctly guessed all the letters in the word:
 
-![Answer Tracker](readme/images/hangman/answer-tracker.png)
+![Answer Tracker](readme/images/hangman/answertracking.png)
 
 ### Guess Counters:
 There are two counting sections under the answer tracker, which will display to the user their progress in terms of how many guesses they have remaining, and how many guesses they have used in the game so far:
 
-![Guess Counters](readme/images/hangman/guess-counters.png)
+![Guess Counters](readme/images/hangman/guesscounters.png)
 
 ### Previous Guesses Recording:
 This feature will record each previous guess a player has entered, and display the previous guesses as a list of comma separated letters below the guess-counter section. This will aid the user in terms of avoiding double-guessing a letter, and not having to try remember a long list of previous guesses:
 
-![Previous Guess Recording](readme/images/hangman/previous-guess-tracker.png)
+![Previous Guess Recording](readme/images/hangman/previousguesses.png)
 
 ### Guess entry prompt:
 This is the key feature on the main game screen and is where the user will be prompted to enter their next guess at which letter may be contained in the answer:
 
-![Guess Entry Prompt](readme/images/hangman/guess-entry-prompt.png)
+![Guess Entry Prompt](readme/images/hangman/guessentry.png)
 
-### Notification Area - Correct Guess:
-The notification area is located above the Answer Tracker section, and will contain various notifications to aid the user as the progress through the game. The notification for correctly guessing a letter is shown below:
+### Warning notification - guess count at three or less:
+When the user reaches the point of having only three guesses remaining, this feature will activate, informing the user of their limited remaining guesses, and adding to the overall UX:
 
-![Notifications - Correct Answer](readme/images/hangman/notification-correct.png)
+![Guess Entry Prompt](readme/images/hangman/firstwarning.png)
 
-### Notification Area - Incorrect Guess:
+### Guess Word or Letter functionality:
+The reduction of the guesses remaining count down to three or less will also trigger the activiation of a feature allowing the user to guess either the full word or a single letter, further adding to the UX:
+
+![Guess Entry Prompt](readme/images/hangman/guesswordorletter.png)
+
+### Warning notification - final guess remaining:
+When the user reaches the point of having only one guess remaining, this feature will activate, informing the user of their limited final chance to guess the answer, and adding to the overall UX:
+
+![Guess Entry Prompt](readme/images/hangman/finalwarning.png)
+
+### Notification - Correct Guess:
+The notification feature for correctly guessing a letter is shown below:
+
+![Notifications - Correct Answer](readme/images/hangman/correctguess.png)
+
+### Notification - Incorrect Guess:
 The equivalent notification for when an incorrect letter has been guessed is shown below:
 
-![Notifications - Incorrect Answer](readme/images/hangman/notification-incorrect.png)
+![Notifications - Incorrect Answer](readme/images/hangman/incorrectguess.png)
 
-### Notification Area - Non-Letter Warning:
-In addition to notifying the user of correct/incorrect guesses - the notification area will also display a warning to the user in the event of incorrect data entry. The example below shows a warning displayed when a user has entered a guess that is not a letter:
+### Data-Validation - Non-Letter Warning:
+The example below shows the warning feature displayed when a user has entered a guess that is not a letter:
 
-![Notifications - Non-Letter Warning](readme/images/hangman/notification-non-letter.png)
+![Notifications - Non-Letter Warning](readme/images/hangman/nonletter.png)
 
-### Notification Area - Duplicate Guess Warning:
-A similar warning will be displayed in the notification area if the user enters a letter that they have already guessed - this will trigger a duplicate entry warning to aid the user:
+### Data Validation - Duplicate Letter Guess Warning:
+A similar warning will be displayed if the user enters a letter that they have already guessed - this will trigger a duplicate entry warning to aid the user:
 
-![Notifications - Duplicate Entry Warning](readme/images/hangman/notification-duplicate.png)
+![Notifications - Duplicate Entry Warning](readme/images/hangman/duplicateletter.png)
+
+### Data validation - Incorrect guess length warning (Letter)
+This data validation feature warns the user when they have entered a guess that does not meet the letter length requiremenet (i.e. a single character), as part of the defensive design approach and dealing elegantly with incorrect data entry
+
+![Notifications - Duplicate Entry Warning](readme/images/hangman/incorrectletterlength.png)
+
+### Data validation - Incorrect guess length warning (Word)
+Similarly, this data validation feature warns the user when they have entered a guess that does not meet the word length requiremenet (i.e. the guess must be the same length as the answer).
+
+The warning will fire when the guess is either too long, or too short, as demonstrated in the screenshots below:
+
+![Notifications - Duplicate Entry Warning](readme/images/hangman/incorrectwordlength-long.png)
+
+![Notifications - Duplicate Entry Warning](readme/images/hangman/incorrectwordlength-short.png)
+
+### Data Validation - Non-Alpha word
+This feature will ensure a warning message is displayed to the user in the event of trying to guess a word that contains non-alphabetic characters:
+
+![Notifications - Duplicate Entry Warning](readme/images/hangman/nonalphaword.png)
+
+### Data Validation - Duplicate Guess word
+This feature will ensure a warning message is displayed to the user in the event of trying to guess a word that has already been guessed:
+
+![Notifications - Duplicate Entry Warning](readme/images/hangman/duplicateword.png)
 
 ### Game Won Notification:
-The final type of notification to be displayed in this feature is the game conclusion - in the example below - the user has won, and the notification area will display a message confirmation:
+The final type of notification to be displayed is the game conclusion - in the example below - the user has won, and the notification area will display a message confirmation:
 
-![Notifications - Game won](readme/images/hangman/notification-won.png)
+![Notifications - Game won](readme/images/hangman/gamewon.png)
 
 ### Game Lost Notification:
-In the event that the player loses the game, the notification area will display the message below informing the user of the game conclusion:
+In the event that the player loses the game, the message below will be displayed informing the user of the game conclusion:
 
-![Notifications - Game Lost](readme/images/hangman/notification-lost.png)
+![Notifications - Game Lost](readme/images/hangman/gamelost.png)
 
 ### Exit Game Prompt:
 Upon conclusion of the game, this feature will provide the user with two options - they can either exit the application by pressing the "e" or "E" key, or they can choose to play another game by pressing any other key followed by the "Enter" key:
 
-![Exit Game Prompt](readme/images/hangman/exit-game-prompt.png)
+![Exit Game Prompt](readme/images/hangman/exitgameprompt.png)
 
 ## Features Left To Implement
 There were several additional features which could be added to the Hangman application - each of which are detailed below:
