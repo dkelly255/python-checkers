@@ -984,9 +984,12 @@ def finish_game():
 # Note: ***Hangman Section of Code Begins here***
 
 def initialise_variables():
-    # Initialise key variables
+    """
+    Initialises key variables for use when looping back to re-play the game
+    Does not take in any parameters
+    Returns 8x key values required to enable core game mechanics 
+    """
     # Answer bank & Word variables
-    # word_list = ["try", "to", "setup", "hangman", "game", "using", "python"]
     word_list = open('words.txt').read().split()
     for words in word_list:
         if len(words) < 3:
@@ -1153,6 +1156,14 @@ def draw_gallows(gallows_stage):
 def main_game_screen(
     guesses_used, guesses_remaining, incorrect_guesses, answer_hidden
         ):
+        """
+        - Builds/Draws the main game screen/board for the user to play on
+        - Function will stop after drawing the initial 4x game elements 
+        if the answer has been guessed, or will add a warning based on the
+        number of guesses remaining if the answer is still unguessed
+        - Requires 4x parameters to be passed in
+        - Does not return any value because it is used for display purposes
+        """        
         print("".join(answer_hidden))
         print(f"Guesses Used So Far: {guesses_used}")
         print(f"Guesses Remaining: {guesses_remaining}")
@@ -1167,6 +1178,14 @@ def main_game_screen(
 
 
 def validate_guess(previous_guesses, guesses_remaining):
+    """
+    - Validates the user's guess for data integrity purposes
+    in downstream calculations & functions
+    - Will allow the user the option to guess the full word
+    if guesses remaining is three or less
+    - Will ensure any word/letter guesses are not duplicates, 
+    non-alpha, or of incorrect length
+    """
     while True:
         if guesses_remaining <= 3:
             guess_type = input(
@@ -1225,7 +1244,9 @@ try again")
 
 
 def reveal_letter_in_answer(user_guess, answer, answer_hidden):
-
+    """
+    
+    """
     if user_guess == answer:
         answer_hidden = ["Guess The Word: ", answer]
     else:
