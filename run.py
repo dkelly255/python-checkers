@@ -1277,21 +1277,21 @@ def answer_check(
         answer_hidden = \
             reveal_letter_in_answer(user_guess, answer, answer_hidden)
         print(f"\nCorrect! Great guess - '{user_guess}' was the answer!")
-        sleep(0.75)
+        sleep(5)
     elif user_guess in answer:
         answer_hidden = \
             reveal_letter_in_answer(user_guess, answer, answer_hidden)
         print(f"\nCorrect! '{user_guess}' is in the answer")
-        sleep(0.75)
+        sleep(5)
     elif len(user_guess) > 1:
         print(f"\nSorry! The word '{user_guess}' is not the answer")
-        sleep(0.75)
+        sleep(5)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 8 - gallows_stage
     else:
         print(f"\nSorry! '{user_guess}' is not in the answer")
-        sleep(0.75)
+        sleep(5)
         gallows_stage += 1
         incorrect_guesses += 1
         guesses_remaining = 8 - gallows_stage
