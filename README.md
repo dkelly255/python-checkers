@@ -67,7 +67,7 @@ The game selection screen allows the user to either choose a game to play, or to
 The following section details the features specific to the "Hangman" component of the application:
 
 ### Hangman Welcome Screen:
-This is the initialintroductory screen greeting the user upon selection of the Hangman game from the game selection menu
+This is the initial introductory screen greeting the user upon selection of the Hangman game from the game selection menu
 
 ![Main screen](readme/images/hangman/hangmanwelcome.png)
 
