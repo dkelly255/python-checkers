@@ -2,9 +2,9 @@
 
 This Readme documentation supports the application "Python Games Package" created using Python, and designed to be played in the terminal 
 
-The application will allow the user the choice of playing either the word-guessing game "Hangman", or a text adventure-style game called "Accounting Adventures" where the user must navigate a series of business decisions as the new CEO of a fictional corporation
+The application will allow the user the choice of playing either the word-guessing game "Hangman", or a text adventure-style game called "FictCorp Adventures" where the user must navigate a series of business decisions as the new CEO of a fictional corporation
 
-![Intro Screen](readme/images/hangman/welcome-screen.png)
+![Intro Screen](readme/images/amiresponsive.png)
 
 # UX Planes
 
