@@ -1464,7 +1464,7 @@ while True:
         \n- Navigate the following series of business decisions, and their\
         \nrespective stakeholder impacts\
         \n- Your performance will be displayed on a dashboard in the format\
-        \nbelow: \n"
+        \nbelow: "
 
         main_menu()
         typewriter(intro, 0.0001)
