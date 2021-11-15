@@ -8,6 +8,7 @@ I have used the PEP8 Python code validation service to test the entire program c
 ## **Specific Testing - Hangman**
 
 Welcome Screen:
+
 ----
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------ | -------------
@@ -19,6 +20,7 @@ Welcome Screen:
 
 
 Main Game Screen:
+
 ----
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------- | -------------
@@ -29,6 +31,7 @@ Gallows builds correctly | The Hangman "Gallows" graphic should start at the cor
 Previous guess tracking functions correctly | The previous guess tracker should update, logging each valid guess from the user, whether the letter is in the answer or not. Any invalid guesses should not trigger an addition to the previous guesses tracker | Previous guesses tracker functions as expected - valid guesses are added, and invalid guesses are not displayed | Pass
 
 Data Entry Prompts:
+
 ----
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------- | -------------
@@ -36,6 +39,7 @@ Data Entry Prompts:
 "Guess A Letter Or A Word" Entry Prompt | When a player reaches their final three guesses, the game should prompt the player to enter either a letter (by pressing "L") or a word (by pressing "W") - If a player enters a valid guess, the game should accept the guess and compare to the answer (see data validation testing below) | Data entry prompt works as expected and allows the option of guessing either a letter or a word at the appropriate stage | Pass
 
 User-Guess Validation:
+
 ----
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------- | -------------
@@ -47,6 +51,7 @@ Non-alphabetic entry validation (Word) | A notification should display to the us
 Duplicate guess validation (Word) | A notification should be displayed to the user with an appropriate error/warning message upon entry of a duplicate word guess, helping the user understand why their input was invalid, and what action to take next | Error message displays correctly as expected, and game re-prompts user for a valid input | Pass
 
 Game Notifications:
+
 ----
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------- | -------------
@@ -58,6 +63,7 @@ Game Won notification | Upon winning the game (guessing all correct letters in t
 Game Lost notification | Upon losing the game (failing to guess all correct letters in the answer before exceeding the maximum guess limit) - the notification area should confirm to the user that they have lost & display a commiseration message | Game Lost notification displays as expected | Pass
 
 End Game Sequence:
+
 ----
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------- | -------------
