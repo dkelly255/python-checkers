@@ -355,6 +355,15 @@ The ability for the user to modify their guess limits would also be a potential 
 
 ## Features Left To Implement - Fictcorp Adventures
 
+### Extended Question Bank
+In an unconstrained environment, I would like to add many additional questions and scenarios to the existing five scenarios which would add more color & depth to the User Experience investigating many different areas of the business and stakeholder sentiment. However, with project deadlines I have decided to leave an extended question bank out of scope for this release in the spirit of having a Minimum Viable Product (MVP) for project deadlines.
+
+### Random question Selection
+In conjunction with the extended question bank above, it would be a potential additional feature for future releases of the game to add in a random selector for each question adding an element of variety and chance to the game to help with the User Experience. This would mean each time the User loads the game, they will not know which questions/scenarios will appear, and which sequence the questions will appear in.
+
+### Game length Control
+This would also be a possible feature whereby the user can select a quick game (3x scenarios), a standard game (5x scenarios) or an extended game (7x scenarios) depending on their wishes and time availability. This would work in combination with the extended question bank, and random question generation features above.
+
 # Testing
 
 ## User Acceptance Testing (UAT)
