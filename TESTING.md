@@ -64,7 +64,7 @@ Test Case | Expected Result | Actual Result | Pass/Fail
 ------------- | ------------- | ------------- | -------------
 End Game notification | Upon conclusion of a game, the player should be greeted with the option to either press any key  to continue, or press "e" to exit | End game notification displays as expected upon conclusion of a game | Pass
 Play Again Option | If a player chooses to press any key other than "e", the game should begin again | Play again option functions as expected | Pass
-Exit Game Option | If a player chooses to press the "e" key, the game should terminate & exit the application | Application terminates as expected upon pressing of the "e" key on the end game menu notification | Pass
+Exit Game Option | If a player chooses to press the "e" key, the game should terminate & exit the application returning to the Python Games Package Main Menu | Application terminates as expected upon pressing of the "e" key on the end game menu notification | Pass
 
 ## **Specific Testing - FictCorp Adventures**
 
@@ -91,10 +91,19 @@ Data Entry Validation:
 ----
 Test Case | Expected Result | Actual Result | Pass/Fail
 ------------- | ------------- | ------------ | -------------
-Scenario Presentation | All five business case scnearios should display as expected on the Code Institute Terminal, without any discrepancies on line length, or text wrapping which would negatively impact the User Experience  | Scenario screens all display and function as expected | Pass
-Scenario sequencing | All five business case scenarios should appear in the correct sequence in ascending numeric order beginning with one and finsihing with five | Scenario screens all sequence and function as expected | Pass
-Dashboard Displays | All opening and closing dashboard displays should contain the correct information for both financial projections and stakeholder sentiment, with correct arithmetic for the financial snapshot impacts | Dashboard screens all display, calculate and function as expected | Pass
-Typewriter effect | The typewriter effect should function as expected without any glitches or bugs in displaying the test & dashboards to the user real-time during the scenario & answer display sequences | Typewriter effect functions & times as expected | Pass
+Non-Valid Entry rejection | At all stages through the game any non-valid data entry (i.e. any values that are not equal to "A", "B", or "C" in either uppercase or lowercase) should be rejected by the program, with an error message explaining to the user why the rejection occured and how to proceed | Non-valid data entry is elegantly rejected as expected, as part of defensive design process | Pass
+Score Tracking | Cumulative score tracking should function accurately throughout all stages of the game, with each scenario's closing score being passed forward to the opening dashboard of the following scenario, until the final scenario where the final score will be shown for the user  |Score tracking functions accurately as expected throughout all game stages | Pass
+Emoji Assignments | The emoji assignment function should ensure correct emoji displays at all times throughout the game loop, based on the ciumulative score for each particular stakeholder's sentiment at that point in time | Emoji assignment functions as expected at all times throughout all stages of the game | Pass
+
+End Game Sequence:
+
+----
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------- | -------------
+End Game notification | Upon conclusion of a game, the player should be greeted with the option to either press any key  to continue, or press "e" to exit | End game notification displays as expected upon conclusion of a game | Pass
+Play Again Option | If a player chooses to press any key other than "e", the game should begin again | Play again option functions as expected | Pass
+Exit Game Option | If a player chooses to press the "e" key, the game should terminate & exit the application returning to the Python Games Package Main Menu | Application terminates as expected upon pressing of the "e" key on the end game menu notification | Pass
+
 
 
 
