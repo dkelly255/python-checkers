@@ -35,9 +35,21 @@ Based upon the site Strategy & Scope laid out above, I felt that this simple but
 To facilitate & guide the design of the application and User Experience, I created a flowchart using Microsoft Excel to map the game's flow control and activity sequencing throughout the stages of play. 
 
 The Flowchart below shows the macro-level flow of the application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
-### - Wireframe & Flowchart
+### - Hangman Wireframe & Flowchart
 
-![Wireframe](readme/images/hangman/hangman-wireframe.png)
+![Wireframe](readme/images/hangman/hangman-flowchart.png)
+
+### - Fictcorp Adventures - Overall Wireframe & Flowchart
+
+![Wireframe](readme/images/fictcorp/fictcorp-wireframe.png)
+
+### - Optimal Decision Path wireframe
+
+![Wireframe](readme/images/fictcorp/optimal-path.png)
+
+### - Worst Case Decision Path wireframe
+
+![Wireframe](readme/images/fictcorp/worst-case-path.png)
 
 ## Surface
 Finally, the evolution of the first four Planes of User Experience above allowed the Surface Plane to take shape in terms of arriving at the visual look & feel of the application to be expereienced by the User
