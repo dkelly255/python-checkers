@@ -5,10 +5,11 @@ I have used the PEP8 Python code validation service to test the entire program c
 
 ![PEP8 Validation](readme/testing/pep8validation.png)
 
-## User Acceptance Testing (UAT)
-In order to thoroughly test the functionality of my application, I sought out resources online in terms of approaches & techniques for effective User Acceptance Testing.
+## Specific Testing - Hangman
 
-I found the below article from [Guru99](https://www.guru99.com/download-sample-test-case-template-with-explanation-of-important-fields.html) to be particularly applicable to my use-case scenario, and have modified their approach & template to better fit my specific application scenarios - with each test case detailed below
+Feature  | Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------- | ------------- | -------------
+Content Cell  | Content Cell | Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell  | Content Cell | Content Cell
 
-![Exit Game Prompt](readme/images/hangman/hangman-testing.png)
 
