@@ -657,7 +657,7 @@ def question_4(
             "Shareholders:      " + emoji_assignment(shareholder_delta4)
         customer_delta4 = customer_delta3 + 0
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
-        employee_delta4 = employee_delta3 + 1
+        employee_delta4 = employee_delta3 + 2
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
         revenue_plug = formatting_plug(revenue4, revenue_delta4)
         expense_plug = formatting_plug(expenses4, expense_delta4)
@@ -725,7 +725,7 @@ def question_4(
             "Shareholders:      " + emoji_assignment(shareholder_delta4)
         customer_delta4 = customer_delta3 + 0
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
-        employee_delta4 = employee_delta3 - 1
+        employee_delta4 = employee_delta3 - 2
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
         revenue_plug = formatting_plug(revenue4, revenue_delta4)
         expense_plug = formatting_plug(expenses4, expense_delta4)
@@ -817,7 +817,7 @@ def question_5(
             "Shareholders:      " + emoji_assignment(shareholder_delta5)
         customer_delta5 = customer_delta4 + 0
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
-        employee_delta5 = employee_delta4 + 1
+        employee_delta5 = employee_delta4 + 2
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
         revenue_plug = formatting_plug(revenue5, revenue_delta5)
         expense_plug = formatting_plug(expenses5, expense_delta5)
@@ -891,7 +891,7 @@ def question_5(
             "Shareholders:      " + emoji_assignment(shareholder_delta5)
         customer_delta5 = customer_delta4 + 0
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
-        employee_delta5 = employee_delta4 - 1
+        employee_delta5 = employee_delta4 - 2
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
         revenue_plug = formatting_plug(revenue5, revenue_delta5)
         expense_plug = formatting_plug(expenses5, expense_delta5)
