@@ -370,14 +370,26 @@ The testing approaches & results for the application are fully detailed in the T
 The following section will provide detail & context in terms of the debugging exercises that were part of the development process.
 
 ## Resolved Bugs
-- Notification Area Display Spacing - Originally the notification area prompts were being punctuated by large blank spaces resulting in a bugged display to the user. Upon investigation I found that this was triggered partly by my reflection of the Initial round of PEP8 code validation feedback whereby I had extended code onto new lines without the accompanying new line separator - this resolved the bug & closed the issue
+
+**Hangman:**
+
+- Notification Display Spacing - Originally some of the notification prompts were being punctuated by large blank spaces resulting in a bugged display to the user within the code institute terminal display. Upon investigation I found that this was triggered partly by my reflection of the Initial round of PEP8 code validation feedback whereby I had extended code onto new lines without the accompanying new line separator - this resolved the bug & closed the issue
 
 - Incorrect Gallows build sequencing - Initially I found that the Gallows was building incorrectly for the user when they have logged an incorrect guess - following a debugging exercise I realised this was due to the gallows function being triggered by the number of guesses remaining, rather than by an incorrect guess & was able to resolve the bug.
 
 - Erroneous Previous guess logging - In the early stages of development, I found that the "Previous Guess" log section of the main game screen would collect up all guesses entered by the user, whether the guesses were valid or not - for example strings of text longer than one character, or numbers and numbers were all logged as previous guesses rather than prohibited. I was able to resolve this following a debugging exercise and improve the data entry validation & controls along with associated warning/error notifications.
 
+- Guess counters not incrementing properly with each new user guess - This bug was due to an incorrect parameter (guesses_remaining) being passed into my main_game_screen function and resulted in the "guesses used" counter remaining at zero after each user guess. Code Institute's tutor support helped me to resolve this issue by firstly pointing out that Python is a hybrid of a "Pass by Reference" and "Pass by value" language, and then also pointing out that the simple resolution to the bug was to ensure the correct parameter (guesses_used) was passed into the main_game_screen function.
+
+**FictCorp Adventures:**
+- Display Bugs - Throughout the game development I encountered several bugs impacting the readability of the game texts, prompts and dashboards. These were primarily driven by a combination of extended-length strings running over the 80-character Code Institute Terminal display width, as well as the reflection of the PEP8 Python validation guidelines for indentation & line length. Through extensive question-by-question and screen-by-screen debugging exercises I was able to resolve all of these bugs for the final release.
+
+- Dashboard Display alignment bugs - Intially I found that the opening and closing Dashboard alignment would be negatively impacted depending on the size of the financial deltas resulting from the user's decision in each scenario. For example, if a decision caused a large in crease in revenue, the shareholder sentiment line would sometimes fall short or run over the line boundary leaving the possibility for a poorer User Experience. To resolve this, I created the "plug" functions, which would ensure the Stakeholder sentiment lines would always start & end at the same character, by measuring the length of the preceeding financial metric display, and deducting it from a fixed line-width thus ensuring a cleaner display and resolving the bdisplay bug.
+
 ## Unresolved Bugs
-- There were no bugs of note left to report in the final version of the application deployed to Heroku (Details on the deployment are covered in the next section below)
+- One current bug that still exists at the time of REadme preparation is the persistance of the two lines of invalid strings at the top of the CI Terminal display on each screen of teh FictCorp adventures game. These lines are not driven by my code, and are not present when I run the game in the gitpod terminal and are currently under investigation for resolution.
+
+- There were no other bugs of note left to report in the final version of the application deployed to Heroku (Details on the deployment are covered in the next section below)
 
 
 # Deployment
@@ -390,20 +402,42 @@ Note - please ensure you have created a github repository prior to proceeding to
 ## Heroku
 The Steps for deployment to Heroku are as follows:
 - Navigate to [Heroku](https://id.heroku.com/login) and create an account
+
+![Welcome Screen](readme/deployment/heroku-intro.png)
+
 - From the Heroku dashboard select the “Create new app” button.
+
+![Welcome Screen](readme/deployment/heroku-newapp.png)
+
 - Choose a name for the application - I have chosen Python-Hangman but please note that the name must be unique.
-- Select your region and then click “Create app” - this will trigger a page with all the information for setting up the app.
+
+![Welcome Screen](readme/deployment/heroku-name.png)
+
+- Select your region 
+
+![Welcome Screen](readme/deployment/heroku-region.png)
+
+- Then click “Create app” - this will trigger a page with all the information for setting up the app.
+
+![Welcome Screen](readme/deployment/heroku-create.png)
 
 Settings Tab:
 
 - Config Vars - It is important to get your settings section done before you deploy  your code, the first section being the "config vars" - also known as "environment variables", are where sensitive data that needs to be kept private is stored. You must then create a Config Var called `PORT` which must be set to `8000`
 
+![Welcome Screen](readme/deployment/heroku-configvars.png)
+
 - Buildpacks - The next step is to add buildpacks - These install further dependencies that we need. Click “Add buildpack”, add the Python buildpack first and then click “Save changes”. Then add the node.js Buildpack, to handle the mock terminal, again clicking “Save”. 
 Note - please make sure the buildpacks are in this  order, with Python on top, and node.js underneath. If they're the other way around you  can click and drag them to change the order.
+
+![Welcome Screen](readme/deployment/heroku-buildpacks.png)
 
 Deployment Tab: 
 
 - Select Github here, and then we  can confirm that we want to connect to Github & search for the equivalent Github repository name, followed by “Search”. 
+
+![Welcome Screen](readme/deployment/heroku-deploy.png)
+
 - Next, click “connect” to link up the Heroku app to our Github repository code, and scroll down to see two options - for manual or automatic deployment
 - If you choose to enable automatic deployment then Heroku will rebuild the app every time you push a new change to your code in Github. 
 - Alternatively you can choose to  manually deploy using the "deploy branch" option
