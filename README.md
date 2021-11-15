@@ -182,10 +182,9 @@ The following section details the features specific to the "FictCorp Adventures"
 The Welcome screen greets the user upon the initial load of the game and shows the game title along with some of the emojis used later to illustrate the different stakeholder sentiment levels - the user continues past this screen by pressing "enter"
 
 ![Welcome Screen](readme/images/fictcorp/welcomescreen.png)
-## Game Rules
 
-## Introductory Story Screen
-The Typewriter effect is used to display the text on the introductory screen - this serves the purpose of both adding to the UX by giving the introduction a more cinematic feel, and also helps the user to visually parse the information by displaying it gradually/piecemeal rather than overwhelm the user with one large block of text:
+## Game Rules / Instructions & Introductory Story Screen
+The user is given an overview of the game rules & instructions via this feature, with the Typewriter effect being used to display the text on serving the purpose of both adding to the UX by giving the introduction a more cinematic feel, and also helps the user to visually parse the information by displaying it gradually/piecemeal rather than overwhelm the user with one large block of text:
 
 ![Intro screen](readme/images/fictcorp/intro.png)
 
