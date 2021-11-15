@@ -95,7 +95,7 @@ Non-Valid Entry rejection | At all stages through the game any non-valid data en
 Score Tracking | Cumulative score tracking should function accurately throughout all stages of the game, with each scenario's closing score being passed forward to the opening dashboard of the following scenario, until the final scenario where the final score will be shown for the user  |Score tracking functions accurately as expected throughout all game stages | Pass
 Emoji Assignments | The emoji assignment function should ensure correct emoji displays at all times throughout the game loop, based on the ciumulative score for each particular stakeholder's sentiment at that point in time | Emoji assignment functions as expected at all times throughout all stages of the game | Pass
 
-End Game Sequence:
+Game Conclusion Sequence:
 
 ----
 Test Case | Expected Result | Actual Result | Pass/Fail
