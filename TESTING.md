@@ -13,11 +13,6 @@ Welcome Screen:
  Test Case | Expected Result | Actual Result | Pass/Fail
  ------------- | ------------- | ------------ | -------------
  Welcome Message Functionality | Welcome screen should load as intended, should present user with a prompt to press any key to continue, and upon pressing any key, the program should proceed to the Main Game Screen | Screen displays and functions as expected | Pass
- 
-
-
-
-
 
 Main Game Screen:
 
@@ -41,8 +36,8 @@ Data Entry Prompts:
 User-Guess Validation:
 
 ----
- Test Case | Expected Result | Actual Result | Pass/Fail
- ------------- | ------------- | ------------- | -------------
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------- | -------------
 Incorrect Guess length (Letter) | If a player enters a guess which does not meet the letter length requirements (must be a single character only) a warning should be displayed advising what the issue is and how to resolve | Entry of a non-valid length guess for a letter triggers the appropriate warning message as expected | Pass
 Non-alphabetic entry validation (Letter) | A notification should display to the user the appropriate error/warning message upon entry of a non-alphabetic character for their guess, helping the user understand why their input was invalid, and what action to take next | Error message displays correctly as expected, and game re-prompts user for a valid input | Pass
 Duplicate guess validation (Letter) | A notification should be displayed to the user with an appropriate error/warning message upon entry of a duplicate letter guess, helping the user understand why their input was invalid, and what action to take next | Error message displays correctly as expected, and game re-prompts user for a valid input | Pass
@@ -53,8 +48,8 @@ Duplicate guess validation (Word) | A notification should be displayed to the us
 Game Notifications:
 
 ----
- Test Case | Expected Result | Actual Result | Pass/Fail
- ------------- | ------------- | ------------- | -------------
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------- | -------------
 Correct Guess notification | If the user enters a correct guess, either a letter or a word, a confirmation message should display to the user informing them of this, and recording the guess by revealing the corresponding blank letter/s in the answer, and adding the guess to the previous guess tracker. In the event of the guess being a word - the game won notification should fire (see further below) | Correct Guess notification displays as expected | Pass
 Incorrect Guess notification | If a user enters an incorrect guess (either letter or word) a confirmation message should display confirming this to the user, and adding the incorrect guess to the previous gess tracker, as well as incrementing the guess counters and building an additional stage on the gallows | Incorrect Guess notification displays as expected | Pass
 Guesses Remaining Limit warning | If a player reaches the stage where they have only three guesses remaining, a warning should fire displaying this communciation to the user, informing them of their limited guesses remaining and advising that they can now guess the word if they wish | Warning fires as expected in terms of both triggering at the correct guesses remaining limit (three guesses remaining) and in terms of the wanring content | Pass
@@ -65,12 +60,41 @@ Game Lost notification | Upon losing the game (failing to guess all correct lett
 End Game Sequence:
 
 ----
- Test Case | Expected Result | Actual Result | Pass/Fail
- ------------- | ------------- | ------------- | -------------
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------- | -------------
 End Game notification | Upon conclusion of a game, the player should be greeted with the option to either press any key  to continue, or press "e" to exit | End game notification displays as expected upon conclusion of a game | Pass
 Play Again Option | If a player chooses to press any key other than "e", the game should begin again | Play again option functions as expected | Pass
 Exit Game Option | If a player chooses to press the "e" key, the game should terminate & exit the application | Application terminates as expected upon pressing of the "e" key on the end game menu notification | Pass
 
+## **Specific Testing - FictCorp Adventures**
+
+Welcome Screen:
+
+----
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------ | -------------
+Welcome Message Functionality | Welcome screen should load as intended, should present user with a prompt to press any key to continue, and upon pressing any key, the program should proceed to the Game Introduction Screen | Screen displays and functions as expected | Pass
+
+
+Scenario Displays & Presentation:
+
+----
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------ | -------------
+Scenario Presentation | All five business case scnearios should display as expected on the Code Institute Terminal, without any discrepancies on line length, or text wrapping which would negatively impact the User Experience  | Scenario screens all display and function as expected | Pass
+Scenario sequencing | All five business case scenarios should appear in the correct sequence in ascending numeric order beginning with one and finsihing with five | Scenario screens all sequence and function as expected | Pass
+Dashboard Displays | All opening and closing dashboard displays should contain the correct information for both financial projections and stakeholder sentiment, with correct arithmetic for the financial snapshot impacts | Dashboard screens all display, calculate and function as expected | Pass
+Typewriter effect | The typewriter effect should function as expected without any glitches or bugs in displaying the test & dashboards to the user real-time during the scenario & answer display sequences | Typewriter effect functions & times as expected | Pass
+
+Data Entry Validation:
+
+----
+Test Case | Expected Result | Actual Result | Pass/Fail
+------------- | ------------- | ------------ | -------------
+Scenario Presentation | All five business case scnearios should display as expected on the Code Institute Terminal, without any discrepancies on line length, or text wrapping which would negatively impact the User Experience  | Scenario screens all display and function as expected | Pass
+Scenario sequencing | All five business case scenarios should appear in the correct sequence in ascending numeric order beginning with one and finsihing with five | Scenario screens all sequence and function as expected | Pass
+Dashboard Displays | All opening and closing dashboard displays should contain the correct information for both financial projections and stakeholder sentiment, with correct arithmetic for the financial snapshot impacts | Dashboard screens all display, calculate and function as expected | Pass
+Typewriter effect | The typewriter effect should function as expected without any glitches or bugs in displaying the test & dashboards to the user real-time during the scenario & answer display sequences | Typewriter effect functions & times as expected | Pass
 
 
 
