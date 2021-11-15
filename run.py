@@ -23,10 +23,11 @@ def clear():
 
 # Note: ***FictCorp Adventures Section of Code Begins Here***
 
+
 def emoji_assignment(delta):
     """
     Assigns emoji to dashboard categories based on stakeholder sentiment score
-    Accepts a numeric delta as input parameter and returns the emoji for use 
+    Accepts a numeric delta as input parameter and returns the emoji for use
     in the stakeholder dashboard displays
     """
     if delta >= 2:
@@ -114,14 +115,15 @@ def question_1(
         customers, customer_delta, employees, employee_delta, dashboard_0):
     """
     First question of the game - requires 13x parameters and returns 13x values
-    Displays the question & financial/stakeholder dashboard and asks the user 
+    Displays the question & financial/stakeholder dashboard and asks the user
     to choose an answer.
-    
-    Based on the answer, the function will display one of three possible outcomes
-    Each of which the function will reflect across the financial & stakeholder
-    dashboard displays, along with the total cumulative points scored
 
-    The function will then return the closing values for each variable to be 
+    Based on the answer, the function will display one of three possible
+    outcomes, each of which the function will reflect across the financial
+    & stakeholder dashboard displays, along with the total cumulative points
+    scored
+
+    The function will then return the closing values for each variable to be
     passed on for use as arguments in the subsequent question
     """
     clear()
@@ -278,15 +280,16 @@ def question_2(
         profits1, profit_delta1, shareholders1, shareholder_delta1,
         customers1, customer_delta1, employees1, employee_delta1, dashboard_1):
     """
-    Second question of the game - requires 13x parameters and returns 13x values
-    Displays the question & financial/stakeholder dashboard and asks the user 
+    Second question game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user
     to choose an answer.
-    
-    Based on the answer, the function will display one of three possible outcomes
-    Each of which the function will reflect across the financial & stakeholder
-    dashboard displays, along with the total cumulative points scored
 
-    The function will then return the closing values for each variable to be 
+    Based on the answer, the function will display one of three possible
+    outcomes, each of which the function will reflect across the financial
+    & stakeholder dashboard displays, along with the total cumulative points
+    scored
+
+    The function will then return the closing values for each variable to be
     passed on for use as arguments in the subsequent question
     """
     clear()
@@ -436,14 +439,15 @@ def question_3(
         customers2, customer_delta2, employees2, employee_delta2, dashboard_2):
     """
     Third question of the game - requires 13x parameters and returns 13x values
-    Displays the question & financial/stakeholder dashboard and asks the user 
+    Displays the question & financial/stakeholder dashboard and asks the user
     to choose an answer.
-    
-    Based on the answer, the function will display one of three possible outcomes
-    Each of which the function will reflect across the financial & stakeholder
-    dashboard displays, along with the total cumulative points scored
 
-    The function will then return the closing values for each variable to be 
+    Based on the answer, the function will display one of three possible
+    outcomes, each of which the function will reflect across the financial
+    & stakeholder dashboard displays, along with the total cumulative points
+    scored
+
+    The function will then return the closing values for each variable to be
     passed on for use as arguments in the subsequent question
     """
     clear()
@@ -593,15 +597,16 @@ def question_4(
         profit_delta3, shareholders3, shareholder_delta3, customers3,
         customer_delta3, employees3, employee_delta3, dashboard_3):
     """
-    Fourth question of the game - requires 13x parameters and returns 13x values
-    Displays the question & financial/stakeholder dashboard and asks the user 
+    Fourth question of game - requires 13x parameters and returns 13x values
+    Displays the question & financial/stakeholder dashboard and asks the user
     to choose an answer.
-    
-    Based on the answer, the function will display one of three possible outcomes
-    Each of which the function will reflect across the financial & stakeholder
-    dashboard displays, along with the total cumulative points scored
 
-    The function will then return the closing values for each variable to be 
+    Based on the answer, the function will display one of three possible
+    outcomes, each of which the function will reflect across the financial
+    & stakeholder dashboard displays, along with the total cumulative points
+    scored
+
+    The function will then return the closing values for each variable to be
     passed on for use as arguments in the subsequent question
     """
     clear()
@@ -753,12 +758,13 @@ def question_5(
         customer_delta4, employees4, employee_delta4, dashboard_4):
     """
     Final question of the game - requires 13x parameters and returns 13x values
-    Displays the question & financial/stakeholder dashboard and asks the user 
+    Displays the question & financial/stakeholder dashboard and asks the user
     to choose an answer.
-    
-    Based on the answer, the function will display one of three possible outcomes
-    Each of which the function will reflect across the financial & stakeholder
-    dashboard displays, along with the total cumulative points scored
+
+    Based on the answer, the function will display one of three possible
+    outcomes, each of which the function will reflect across the financial
+    & stakeholder dashboard displays, along with the total cumulative points
+    scored
 
     The function will then return the closing values for each variable and will
     also display to the user their final score
@@ -918,8 +924,8 @@ def question_5(
 def run_textadv():
     """
     Main function containing questions for game execution
-    Sequenced to ensure the correct parameters and handed over from 
-    each question function to the next, and returns the final 
+    Sequenced to ensure the correct parameters and handed over from
+    each question function to the next, and returns the final
     status for each of the 3x key stakeholders
     """
     revenue1, revenue_delta1, expenses1, expense_delta1, profits1,\
@@ -981,13 +987,15 @@ def finish_game():
             shareholder_delta5, customer_delta5, employee_delta5 = \
                 run_textadv()
 
+
 # Note: ***Hangman Section of Code Begins here***
+
 
 def initialise_variables():
     """
     Initialises key variables for use when looping back to re-play the game
     Does not take in any parameters
-    Returns 8x key values required to enable core game mechanics 
+    Returns 8x key values required to enable core game mechanics
     """
     # Answer bank & Word variables
     word_list = open('words.txt').read().split()
@@ -1158,12 +1166,12 @@ def main_game_screen(
         ):
         """
         - Builds/Draws the main game screen/board for the user to play on
-        - Function will stop after drawing the initial 4x game elements 
+        - Function will stop after drawing the initial 4x game elements
         if the answer has been guessed, or will add a warning based on the
         number of guesses remaining if the answer is still unguessed
         - Requires 4x parameters to be passed in
         - Does not return any value because it is used for display purposes
-        """        
+        """
         print("".join(answer_hidden))
         print(f"Guesses Used So Far: {guesses_used}")
         print(f"Guesses Remaining: {guesses_remaining}")
@@ -1183,7 +1191,7 @@ def validate_guess(previous_guesses, guesses_remaining):
     in downstream calculations & functions
     - Will allow the user the option to guess the full word
     if guesses remaining is three or less
-    - Will ensure any word/letter guesses are not duplicates, 
+    - Will ensure any word/letter guesses are not duplicates,
     non-alpha, or of incorrect length
     """
     while True:
@@ -1247,7 +1255,7 @@ def reveal_letter_in_answer(user_guess, answer, answer_hidden):
     """
     - Replaces the blanks/underscores representing the unguessed letters of
     the answer with the correct guesses from the user
-    - It requires 3x parameters as inputs, and returns the status of the 
+    - It requires 3x parameters as inputs, and returns the status of the
     answer in terms of guessed/unguessed letters
     """
     if user_guess == answer:
@@ -1305,13 +1313,13 @@ def play_game(
         answer, answer_hidden, guesses_remaining):
     """
     - Main game function: this will display to the user either a "game
-    lost" notification if the gallows is fully built resulting from 
+    lost" notification if the gallows is fully built resulting from
     8x incorrect guesses, or alternatively a game won notification if
     the "answer_hidden" variable no longer contains any unguessed letters
     - if the game has been neither won, nor lost, the game will still be
     in progress, and in this case the function will run the main game
     mechanics for the player
-    - The function requires 7x key parameters as inputs and does not 
+    - The function requires 7x key parameters as inputs and does not
     return any values
     """
     while "_ " in answer_hidden:
@@ -1424,7 +1432,7 @@ while True:
                     guesses_used, answer, answer_hidden, guesses_remaining)
             else:
                 print(f"\n'{stop_go}' is an invalid choice\n")
-    # Option "B" selection will trigger the FictCorp Adventures game 
+    # Option "B" selection will trigger the FictCorp Adventures game
     # The code below intialises the key variables and runs the game
     elif game == "b":
         clear()
@@ -1476,7 +1484,7 @@ while True:
     elif game == "c":
         print("Goodbye")
         break
-    # Input validation to ensure invalid data entry is dealt with elegantly as 
+    # Input validation to ensure invalid data entry is dealt with elegantly as
     # part of defensive design principles
     else:
         clear()

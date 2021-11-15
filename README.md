@@ -365,18 +365,7 @@ In conjunction with the extended question bank above, it would be a potential ad
 This would also be a possible feature whereby the user can select a quick game (3x scenarios), a standard game (5x scenarios) or an extended game (7x scenarios) depending on their wishes and time availability. This would work in combination with the extended question bank, and random question generation features above.
 
 # Testing
-
-## User Acceptance Testing (UAT)
-In order to thoroughly test the functionality of my application, I sought out resources online in terms of approaches & techniques for effective User Acceptance Testing.
-
-I found the below article from [Guru99](https://www.guru99.com/download-sample-test-case-template-with-explanation-of-important-fields.html) to be particularly applicable to my use-case scenario, and have modified their approach & template to better fit my specific application scenarios - with each test case detailed below
-
-![Exit Game Prompt](readme/images/hangman/hangman-testing.png)
-
-## Validator Testing
-I have used the PEP8 Python code validation service to test my program and the code has passed without any errors, notifications or warnings as shown in screenshot below:
-
-![Exit Game Prompt](readme/images/hangman/pep8-hangman.png)
+The testing approaches & results for the application are fully detailed in the TESTING.md file attached - please navigate to this section for details of the application's testing.
 
 # Bugs
 The following section will provide detail & context in terms of the debugging exercises that were part of the development process.
