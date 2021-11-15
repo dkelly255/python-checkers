@@ -53,6 +53,9 @@ These Surface elements are discussed & illustrated in further detail in the "Fea
 The main features of the application are discussed in detail below - I have segregated the features into two sections - "Existing Features" and "Features Left To Implement" with screenshots and narrative descriptions where appropriate:
 ## Existing Features:
 
+### Word Bank:
+The libraray of words for the game is contained in the file "words.txt", and is imported into the main run.py Python file. I found this approach enabled the best user experience in that it gave a very large selection of words of varying lengths and difficulties to keep the game interesting for the User/s. The source is attributed & detailed in the credits section.
+
 ### Welcome Screen:
 The welcome screen greets the user upon loading the game and will load the game selection screen upon pressing the "Enter" Key
 
