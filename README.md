@@ -406,7 +406,7 @@ The following section will provide detail & context in terms of the debugging ex
 - Dashboard Display alignment bugs - Intially I found that the opening and closing Dashboard alignment would be negatively impacted depending on the size of the financial deltas resulting from the user's decision in each scenario. For example, if a decision caused a large in crease in revenue, the shareholder sentiment line would sometimes fall short or run over the line boundary leaving the possibility for a poorer User Experience. To resolve this, I created the "plug" functions, which would ensure the Stakeholder sentiment lines would always start & end at the same character, by measuring the length of the preceeding financial metric display, and deducting it from a fixed line-width thus ensuring a cleaner display and resolving the bdisplay bug.
 
 ## Unresolved Bugs
-- One current bug that still exists at the time of REadme preparation is the persistance of the two lines of invalid strings at the top of the CI Terminal display on each screen of teh FictCorp adventures game. These lines are not driven by my code, and are not present when I run the game in the gitpod terminal and are currently under investigation for resolution.
+- One current bug that still exists at the time of REadme preparation is the persistance of the two lines of invalid strings at the top of the CI Terminal display on each screen of the FictCorp adventures game. These lines are not driven by my code, and are not present when I run the game in the gitpod terminal and are currently under investigation for resolution.
 
 - There were no other bugs of note left to report in the final version of the application deployed to Heroku (Details on the deployment are covered in the next section below)
 
@@ -498,7 +498,7 @@ Within the application I have used the following sections of code at varying sta
 
 - I sourced the code for [Importing words from a .txt file](https://stackoverflow.com/questions/30768056/importing-external-txt-file-in-python) from the linked [Stack Overflow](https://stackoverflow.com/questions/30768056/importing-external-txt-file-in-python) article - this was very brief, concise & accurate code which helped tie together the mechanics of the game towards the end of development when I was switching from a very small development words bank for testing purposes to a larger operational word bank for the final release.
 
-- The [Emoji Icons For FictCorp Dashboard](https://emojipedia.org/) were all sourced from the [emojipedia.ord](https://emojipedia.org/) site linked above and are heavily used at various stages throughout the dashboard displays to add a visual element to the User Experience in the Code Instititute Terminal
+- The [Emoji Icons For FictCorp Dashboard](https://emojipedia.org/) were all sourced from the [emojipedia.org](https://emojipedia.org/) site linked above and are heavily used at various stages throughout the dashboard displays to add a visual element to the User Experience in the Code Instititute Terminal
 
 
 ## Technologies & Libraries Used:
