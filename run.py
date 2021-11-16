@@ -92,9 +92,8 @@ def main_menu():
     clear()
 
 
-# Credits: This function was sourced from the article below and adapted for my
-# project needs:
-# Credits:
+# Credits: Typewriter function was sourced from the article below and adapted for my
+# project needs - see credits section of readme for further detail:
 # www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal
 
 
@@ -127,19 +126,24 @@ def question_1(
     passed on for use as arguments in the subsequent question
     """
     clear()
+    # Print opening dashboard, use typewriter effect to enhance UX
     typewriter(dashboard_0, 0.003)
+    # Text outlining the scenario details for the user stored as a string variable: 
     scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
     FictonalCorp's leading product should be set for the coming year:\n\
     \n    A. Increase Current Selling Price\n\
     B. Maintain Current Selling Price \n\
     C. Reduce Current Selling Price\n"
     typewriter(scenario_1, 0.01)
+    # Request input from the user - choice between A, B or C
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
+        # Input validation to ensure no invalid data passed on further into program
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
+    # Answers A, B & C stored in strings in 3x variables below:
     scenario_1_answer_1 = "\nYou have chosen Option A\
     \n \n\
     - Increasing Selling Prices by ~5% has resulted in a decrease in\n\
@@ -158,28 +162,49 @@ def question_1(
     units sold, with several new customers interested\n\
     - Overall Revenue projections have increased as a result\n\
     - With expenses unchanged, profit projections have increased\n"
-
+    # Code dealing with Decision Path "A"
     if input1 == "A":
+        # Revenue decreases by €50,000
         revenue_delta1 = -50000
+        # Updated revenue stored in variable revenue1
         revenue1 = revenue + revenue_delta1
+        # No impact to costs in this scenario therefore expense delta = 0
         expense_delta1 = 0
+        # Error Handling/Input validation for initial round of expense delta
+        # calculations
         try:
             expenses1 = expenses + expense_delta
         except TypeError:
             expenses1 = expenses
+        # Calculate updated profit delta
         profit_delta1 = revenue_delta1 - expense_delta1
+        # Calculate scenario's closing profit
         profits1 = revenue1 - expenses1
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta1 = -1
+        # Updated Shareholder section of dashboard
         shareholders1 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta1)
+        # Impact to customer sentiment of decision path chosen
         customer_delta1 = -1
+        # Updated Customer section of dashboard
         customers1 = "Customers:         " + emoji_assignment(customer_delta1)
+        # Impact to employee sentiment of decision path chosen
         employee_delta1 = 0
+        # Updated Employee section of dashboard
         employees1 = "Employees:         " + emoji_assignment(employee_delta1)
+        # Plugs to visually align the revenue, expenses & profits in 
+        # dashboard displays for terminal width ensuring consistency 
+        # of formatting
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
         profit_plug = formatting_plug(profits1, profit_delta1)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta1 + customer_delta1 + employee_delta1
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials & 
+        # stakeholder sentiment - stored in variable below
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -191,9 +216,15 @@ def question_1(
   {employee_delta1}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_1_answer_1, 0.01)
+        # Also display updated/closing dashboard with results of scenario decision
         typewriter(dashboard_1, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
@@ -998,6 +1029,13 @@ def initialise_variables():
     Returns 8x key values required to enable core game mechanics
     """
     # Answer bank & Word variables
+    # Credits: word_list sourced from Github repository below:
+    # https://github.com/Xethron/Hangman/blob/master/words.txt
+    # And the method for removing words less than three letters in length
+    # was sourced from (https://stackoverflow.com/questions/10150725/
+    # beginner-issue-python-how-do-i-remove-words-from-a-list-under
+    # -a-certain-leng) article on Stack Overflow
+    # Please see readme credits for more detail if required
     word_list = open('words.txt').read().split()
     for words in word_list:
         if len(words) < 3:
@@ -1267,6 +1305,10 @@ def reveal_letter_in_answer(user_guess, answer, answer_hidden):
 
     return answer_hidden
 
+# Credits: the "Sleep" function used throughout my answer_check
+# function was sourced from the article below:
+# https://www.programiz.com/python-programming/time/sleep 
+# Please see credits section of readme for further detail
 
 def answer_check(
     user_guess, previous_guesses, gallows_stage, incorrect_guesses,
