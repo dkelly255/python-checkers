@@ -92,8 +92,8 @@ def main_menu():
     clear()
 
 
-# Credits: Typewriter function was sourced from the article below and adapted for my
-# project needs - see credits section of readme for further detail:
+# Credits: Typewriter function was sourced from the article below and adapted
+# for project needs - see credits section of readme for further detail:
 # www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal
 
 
@@ -128,7 +128,7 @@ def question_1(
     clear()
     # Print opening dashboard, use typewriter effect to enhance UX
     typewriter(dashboard_0, 0.003)
-    # Text outlining the scenario details for the user stored as a string variable: 
+    # Text outlining scenario details for the user stored as string variable:
     scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
     FictonalCorp's leading product should be set for the coming year:\n\
     \n    A. Increase Current Selling Price\n\
@@ -138,7 +138,7 @@ def question_1(
     # Request input from the user - choice between A, B or C
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
-        # Input validation to ensure no invalid data passed on further into program
+        # Input validation to ensure no invalid data entered into program
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
@@ -193,8 +193,8 @@ def question_1(
         employee_delta1 = 0
         # Updated Employee section of dashboard
         employees1 = "Employees:         " + emoji_assignment(employee_delta1)
-        # Plugs to visually align the revenue, expenses & profits in 
-        # dashboard displays for terminal width ensuring consistency 
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
         # of formatting
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
@@ -203,7 +203,7 @@ def question_1(
         # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta1 + customer_delta1 + employee_delta1
         # Updated dashboard/closing dashboard for current scenario
-        # Reflects the impact of user's chosen decision on financials & 
+        # Reflects the impact of user's chosen decision on financials &
         # stakeholder sentiment - stored in variable below
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -221,7 +221,7 @@ def question_1(
         # Display to the user the explanation of the impacts of their chosen
         # decision path using typewriter method to enhance UX
         typewriter(scenario_1_answer_1, 0.01)
-        # Also display updated/closing dashboard with results of scenario decision
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_1, 0.003)
         # Request user to press the enter key to proceed to next scenario when
         # ready
@@ -257,8 +257,8 @@ def question_1(
         employee_delta1 = 0
         # Updated Employee section of dashboard
         employees1 = "Employees:         " + emoji_assignment(employee_delta1)
-        # Plugs to visually align the revenue, expenses & profits in 
-        # dashboard displays for terminal width ensuring consistency 
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
         # of formatting
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
@@ -267,7 +267,7 @@ def question_1(
         # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta1 + customer_delta1 + employee_delta1
         # Updated dashboard/closing dashboard for current scenario
-        # Reflects the impact of user's chosen decision on financials & 
+        # Reflects the impact of user's chosen decision on financials &
         # stakeholder sentiment - stored in variable below
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -285,7 +285,7 @@ def question_1(
         # Display to the user the explanation of the impacts of their chosen
         # decision path using typewriter method to enhance UX
         typewriter(scenario_1_answer_2, 0.01)
-        # Also display updated/closing dashboard with results of scenario decision
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_1, 0.003)
         # Request user to press the enter key to proceed to next scenario when
         # ready
@@ -321,8 +321,8 @@ def question_1(
         employee_delta1 = 0
         # Updated Employee section of dashboard
         employees1 = "Employees:         " + emoji_assignment(employee_delta1)
-        # Plugs to visually align the revenue, expenses & profits in 
-        # dashboard displays for terminal width ensuring consistency 
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
         # of formatting
         revenue_plug = formatting_plug(revenue1, revenue_delta1)
         expense_plug = formatting_plug(expenses1, expense_delta1)
@@ -331,7 +331,7 @@ def question_1(
         # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta1 + customer_delta1 + employee_delta1
         # Updated dashboard/closing dashboard for current scenario
-        # Reflects the impact of user's chosen decision on financials & 
+        # Reflects the impact of user's chosen decision on financials &
         # stakeholder sentiment - stored in variable below
         dashboard_1 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
@@ -349,7 +349,7 @@ def question_1(
         # Display to the user the explanation of the impacts of their chosen
         # decision path using typewriter method to enhance UX
         typewriter(scenario_1_answer_3, 0.01)
-        # Also display updated/closing dashboard with results of scenario decision
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_1, 0.003)
         # Request user to press the enter key to proceed to next scenario when
         # ready
@@ -1362,8 +1362,9 @@ def reveal_letter_in_answer(user_guess, answer, answer_hidden):
 
 # Credits: the "Sleep" function used throughout my answer_check
 # function was sourced from the article below:
-# https://www.programiz.com/python-programming/time/sleep 
+# https://www.programiz.com/python-programming/time/sleep
 # Please see credits section of readme for further detail
+
 
 def answer_check(
     user_guess, previous_guesses, gallows_stage, incorrect_guesses,
@@ -1565,7 +1566,7 @@ while True:
             {employee_delta}    \
     ------------------------------------------------------------\n"
         # Introductory text & instructions/game objectives
-        # Stored in variable below 
+        # Stored in variable below
         intro = f"- The Year is 2021...\
         \n- FictionalCorp have hired you as their new CEO\
         \n- You have been tasked with improving their performance on 3x fronts\
