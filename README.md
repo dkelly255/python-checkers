@@ -11,30 +11,33 @@ The application will allow the user the choice of playing either the word-guessi
 I have used the Five Planes of UX to design the application, and provide a description of the acitvities, connections, and flows through each of the UX Planes below:
 ## Strategy
 The strategy for the application's User Experience was developed around addressing the User Needs and User Stories below - users will wish to:
-- Have the ability to play a game of Hangman against the computer 
-- See their progress through the game in terms of guesses used, guessed remaining and answer letters revealed
-- Have the option to either exit the game or play again upon completion of an individual game
+- Have the ability to play either a game of Hangman or a text adventure game called "FictCorp Adventures" against the computer 
+- See their progress through the games in terms of guesses used, guessed remaining and answer letters revealed for Hangman, and in terms of points scored and financial/stakeholder performance in FictCorp Adventures
+- Have the option to either exit to the main menu or play again upon completion of an individual game
  
 ## Scope
 The Scope of the application is informed by the Strategy above, in terms of the Functional Specifications and Requirements of the game - I wanted to ensure optimal scope to actualise the strategy by including content and interactivity that help enable the user stories.
 
-The site's scope encompasses the provision of a fully functional hangman game to the user, with features that would appropriately deliver the user experience - including a drawable gallows, guess tracking/counting functionality, an answer display, and a suite of situational notifications to help guide the user through the game experience
+The site's scope encompasses the provision of a fully functional hangman game to the user, with features that would appropriately deliver the user experience - including a drawable gallows, guess tracking/counting functionality, an answer display, and a suite of situational notifications to help guide the user through the game experience. 
+
+Additionally the Text Adventure game "FictCorp Adventures" should ensure the provision to the user of a fully functional basic text adventure game, complete with multiple scenarios/questions, and multiple discretionary decision paths through each scenario - with each path having unique consequences and impacts both positive and negative upon the financial performance of the company, as well as sentiment amongst key stakeholders (shareholders, customers & employees)
 
 I have also demarcated the original possible list of site scope into "existing features" and "features yet to implement" in the next section of this readme document - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
 
 ## Structure
 
-The application is delivered via a simple 2-page structure, with the first page containing the welcome message that greets the user upon initialising the game, and the second page housing the actual game content & interface.
+The application is delivered via a simple set of menus and screens which the user can easily & inutiviely navigate with specific keystrokes when instructed. The first page containing the welcome message that greets the user upon initialising the game, and the second page housing the actual game choice menu & interface, which allows the user into playing either Hangman or FictCorp Adventures.
 
-As detailed further in the "Features" section below, the main game page is a one-stop-shop delivering all of the user needs in one self-contained area - including everything from the gallows displaying the game progress, to guess counters, to answer tracking and a notification area.
+As detailed further in the "Features" section below, each game has it's own main game page. In the case of Hangman, this is a one-stop-shop delivering all of the user needs in one self-contained area - including everything from the gallows displaying the game progress, to guess counters, to answer tracking and a notification area. Whereas in the case of FictCorp Adventures, the game will progress through a series of five individual business decision scenarios, with cumulative score tracking and a final score report to close the game.
 
 Based upon the site Strategy & Scope laid out above, I felt that this simple but effective structure would represent the optimal way of delivering the User Experience in a positive and effective manner
 
 ## Skeleton
 
-To facilitate & guide the design of the application and User Experience, I created a flowchart using Microsoft Excel to map the game's flow control and activity sequencing throughout the stages of play. 
+To facilitate & guide the design of the application and User Experience, I created several flowcharts as wireframe diagrams using Microsoft Excel to map the flow control and activity sequencing throughout the stages of play for both games. 
 
-The Flowchart below shows the macro-level flow of the application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
+The Flowcharts below show the macro-level flow of the application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
+
 ### - Hangman Wireframe & Flowchart
 
 ![Wireframe](readme/images/hangman/hangman-flowchart.png)
