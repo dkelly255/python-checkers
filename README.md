@@ -301,7 +301,7 @@ In this scenario the user must decide on setting the coming year's employee payr
 
 ![Welcome Screen](readme/images/fictcorp/q4.png)
 
-In terms of the possible decision paths through this scenario - If the user selects answer A, it will have an overall net zero effect on the company's financial status & stakeholder sentiment. Employees in this case are happy that they have increased salaries, but shareholders are causing a points deduction due to the negative impacts on costs dialling through to reduced profits. 
+In terms of the possible decision paths through this scenario - If the user selects answer A, it will have an overall net positive effect of +1 on the company's financial status & stakeholder sentiment. Employees in this case very are happy that they have increased salaries (adding +2 points to the user's score), but shareholders are causing a single point deduction due to the negative impacts on costs dialling through to reduced profits. 
 
 Answer B will again have no material effect on current financials or stakeholder sentiment, with no change to current plans, and will award/deduct zero points as a result.
 
@@ -322,7 +322,7 @@ In this final scenario the user must decide on setting a budget for the upcoming
 
 ![Welcome Screen](readme/images/fictcorp/q5.png)
 
-In terms of the possible decision paths through this scenario - If the user selects answer A, it will have an overall net zero effect on the company's financial status & stakeholder sentiment. Employees in this case are happy that they have an improved workplace environment, but shareholders are causing a points deduction due to the negative impacts on costs dialling through to reduced profits. 
+In terms of the possible decision paths through this scenario - If the user selects answer A, it will have an overall net effect of +1 point to the company's financial status & stakeholder sentiment. Employees in this case are again very happy that they have an improved workplace environment (+2 points), but shareholders are causing a points deduction due to the negative impacts on costs dialling through to reduced profits. 
 
 Answer B will again have no material effect on current financials or stakeholder sentiment, with no change to current plans, and will award/deduct zero points as a result.
 
@@ -355,31 +355,30 @@ Finally - this feature will display upon conclusion of the game, and will give t
 ## Features Left To Implement - Hangman
 There were several additional features which could be added to the Hangman application - each of which are detailed below:
 
-### Guess Word Functionality
-This would add a feature to the game whereby the user would have the option to "guess the word" at any point in the game, rather than continuing to guess individual letters. It would save the user time, and would add an element of risk to the game if accompanied by an "automatic fail" if the user guesses the wrong word, triggering the game lost screen.
-
-### Add Phrases to Answer Pool 
+### - Add Phrases to Answer Pool 
 An additional feature that could be added in future is for the user to have the option to "guess a phrase" instead of the deafult option of "guessing a word". It would add an extra dimension to the game and would contribute to a positive User Experience
 
-### Difficulty Level Settings
+### - Difficulty Level Settings
 Difficulty level setting could also be additional features in future - giving the user the ability to specifiy a difficulty level, which would be primarily be determined by the length of the word being guessed. For example - easier words would be of shorter length, with harder diffuclty words being longer in length.
 
-### Guess limit extension/reduction
+### - Guess limit extension/reduction
 The ability for the user to modify their guess limits would also be a potential future feature for the game - adding depth to the game by allowing higher and lower guess limits according to the user's personal choice.
 
 ## Features Left To Implement - Fictcorp Adventures
 
-### Extended Question Bank
+### - Extended Question Bank
 In an unconstrained environment, I would like to add many additional questions and scenarios to the existing five scenarios which would add more color & depth to the User Experience investigating many different areas of the business and stakeholder sentiment. However, with project deadlines I have decided to leave an extended question bank out of scope for this release in the spirit of having a Minimum Viable Product (MVP) for project deadlines.
 
-### Random question Selection
+### - Random question Selection
 In conjunction with the extended question bank above, it would be a potential additional feature for future releases of the game to add in a random selector for each question adding an element of variety and chance to the game to help with the User Experience. This would mean each time the User loads the game, they will not know which questions/scenarios will appear, and which sequence the questions will appear in.
 
-### Game length Control
+### - Game length Control
 This would also be a possible feature whereby the user can select a quick game (3x scenarios), a standard game (5x scenarios) or an extended game (7x scenarios) depending on their wishes and time availability. This would work in combination with the extended question bank, and random question generation features above.
 
 # Testing
-The testing approaches & results for the application are fully detailed in the TESTING.md file attached - please navigate to this section for details of the application's testing.
+To keep the readme as streamlined & structured as possible - The testing approaches & results for the application are contained in a separate file, located at the [TESTING.md](https://github.com/dkelly255/python-games-package/blob/main/TESTING.md) link attached 
+
+Please navigate to this section for an in depth analysis & overview of the code validation, code testing processes & procedures, and the testing results for all end-to-end aspects of the application & functionality.
 
 # Bugs
 The following section will provide detail & context in terms of the debugging exercises that were part of the development process.
@@ -412,9 +411,9 @@ The application was deployed via the "Heroku" service, and the link to the live 
 
 An extended list of detailed steps & instructions for deployment follows in the section below:
 
-## Github
+## - Github Deployment
 Note - please ensure you have created a github repository prior to proceeding to the "Heroku" deployment section below to ensure no rework or deployment issues
-## Heroku
+## - Heroku Deployment
 The Steps for deployment to Heroku are as follows:
 - Navigate to [Heroku](https://id.heroku.com/login) and create an account
 
@@ -468,7 +467,7 @@ Alternatively, if you use Gitpod, you can click the button below to generate a n
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dkelly255/python-checkers)
 # Credits
-## Content
+## Content:
 As part of the generic research & development process to enable building the application, I benchmarked several different sources providing fully functional Hangman Python Terminal applications - these are listed below:
 
 1. [How to build python Hangman in 10 minutes](https://www.youtube.com/watch?v=m4nEnsavl6w) - this tutorial from Youtube account "Kite" was a quick & comprehensive tutorial from which I gained several insights into the mechanics of a typical Python Terminal based game of Hangman
@@ -477,11 +476,25 @@ As part of the generic research & development process to enable building the app
 
 3. [Terminal Hangman in Python](https://github.com/Pran54/Hangman) - This repository from Github was returned from a search engine research exercise and contained similar insights into the detailed mechanics of how to program a simple game of Hangman using the Python Terminal
 
-## Code
-- [Clear Terminal function:](https://www.geeksforgeeks.org/clear-screen-python/) I required a function to clear the terminal for use in multiple stages of the application - after researching several sources I found the following method used by [GeeksForGeeks.org](https://www.geeksforgeeks.org/clear-screen-python/) whic involved the importation of the name and system functions from the OS library
+
+## Code:
+
+Within the application I have used the following sections of code at varying stages to help deliver the final release, each source is deatiled and attributed both below and in the code comments from a credits perspective:
+
+- [Clear Terminal function:](https://www.geeksforgeeks.org/clear-screen-python/) I required a function to clear the terminal for use in multiple stages of the application - in both Hangman and FictCorp Adventures games. After researching several sources via Search Engines I found the following method used by [GeeksForGeeks.org](https://www.geeksforgeeks.org/clear-screen-python/) whic involved the importation of the name and system functions from the OS library
+
+- [Typewriter Effect Function:](https://www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal) Given the text-intensive nature of the FictCorp Adventures game, I wanted to ensure the user was not overwhelmed by large blocks of text appearing simultaneously, and felt that the text appearing in small sections, and gradually would help the user visually parse the information in a more efficient manner. This typewriter functionfrom [Codegrepper.com](https://www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal) helped with this objective, and has been fully attributed & credited.
+
+- The [Word List](https://github.com/Xethron/Hangman/blob/master/words.txt) used for the Hangman game was sourced from a search engine researching exercise - the GitHub Repo linked above from user [Xethron](https://github.com/Xethron/Hangman/blob/master/words.txt) contains a large list of words which was suitable for the purposes of my application. Note I applied some processing steps to the raw data, including stripping out any blank lines, and removing any words of length less than three, as I felt these words would not add to the User Experience were they to be part of the final release.
+
+- The code for [Removing Words Under A Certain Length](https://stackoverflow.com/questions/10150725/beginner-issue-python-how-do-i-remove-words-from-a-list-under-a-certain-leng) from the opening Word Bank was also sourced from [Stack Overflow](https://stackoverflow.com/questions/10150725/beginner-issue-python-how-do-i-remove-words-from-a-list-under-a-certain-leng) with the details being contained in the link above and being fullly attributed & credited in the code comments as well as the readme credits section.
+
+- I sourced the code for [Importing words from a .txt file](https://stackoverflow.com/questions/30768056/importing-external-txt-file-in-python) from the linked [Stack Overflow](https://stackoverflow.com/questions/30768056/importing-external-txt-file-in-python) article - this was very brief, concise & accurate code which helped tie together the mechanics of the game towards the end of development when I was switching from a very small development words bank for testing purposes to a larger operational word bank for the final release.
+
+- The [Emoji Icons For FictCorp Dashboard](https://emojipedia.org/) were all sourced from the [emojipedia.ord](https://emojipedia.org/) site linked above and are heavily used at various stages throughout the dashboard displays to add a visual element to the User Experience in the Code Instititute Terminal
 
 
-## Technologies & Libraries Used
+## Technologies & Libraries Used:
 To deliver the final application functionality, I made use of several of the Built-In Python Libraries - these are detailed below:
 
 - OS Library: From the Python OS library I imported the "system" and "name" functions to enable the "clear the terminal" function used at regular intervals throughout the game sequence

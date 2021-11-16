@@ -133,7 +133,7 @@ def question_1(
     \n    A. Increase Current Selling Price\n\
     B. Maintain Current Selling Price \n\
     C. Reduce Current Selling Price\n"
-    typewriter(scenario_1, 0.0015)
+    typewriter(scenario_1, 0.001)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -192,7 +192,7 @@ def question_1(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        typewriter(scenario_1_answer_1, 0.0015)
+        typewriter(scenario_1_answer_1, 0.001)
         typewriter(dashboard_1, 0.0003)
         input("\nPress Enter To Proceed to Next Scenario")
 
@@ -1475,8 +1475,8 @@ while True:
         \nbelow: "
 
         main_menu()
-        typewriter(intro, 0.0001)
-        typewriter(dashboard_0, 0.001)
+        typewriter(intro, 0.01)
+        typewriter(dashboard_0, 0.003)
         input("\n[Press Enter To Begin]")
         shareholder_delta5, customer_delta5, employee_delta5 = run_textadv()
         finish_game()
