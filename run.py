@@ -127,13 +127,13 @@ def question_1(
     passed on for use as arguments in the subsequent question
     """
     clear()
-    typewriter(dashboard_0, 0.0003)
+    typewriter(dashboard_0, 0.003)
     scenario_1 = "\n    Scenario 1: You must decide at what level the selling price for \n\
     FictonalCorp's leading product should be set for the coming year:\n\
     \n    A. Increase Current Selling Price\n\
     B. Maintain Current Selling Price \n\
     C. Reduce Current Selling Price\n"
-    typewriter(scenario_1, 0.001)
+    typewriter(scenario_1, 0.01)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -192,8 +192,8 @@ def question_1(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        typewriter(scenario_1_answer_1, 0.001)
-        typewriter(dashboard_1, 0.0003)
+        typewriter(scenario_1_answer_1, 0.01)
+        typewriter(dashboard_1, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
@@ -229,8 +229,8 @@ def question_1(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_1_answer_2)
-        print(dashboard_1)
+        typewriter(scenario_1_answer_2, 0.01)
+        typewriter(dashboard_1, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "C":
@@ -266,8 +266,8 @@ def question_1(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_1_answer_3)
-        print(dashboard_1)
+        typewriter(scenario_1_answer_3, 0.01)
+        typewriter(dashboard_1, 0.003)
         input("\nPress Enter To Proceed to Next Scenario\n")
 
     return revenue1, revenue_delta1, expenses1, expense_delta1, profits1,\
@@ -293,13 +293,13 @@ def question_2(
     passed on for use as arguments in the subsequent question
     """
     clear()
-    print(dashboard_1)
+    typewriter(dashboard_1, 0.003)
     scenario_2 = "\n    Scenario 2: You must decide at what level the marketing \n\
     budget should be set for the coming year:\n\
     \n    A. Increase Marketing Expenditure \n\
     B. Maintain Marketing Expenditure \n\
     C. Decrease Marketing Expenditure \n"
-    print(scenario_2)
+    typewriter(scenario_2, 0.01)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -357,8 +357,8 @@ def question_2(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_2_answer_1)
-        print(dashboard_2)
+        typewriter(scenario_2_answer_1, 0.01)
+        typewriter(dashboard_2, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
@@ -390,8 +390,8 @@ def question_2(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_2_answer_2)
-        print(dashboard_2)
+        typewriter(scenario_2_answer_2, 0.01)
+        typewriter(dashboard_2, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "C":
@@ -424,8 +424,8 @@ def question_2(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_2_answer_3)
-        print(dashboard_2)
+        typewriter(scenario_2_answer_3, 0.01)
+        typewriter(dashboard_2, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     return revenue2, revenue_delta2, expenses2, expense_delta2, profits2,\
@@ -451,13 +451,13 @@ def question_3(
     passed on for use as arguments in the subsequent question
     """
     clear()
-    print(dashboard_2)
+    typewriter(dashboard_2, 0.003)
     scenario_3 = "\n    Scenario 3: You must Choose the new material supplier rate \n\
     for the coming year:\n\
     \n    A. Premium rate - Increase Expenditure \n\
     B. Maintain Rate - Maintain Expenditure \n\
     C. Low Cost Rate - Decrease Expenditure \n"
-    print(scenario_3)
+    typewriter(scenario_3, 0.01)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -515,8 +515,8 @@ def question_3(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_3_answer_1)
-        print(dashboard_3)
+        typewriter(scenario_3_answer_1, 0.01)
+        typewriter(dashboard_3, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
@@ -549,8 +549,8 @@ def question_3(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_3_answer_2)
-        print(dashboard_3)
+        typewriter(scenario_3_answer_2, 0.01)
+        typewriter(dashboard_3, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "C":
@@ -583,8 +583,8 @@ def question_3(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_3_answer_3)
-        print(dashboard_3)
+        typewriter(scenario_3_answer_3, 0.01)
+        typewriter(dashboard_3, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     return revenue3, revenue_delta3, expenses3, expense_delta3, profits3,\
@@ -610,13 +610,13 @@ def question_4(
     passed on for use as arguments in the subsequent question
     """
     clear()
-    print(dashboard_3)
+    typewriter(dashboard_3, 0.003)
     scenario_4 = "\n    Scenario 4: You must now help set the employee payroll budget \n\
     for the coming year:\n\
     \n    A. Increase Payroll Budget (Increasing Expenditure) \n\
     B. Maintain Payroll Budget - (Maintaining Expenditure) \n\
     C. Reduce Payroll Budget - (Decreasing Expenditure) \n"
-    print(scenario_4)
+    typewriter(scenario_4, 0.01)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -675,8 +675,8 @@ def question_4(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_4_answer_1)
-        print(dashboard_4)
+        typewriter(scenario_4_answer_1, 0.01)
+        typewriter(dashboard_4, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
@@ -709,8 +709,8 @@ def question_4(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_4_answer_2)
-        print(dashboard_4)
+        typewriter(scenario_4_answer_1, 0.01)
+        typewriter(dashboard_4, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "C":
@@ -743,8 +743,8 @@ def question_4(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_4_answer_3)
-        print(dashboard_4)
+        typewriter(scenario_4_answer_1, 0.01)
+        typewriter(dashboard_4, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
     return revenue4, revenue_delta4, expenses4, expense_delta4, profits4,\
@@ -770,13 +770,13 @@ def question_5(
     also display to the user their final score
     """
     clear()
-    print(dashboard_4)
+    typewriter(dashboard_4, 0.03)
     scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy'\n\
     expenditure level for the coming year:\n\
     \n    A. Increase (Increasing Expenditure) \n\
     B. Maintain - (Maintaining Expenditure) \n\
     C. Reduce - (Decreasing Expenditure) \n"
-    print(scenario_5)
+    typewriter(scenario_5, 0.01)
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
         if input1.upper() not in ('A', 'B', 'C'):
@@ -835,8 +835,8 @@ def question_5(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_5_answer_1)
-        print(dashboard_5)
+        typewriter(scenario_5_answer_1, 0.01)
+        typewriter(dashboard_5, 0.003)
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
         print(f"\nThis completes the final scenario - you have scored {final}")
@@ -872,8 +872,8 @@ def question_5(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_5_answer_2)
-        print(dashboard_5)
+        typewriter(scenario_5_answer_2, 0.01)
+        typewriter(dashboard_5, 0.003)
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
         print(f"\nThis completes the final scenario - you have scored {final}")
@@ -909,8 +909,8 @@ def question_5(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        print(scenario_5_answer_3)
-        print(dashboard_5)
+        typewriter(scenario_5_answer_3, 0.01)
+        typewriter(dashboard_5, 0.003)
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
         print(f"\nThis completes the final scenario - you have scored {final}")

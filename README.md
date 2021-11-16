@@ -132,12 +132,12 @@ When the user reaches the point of having only one guess remaining, this feature
 ![Guess Entry Prompt](readme/images/hangman/finalwarning.png)
 
 ### Notification - Correct Guess:
-The notification feature for correctly guessing a letter is shown below:
+The notification feature for correctly guessing a letter is shown below, note this is also used in conjunction with the "sleep" function (detailed further in the [credits](https://github.com/dkelly255/python-games-package#technologies--libraries-used) section) to help with delivering a positive UX by having the text appear & then disappear after a pre-programmed time limit.
 
 ![Notifications - Correct Answer](readme/images/hangman/correctguess.png)
 
 ### Notification - Incorrect Guess:
-The equivalent notification for when an incorrect letter has been guessed is shown below:
+The equivalent notification for when an incorrect letter has been guessed is shown below, note that similar to the "Correct Guess" notification, this is also used in conjunction with the "sleep" function (detailed further in the [credits](https://github.com/dkelly255/python-games-package#technologies--libraries-used) section) to help with delivering a positive UX by having the text appear & then disappear after a pre-programmed time limit.
 
 ![Notifications - Incorrect Answer](readme/images/hangman/incorrectguess.png)
 
@@ -217,6 +217,11 @@ This section of the dashboard feature will display the projected financial data 
 This section of the dashboard feature will display a snapshot of the sentiment of the company's key stakeholders - shareholders, employees and customers - with an emoji for each to give a visual representation of the stakeholder's satisfaction level. The impact of the user's decisions will cause changes in the stakeholder's sentiment levels, and the user will recieve points for positive changes and will lose points for negative changes
 
 ![Stakeholder display](readme/images/fictcorp/stakeholders.png)
+
+### Dashboard Deltas - Financial & Stakeholders
+The "Delta" sections of the dashboard are an integral feature of the game, helping keep the user informed from decision to decision as to the results of their particular course of action on the financial status & stakeholder sentiment levels. The change in Revenue, Costs, and profits versus the prior dashboard are shown to the right of the metrics, and similarly for the shareholders, customers, and employees current satisfaction levels - both illustrated in the screenshot below:
+
+![Stakeholder display](readme/images/fictcorp/dboarddeltas.png)
 
 ## Cumulative Score Tracking
 This feature will track the user's score as they move through each question. Any points the user gains/loses from their proposed courses of action will be cumulatively tracked and displayed here.
@@ -414,7 +419,7 @@ An extended list of detailed steps & instructions for deployment follows in the 
 ## - Github Deployment
 Note - please ensure you have created a github repository prior to proceeding to the "Heroku" deployment section below to ensure no rework or deployment issues
 ## - Heroku Deployment
-The Steps for deployment to Heroku are as follows:
+The Steps for deployment to Heroku are as follows - Please note these steps are correct and current as at the time of application release)November 2021) but may be subject to change in future:
 - Navigate to [Heroku](https://id.heroku.com/login) and create an account
 
 ![Welcome Screen](readme/deployment/heroku-intro.png)
@@ -485,6 +490,8 @@ Within the application I have used the following sections of code at varying sta
 
 - [Typewriter Effect Function:](https://www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal) Given the text-intensive nature of the FictCorp Adventures game, I wanted to ensure the user was not overwhelmed by large blocks of text appearing simultaneously, and felt that the text appearing in small sections, and gradually would help the user visually parse the information in a more efficient manner. This typewriter functionfrom [Codegrepper.com](https://www.codegrepper.com/code-examples/python/typewriter+effect+python+terminal) helped with this objective, and has been fully attributed & credited.
 
+- The [Sleep](https://www.programiz.com/python-programming/time/sleep) function is used at several points throughout the application to help imrove the UX by giving the user time to parse & process text visually, generally warnging/notification messages, and particularly in the Hangman section of the application. I was able to find this [article](https://www.programiz.com/python-programming/time/sleep) from [programiz.com](https://www.programiz.com/python-programming/time/sleep) on how to use the sleep function, including importation from the appropriate Python library.
+
 - The [Word List](https://github.com/Xethron/Hangman/blob/master/words.txt) used for the Hangman game was sourced from a search engine researching exercise - the GitHub Repo linked above from user [Xethron](https://github.com/Xethron/Hangman/blob/master/words.txt) contains a large list of words which was suitable for the purposes of my application. Note I applied some processing steps to the raw data, including stripping out any blank lines, and removing any words of length less than three, as I felt these words would not add to the User Experience were they to be part of the final release.
 
 - The code for [Removing Words Under A Certain Length](https://stackoverflow.com/questions/10150725/beginner-issue-python-how-do-i-remove-words-from-a-list-under-a-certain-leng) from the opening Word Bank was also sourced from [Stack Overflow](https://stackoverflow.com/questions/10150725/beginner-issue-python-how-do-i-remove-words-from-a-list-under-a-certain-leng) with the details being contained in the link above and being fullly attributed & credited in the code comments as well as the readme credits section.
@@ -500,5 +507,7 @@ To deliver the final application functionality, I made use of several of the Bui
 - OS Library: From the Python OS library I imported the "system" and "name" functions to enable the "clear the terminal" function used at regular intervals throughout the game sequence
 
 - Random Library: The "Random" Python library provided one of the cornerstone functions within the application - the "choice" function which is used to pull a random word from the total array of words in the answer bank - allowing for a better user expereience & an element of unpredictability when playing the game.
+
+- Time Library: The "Sleep" function is used at varying stages throughout the application to provide delays to allow the user process & parse information at different key stages of game execution - particularly during the Hangman game.
 
 - The [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template) Repository was used as a baseline for the project along with the Code Institute Mock Terminal application to allow the application to run on a simulated terminal in a web page
