@@ -8,7 +8,7 @@ The application will allow the user the choice of playing either the word-guessi
 
 # UX Planes
 
-I have used the Five Planes of UX to design the application, and provide a description of the acitvities, connections, and flows through each of the UX Planes below:
+I have used the Five Planes of UX to design the application, and provide a description of the activities, connections, and flows through each of the UX Planes below:
 ## Strategy
 The strategy for the application's User Experience was developed around addressing the User Needs and User Stories below - users will wish to:
 - Have the ability to play either a game of Hangman or a text adventure game called "FictCorp Adventures" against the computer 
