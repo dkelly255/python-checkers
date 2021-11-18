@@ -856,7 +856,7 @@ def question_5(
     also display to the user their final score
     """
     clear()
-    typewriter(dashboard_4, 0.03)
+    typewriter(dashboard_4, 0.003)
     scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy'\n\
     expenditure level for the coming year:\n\
     \n    A. Increase (Increasing Expenditure) \n\
@@ -1601,3 +1601,4 @@ while True:
     else:
         clear()
         print("Please enter a valid input - A, B or C")
+
