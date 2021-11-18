@@ -469,11 +469,11 @@ and a button for the deployed link.
 ## Local Deployment
 Additionally - if you would like to make a local copy of the Github repository, you can clone it by typing the following command in your IDE terminal:
 
-- `git clone https://github.com/dkelly255/python-checkers.git`
+- `git clone https://github.com/dkelly255/python-games-package.git`
 
 Alternatively, if you use Gitpod, you can click the button below to generate a new workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dkelly255/python-checkers)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dkelly255/python-games-package)
 # Credits
 ## Content:
 As part of the generic research & development process to enable building the application, I benchmarked several different sources providing fully functional Hangman Python Terminal applications - these are listed below:
