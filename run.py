@@ -1068,6 +1068,8 @@ def finish_game():
         choice = input(f"\nPress any key followed by enter to play again:")
         if choice.upper() == "E":
             print("Goodbye")
+            sleep(0.5)
+            clear()
             loop = False
         else:
             shareholder_delta5, customer_delta5, employee_delta5 = \
