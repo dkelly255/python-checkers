@@ -113,7 +113,6 @@ The following section will provide detail & context in terms of the debugging ex
 - Dashboard Display alignment bugs - Intially I found that the opening and closing Dashboard alignment would be negatively impacted depending on the size of the financial deltas resulting from the user's decision in each scenario. For example, if a decision caused a large in crease in revenue, the shareholder sentiment line would sometimes fall short or run over the line boundary leaving the possibility for a poorer User Experience. To resolve this, I created the "plug" functions, which would ensure the Stakeholder sentiment lines would always start & end at the same character, by measuring the length of the preceeding financial metric display, and deducting it from a fixed line-width thus ensuring a cleaner display and resolving the bdisplay bug.
 
 ## Unresolved Bugs
-- One current bug that still exists at the time of Readme preparation is the persistance of the two lines of invalid strings at the top of the CI Terminal display on each screen of the FictCorp adventures game. These lines are not driven by my code, and are not present when I run the game in the gitpod terminal and are currently under investigation for resolution.
 
 - There were no other bugs of note left to report in the final version of the application deployed to Heroku (Details on the deployment are covered in the next section below)
 
