@@ -5,6 +5,7 @@ from random import choice
 from time import sleep
 import sys
 
+
 # Credits: As per readme credits section - the clear terminal function
 # is taken from the methods used by geeksforgeeks.org - see full details
 # and links in credits section of readme - used extensively throughout
@@ -20,6 +21,37 @@ def clear():
         _ = system('cls')
     else:
         _ = system('clear')
+
+
+# Credits: As per readme credits section - the class for adding colored
+# text is taken from the stack overflow article - see full details
+# and links in credits section of readme
+
+
+class bcolors:
+    """
+    Class to enable adding colors to text throughout the application
+    Credits:sourced from stack overflow article - please see full
+    details in the credits section of README.md
+    """
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+    def disable(self):
+        self.HEADER = ''
+        self.OKBLUE = ''
+        self.OKGREEN = ''
+        self.WARNING = ''
+        self.FAIL = ''
+        self.ENDC = ''
+
 
 # Note: ***FictCorp Adventures Section of Code Begins Here***
 
@@ -1274,10 +1306,12 @@ def main_game_screen(
         if not ("_ " in answer_hidden):
             return
         elif guesses_remaining == 1:
-            print(f"Final attempt!\nOne last chance to guess the word!\n")
+            print(f"{bcolors.FAIL}Final attempt!\
+            \nOne last chance to guess the word!{bcolors.ENDC}\n")
         elif guesses_remaining == 3 or guesses_remaining == 2:
-            print(f"Hurry!\nYou only have {guesses_remaining} lives left...")
-            print("Try guessing the word!\n")
+            print(f"{bcolors.WARNING}Hurry!\
+            \nYou only have {guesses_remaining} lives left...{bcolors.ENDC}")
+            print(bcolors.WARNING + "Try guessing the word!\n" + bcolors.ENDC)
 
 
 def validate_guess(previous_guesses, guesses_remaining):
@@ -1464,24 +1498,30 @@ def play_game(
 # Main application loop - this will display the opening welcome screen
 # and progress into the "select game" screen allowing the user to choose
 # which game to play, or to exit the application
+
+print("--------------------------------------------")
+print("|                                          |")
+print(bcolors.WARNING + "|    W  E  L  C  O  M  E                   |" +
+      bcolors.ENDC)
+print("|                                          |")
+print("|       T O                                |")
+print("|                                          |")
+print(bcolors.FAIL + "|          P  Y  T  H  O  N                |" +
+      bcolors.ENDC)
+print("|                                          |")
+print("|              G A M E S                   |")
+print("|                                          |")
+print(bcolors.OKBLUE + "|                 P A C K A G E            |" +
+      bcolors.ENDC)
+print("|                                          |")
+print("|                                          |")
+print(bcolors.BOLD + "|         [PRESS ENTER TO BEGIN]           |" +
+      bcolors.ENDC)
+print("|                                          |")
+print("--------------------------------------------")
+input()
+
 while True:
-    print("--------------------------------------------")
-    print("|                                          |")
-    print("|    W  E  L  C  O  M  E                   |")
-    print("|                                          |")
-    print("|       T O                                |")
-    print("|                                          |")
-    print("|          P  Y  T  H  O  N                |")
-    print("|                                          |")
-    print("|              G A M E S                   |")
-    print("|                                          |")
-    print("|                 P A C K A G E            |")
-    print("|                                          |")
-    print("|                                          |")
-    print("|         [PRESS ENTER TO BEGIN]           |")
-    print("|                                          |")
-    print("--------------------------------------------")
-    input()
     clear()
     print("--------------------------------------------")
     print("|                                          |")
@@ -1601,6 +1641,8 @@ while True:
     # Input validation to ensure invalid data entry is dealt with elegantly as
     # part of defensive design principles
     else:
+        print(bcolors.FAIL + "Please enter a valid input - A, B or C" +
+              bcolors.ENDC)
+        sleep(1)
         clear()
-        print("Please enter a valid input - A, B or C")
 
