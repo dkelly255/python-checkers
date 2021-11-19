@@ -104,6 +104,24 @@ End Game notification | Upon conclusion of a game, the player should be greeted 
 Play Again Option | If a player chooses to press any key other than "e", the game should begin again | Play again option functions as expected | Pass
 Exit Game Option | If a player chooses to press the "e" key, the game should terminate & exit the application returning to the Python Games Package Main Menu | Application terminates as expected upon pressing of the "e" key on the end game menu notification | Pass
 
+## **Browser Compatibility & Responsiveness**
+As part of the overall testing efforts I also concentrated on ensuring browser compatibility & responsiveness was addressed for the application. I have tested the application on the following browsers to ensure compatibility & resposiveness - all browsers tested had zero issues with the results illustrated in screenshots below:
+
+- Google Chrome (PC)
+
+![Broswer Compatibility](readme/testing/chrome.png)
+
+- Mozilla Firefox (PC)
+
+![Broswer Compatibility](readme/testing/firefox.png)
+
+- Microsoft Edge (PC)
+
+![Broswer Compatibility](readme/testing/edge.png)
+
+- Apple Safari (iPad)
+
+![Broswer Compatibility](readme/testing/safari.png)
 
 
 
