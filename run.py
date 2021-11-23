@@ -411,19 +411,24 @@ def question_2(
     passed on for use as arguments in the subsequent question
     """
     clear()
+    # Print opening dashboard, use typewriter effect to enhance UX
     typewriter(dashboard_1, 0.003)
+    # Text outlining scenario details for the user stored as string variable:
     scenario_2 = "\n    Scenario 2: You must decide at what level the marketing \n\
     budget should be set for the coming year:\n\
     \n    A. Increase Marketing Expenditure \n\
     B. Maintain Marketing Expenditure \n\
     C. Decrease Marketing Expenditure \n"
     typewriter(scenario_2, 0.01)
+    # Request input from the user - choice between A, B or C
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
+        # Input validation to ensure no invalid data entered into program
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
+    # Answers A, B & C stored in strings in 3x variables below:
     scenario_2_answer_1 = "\nYou have chosen Option A\
     \n \n\
     - Increasing the Marketing Budget by ~5% has resulted in an increase in \n\
@@ -444,25 +449,45 @@ def question_2(
     - Yearly Revenue projection decreases outstrip expenditure reduction\n\
     projections\n\
     - Profit projections have decreased as a result\n"
-
+    # Code dealing with Decision Path "A"
     if input1 == "A":
+        # Revenue increases by €100,000
         revenue_delta2 = 100000
+        # Updated revenue stored in variable revenue2
         revenue2 = revenue1 + revenue_delta2
+        # Costs impacts driving expensedelta2 of €50,000
         expense_delta2 = 50000
+        # Calculate updated expenses2
         expenses2 = expenses1 + expense_delta2
+        # Calculate updated profit delta
         profit_delta2 = revenue_delta2 - expense_delta2
+        # Calculate scenario's closing profit
         profits2 = revenue2 - expenses2
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta2 = shareholder_delta1 + 1
+        # Updated Shareholder section of dashboard
         shareholders2 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta2)
+        # Impact to customer sentiment of decision path chosen
         customer_delta2 = customer_delta1 + 1
+        # Updated Customer section of dashboard
         customers2 = "Customers:         " + emoji_assignment(customer_delta2)
+        # Impact to employee sentiment of decision path chosen
         employee_delta2 = 0
+        # Updated Employee section of dashboard
         employees2 = "Employees:         " + emoji_assignment(employee_delta2)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue2, revenue_delta2)
         expense_plug = formatting_plug(expenses2, expense_delta2)
         profit_plug = formatting_plug(profits2, profit_delta2)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta2 + customer_delta2 + employee_delta2
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_2 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -474,28 +499,54 @@ def question_2(
   {employee_delta2}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_2_answer_1, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_2, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
+        # No impact to revenue therefore revenue delta = 0
         revenue_delta2 = 0
+        # Updated revenue stored in variable revenue2
         revenue2 = revenue1 + revenue_delta2
+        # No impact to costs in this scenario therefore expense delta = 0
         expense_delta2 = 0
+        # Calculate updated expenses2
         expenses2 = expenses1 + expense_delta2
+        # Calculate updated profit delta
         profit_delta2 = revenue_delta2 - expense_delta2
+        # Calculate scenario's closing profit
         profits2 = revenue2 - expenses2
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta2 = shareholder_delta1 + 0
+        # Updated Shareholder section of dashboard
         shareholders2 = shareholders1
+        # Impact to customer sentiment of decision path chosen
         customer_delta2 = customer_delta1 + 0
+        # Updated Customer section of dashboard
         customers2 = customers1
+        # Impact to employee sentiment of decision path chosen
         employee_delta2 = 0
+        # Updated Employee section of dashboard
         employees2 = employees1
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue2, revenue_delta2)
         expense_plug = formatting_plug(expenses2, expense_delta2)
         profit_plug = formatting_plug(profits2, profit_delta2)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta2 + customer_delta2 + employee_delta2
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_2 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -507,29 +558,55 @@ def question_2(
   {employee_delta2}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_2_answer_2, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_2, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "C":
+        # Revenue decreases by €50,000
         revenue_delta2 = -50000
+        # Updated revenue stored in variable revenue2
         revenue2 = revenue1 + revenue_delta2
+        # Costs impact in this scenario is negative €50,000
         expense_delta2 = -50000
+        # Calculate updated expenses2
         expenses2 = expenses1 + expense_delta2
+        # Calculate updated profit delta
         profit_delta2 = revenue_delta2 - expense_delta2
+        # Calculate scenario's closing profit
         profits2 = revenue2 - expenses2
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta2 = shareholder_delta1 - 1
+        # Updated Shareholder section of dashboard
         shareholders2 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta2)
+        # Impact to customer sentiment of decision path chosen
         customer_delta2 = customer_delta1 - 1
+        # Updated Customer section of dashboard
         customers2 = "Customers:         " + emoji_assignment(customer_delta2)
+        # Impact to employee sentiment of decision path chosen
         employee_delta2 = 0
+        # Updated Employee section of dashboard
         employees2 = "Employees:         " + emoji_assignment(employee_delta2)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue2, revenue_delta2)
         expense_plug = formatting_plug(expenses2, expense_delta2)
         profit_plug = formatting_plug(profits2, profit_delta2)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta2 + customer_delta2 + employee_delta2
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_2 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -541,10 +618,18 @@ def question_2(
   {employee_delta2}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_2_answer_3, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_2, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
+    # Pass on key values (depending on user's chosen decision path) for use as
+    # opening balances/figures/dashboards & scores in the next scenario
 
     return revenue2, revenue_delta2, expenses2, expense_delta2, profits2,\
         profit_delta2, shareholders2, shareholder_delta2, customers2,\
@@ -827,7 +912,7 @@ def question_4(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        typewriter(scenario_4_answer_1, 0.01)
+        typewriter(scenario_4_answer_2, 0.01)
         typewriter(dashboard_4, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
@@ -861,7 +946,7 @@ def question_4(
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
         clear()
-        typewriter(scenario_4_answer_1, 0.01)
+        typewriter(scenario_4_answer_3, 0.01)
         typewriter(dashboard_4, 0.003)
         input("\nPress Enter To Proceed to Next Scenario")
 
@@ -1144,33 +1229,33 @@ def initialise_variables():
 
 
 def welcome_screen():
-        """
-        Displays welcome screen to user upon loading
-        the application. Allows proceeding to play
-        the game upon pressing "Enter"
-        """
-        clear()
-        print("------------------------------------------------------")
-        print("|                                                    |")
-        print("|                P  Y  T  H  O  N                    |")
-        print("|                                                    |")
-        print("|                   H  A  N  G  M  A  N              |")
-        print("|                    _________                       |")
-        print("|                    |       |                       |")
-        print("|                    |       O                       |")
-        print("|                    |      /|\                      |")
-        print("|                    |       |                       |")
-        print("|                    |      / \                      |")
-        print("|                    |                               |")
-        print("|                    |                               |")
-        print("|                 ___|___________                    |")
-        print("|                 XXXXXXXXXXXXXXX                    |")
-        print("|                                                    |")
-        print("|               [PRESS ENTER TO BEGIN]               |")
-        print("|                                                    |")
-        print("------------------------------------------------------")
-        input()
-        clear()
+    """
+    Displays welcome screen to user upon loading
+    the application. Allows proceeding to play
+    the game upon pressing "Enter"
+    """
+    clear()
+    print("------------------------------------------------------")
+    print("|                                                    |")
+    print("|                P  Y  T  H  O  N                    |")
+    print("|                                                    |")
+    print("|                   H  A  N  G  M  A  N              |")
+    print("|                    _________                       |")
+    print("|                    |       |                       |")
+    print("|                    |       O                       |")
+    print("|                    |      /|\                      |")
+    print("|                    |       |                       |")
+    print("|                    |      / \                      |")
+    print("|                    |                               |")
+    print("|                    |                               |")
+    print("|                 ___|___________                    |")
+    print("|                 XXXXXXXXXXXXXXX                    |")
+    print("|                                                    |")
+    print("|               [PRESS ENTER TO BEGIN]               |")
+    print("|                                                    |")
+    print("------------------------------------------------------")
+    input()
+    clear()
 
 
 def draw_gallows(gallows_stage):
@@ -1645,4 +1730,3 @@ while True:
               bcolors.ENDC)
         sleep(1)
         clear()
-
