@@ -36,21 +36,27 @@ Based upon the site Strategy & Scope laid out above, I felt that this simple but
 
 To facilitate & guide the design of the application and User Experience, I created several flowcharts as wireframe diagrams using Microsoft Excel to map the flow control and activity sequencing throughout the stages of play for both games. 
 
-The Flowcharts below show the macro-level flow of the application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
-
 ### - Hangman Wireframe & Flowchart
+
+The Flowchart below shows the macro-level flow of the Hangman application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
 
 ![Wireframe](readme/images/hangman/hangman-flowchart.png)
 
 ### - FictCorp Adventures - Overall Wireframe & Flowchart
 
+The overall structure of the FictCorp Adventures text adventure style game is shown below - the game basically consists of five scenarios, each with three possible decision paths, which the user must navigate, with a set amount of points awarded for each decision path in each scenario. A running total of the user's score is displayed throughout, and presented at the conclusion of the game.
+
 ![Wireframe](readme/images/fictcorp/fictcorp-wireframe.png)
 
 ### - Optimal Decision Path wireframe
 
+Below illustrates the "Best Case" decision path through the game - if the user selects each of the decision paths/options below, they will finish the game with the highest possible score & stakeholder sentiment.
+
 ![Wireframe](readme/images/fictcorp/optimal-path.png)
 
 ### - Worst Case Decision Path wireframe
+
+Below illustrates the "Worst Case" decision path through the game - if the user selects each of the decision paths/options below, they will finish the game with the lowest possible score & stakeholder sentiment.
 
 ![Wireframe](readme/images/fictcorp/worst-case-path.png)
 
