@@ -38,7 +38,7 @@ To facilitate & guide the design of the application and User Experience, I creat
 
 ### - Hangman Wireframe & Flowchart
 
-The Flowchart below shows the macro-level flow of the Hangman application logic & flow, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
+The Flowchart below shows the macro-level flow of the Hangman application, with rectangular containers representing processing steps, and circular containers representing decision points where the program will take a different path depending on specific circumstances:
 
 ![Wireframe](readme/images/hangman/hangman-flowchart.png)
 
@@ -124,7 +124,7 @@ The following section will provide detail & context in terms of the debugging ex
 
 
 # Deployment
-The application was deployed via the "Heroku" service, and the link to the live deployment can be found by clicking [here](https://python-checkers.herokuapp.com/)
+The application was deployed via the "Heroku" service, and the link to the live deployment can be found by clicking [here](https://python-games-package.herokuapp.com/)
 
 An extended list of detailed steps & instructions for deployment follows in the section below:
 
