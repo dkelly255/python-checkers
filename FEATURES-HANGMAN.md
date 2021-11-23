@@ -5,7 +5,7 @@ The following section details the features specific to the "Hangman" component o
 ----
 
 ### - Word Bank:
-The libraray of words for the game is contained in the file "words.txt", and is imported into the main run.py Python file. I found this approach enabled the best user experience in that it gave a very large selection of words of varying lengths and difficulties to keep the game interesting for the User/s. The source is attributed & detailed in the credits section.
+The library of words for the game is contained in the file "words.txt", and is imported into the main run.py Python file. I found this approach enabled the best user experience in that it gave a very large selection of words of varying lengths and difficulties to keep the game interesting for the User/s. The source is attributed & detailed in the credits section.
 
 ### - Hangman Welcome Screen:
 This is the initial introductory screen greeting the user upon selection of the Hangman game from the game selection menu
@@ -48,7 +48,7 @@ When the user reaches the point of having only three guesses remaining, this fea
 ![Guess Entry Prompt](readme/images/hangman/firstwarning.png)
 
 ### - Guess Word or Letter functionality:
-The reduction of the guesses remaining count down to three or less will also trigger the activiation of a feature allowing the user to guess either the full word or a single letter, further adding to the UX:
+The reduction of the guesses remaining count down to three or less will also trigger the activation of a feature allowing the user to guess either the full word or a single letter, further adding to the UX:
 
 ![Guess Entry Prompt](readme/images/hangman/guesswordorletter.png)
 
@@ -78,12 +78,12 @@ A similar warning will be displayed if the user enters a letter that they have a
 ![Notifications - Duplicate Entry Warning](readme/images/hangman/duplicateletter.png)
 
 ### - Data validation - Incorrect guess length warning (Letter)
-This data validation feature warns the user when they have entered a guess that does not meet the letter length requiremenet (i.e. a single character), as part of the defensive design approach and dealing elegantly with incorrect data entry
+This data validation feature warns the user when they have entered a guess that does not meet the letter length requirement (i.e. a single character), as part of the defensive design approach and dealing elegantly with incorrect data entry
 
 ![Notifications - Duplicate Entry Warning](readme/images/hangman/incorrectletterlength.png)
 
 ### - Data validation - Incorrect guess length warning (Word)
-Similarly, this data validation feature warns the user when they have entered a guess that does not meet the word length requiremenet (i.e. the guess must be the same length as the answer).
+Similarly, this data validation feature warns the user when they have entered a guess that does not meet the word length requirement (i.e. the guess must be the same length as the answer).
 
 The warning will fire when the guess is either too long, or too short, as demonstrated in the screenshots below:
 
@@ -121,10 +121,10 @@ Upon conclusion of the game, this feature will provide the user with two options
 In addition to the existing features, there were several additional features which could be added to the Hangman application in future and are yet to be implemented - each of which are detailed below:
 
 ### - Add Phrases to Answer Pool: 
-An additional feature that could be added in future is for the user to have the option to "guess a phrase" instead of the deafult option of "guessing a word". It would add an extra dimension to the game and would contribute to a positive User Experience
+An additional feature that could be added in future is for the user to have the option to "guess a phrase" instead of the default option of "guessing a word". It would add an extra dimension to the game and would contribute to a positive User Experience
 
 ### - Difficulty Level Settings:
-Difficulty level setting could also be additional features in future - giving the user the ability to specifiy a difficulty level, which would be primarily be determined by the length of the word being guessed. For example - easier words would be of shorter length, with harder diffuclty words being longer in length.
+Difficulty level setting could also be additional features in future - giving the user the ability to specify a difficulty level, which would be primarily be determined by the length of the word being guessed. For example - easier words would be of shorter length, with harder difficulty words being longer in length.
 
 ### - Guess limit extension/reduction:
 The ability for the user to modify their guess limits would also be a potential future feature for the game - adding depth to the game by allowing higher and lower guess limits according to the user's personal choice.
