@@ -25,7 +25,7 @@ This section of the dashboard feature will display the projected financial data 
 ![Financial Display](readme/images/fictcorp/financials.png)
 
 ### - Stakeholder Sentiment
-This section of the dashboard feature will display a snapshot of the sentiment of the company's key stakeholders - shareholders, employees and customers - with an emoji for each to give a visual representation of the stakeholder's satisfaction level. The impact of the user's decisions will cause changes in the stakeholder's sentiment levels, and the user will recieve points for positive changes and will lose points for negative changes
+This section of the dashboard feature will display a snapshot of the sentiment of the company's key stakeholders - shareholders, employees and customers - with an emoji for each to give a visual representation of the stakeholder's satisfaction level. The impact of the user's decisions will cause changes in the stakeholder's sentiment levels, and the user will receive points for positive changes and will lose points for negative changes
 
 ![Stakeholder display](readme/images/fictcorp/stakeholders.png)
 
@@ -46,7 +46,7 @@ This is the first scenario the user must navigate, and involves making a decisio
 
 The section below details the possible decision paths the user can take through scenario one:
 
-If the user selects answer A for example, it will have an overall negative effect on the company's financial status & stakeholder sentiment. Customers will be dissatisfied with the increased prices they have to pay, and will look elsewhere for alternatives, cauing a net decrease in revenues. This will knock on into reduced profits, which will also cause shareholder sentiment to decline. 
+If the user selects answer A for example, it will have an overall negative effect on the company's financial status & stakeholder sentiment. Customers will be dissatisfied with the increased prices they have to pay, and will look elsewhere for alternatives, driving a net decrease in revenues. This will knock on into reduced profits, which will also cause shareholder sentiment to decline. 
 
 Answer B will have no material effect on current financials or stakeholder sentiment, and will award/deduct zero points as a result.
 
@@ -157,7 +157,7 @@ Both of these final features are detailed below:
 
 ## - Final Score Display
 
-Here you can see the feature displaying to the user their final cumulative score resulting from the decision path they have chosen through the game, displayed together with a notificaiton to confirm to the user that they have completed all of the required scenarios and decisions:
+Here you can see the feature displaying to the user their final cumulative score resulting from the decision path they have chosen through the game, displayed together with a notification to confirm to the user that they have completed all of the required scenarios and decisions:
 
 ![Welcome Screen](readme/images/fictcorp/finalscore.png)
 
