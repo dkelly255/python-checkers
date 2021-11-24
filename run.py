@@ -695,7 +695,7 @@ def question_3(
     if input1 == "A":
         # No change to revenue
         revenue_delta3 = 0
-        # Updated revenue stored in variable revenue2
+        # Updated revenue stored in variable revenue3
         revenue3 = revenue2 + revenue_delta2
         # Costs impacts driving expensedelta3 of €50,000
         expense_delta3 = 50000
@@ -710,7 +710,7 @@ def question_3(
         # Updated Shareholder section of dashboard
         shareholders3 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta3)
-            # Impact to customer sentiment of decision path chosen
+        # Impact to customer sentiment of decision path chosen
         customer_delta3 = customer_delta2 + 1
         # Updated Customer section of dashboard
         customers3 = "Customers:         " + emoji_assignment(customer_delta3)
@@ -755,11 +755,11 @@ def question_3(
     elif input1 == "B":
         # No impact to revenue therefore revenue delta = 0
         revenue_delta3 = 0
-        # Updated revenue stored in variable revenue2
+        # Updated revenue stored in variable revenue3
         revenue3 = revenue2 + revenue_delta2
         # No impact to costs in this scenario therefore expense delta = 0
         expense_delta3 = 0
-        # Calculate updated expenses2
+        # Calculate updated expenses3
         expenses3 = expenses2 + expense_delta3
         # Calculate updated profit delta
         profit_delta3 = revenue_delta3 - expense_delta3
@@ -815,11 +815,11 @@ def question_3(
     elif input1 == "C":
         # No change to revenue
         revenue_delta3 = 0
-        # Updated revenue stored in variable revenue2
+        # Updated revenue stored in variable revenue3
         revenue3 = revenue2 + revenue_delta2
         # Costs impact in this scenario is negative €50,000
         expense_delta3 = -50000
-        # Calculate updated expenses2
+        # Calculate updated expenses3
         expenses3 = expenses2 + expense_delta3
         # Calculate updated profit delta
         profit_delta3 = revenue_delta3 - expense_delta3
@@ -896,19 +896,24 @@ def question_4(
     passed on for use as arguments in the subsequent question
     """
     clear()
+    # Print opening dashboard, use typewriter effect to enhance UX
     typewriter(dashboard_3, 0.003)
+    # Text outlining scenario details for the user stored as string variable:
     scenario_4 = "\n    Scenario 4: You must now help set the employee payroll budget \n\
     for the coming year:\n\
     \n    A. Increase Payroll Budget (Increasing Expenditure) \n\
     B. Maintain Payroll Budget - (Maintaining Expenditure) \n\
     C. Reduce Payroll Budget - (Decreasing Expenditure) \n"
     typewriter(scenario_4, 0.01)
+    # Request input from the user - choice between A, B or C
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
+        # Input validation to ensure no invalid data entered into program
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
+    # Answers A, B & C stored in strings in 3x variables below:
     scenario_4_answer_1 = "\nYou have chosen Option A\
     \n \n\
     - Increasing the payroll budget has resulted in an increase in yearly\n\
@@ -930,25 +935,45 @@ def question_4(
     have decreased\n\
     - Profit projections for the year have improved as a result - however -\n\
     your employees are not happy!\n"
-
+    # Code dealing with Decision Path "A"
     if input1 == "A":
+        # No change to revenue
         revenue_delta4 = 0
+        # Updated revenue stored in variable revenue4
         revenue4 = revenue3 + revenue_delta4
+        # Costs increased in this scenario therefore expense delta = €50,000
         expense_delta4 = 50000
+        # Calculate updated expenses4
         expenses4 = expenses3 + expense_delta4
+        # Calculate updated profit delta
         profit_delta4 = revenue_delta4 - expense_delta4
+        # Calculate scenario's closing profit
         profits4 = revenue4 - expenses4
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta4 = shareholder_delta3 - 1
+        # Updated Shareholder section of dashboard
         shareholders4 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta4)
+        # Impact to customer sentiment of decision path chosen
         customer_delta4 = customer_delta3 + 0
+        # Updated Customer section of dashboard
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
+        # Impact to employee sentiment of decision path chosen
         employee_delta4 = employee_delta3 + 2
+        # Updated Employee section of dashboard
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue4, revenue_delta4)
         expense_plug = formatting_plug(expenses4, expense_delta4)
         profit_plug = formatting_plug(profits4, profit_delta4)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta4 + customer_delta4 + employee_delta4
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_4 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -960,29 +985,55 @@ def question_4(
   {employee_delta4}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_4_answer_1, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_4, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "B":
+        # No impact to revenue therefore revenue delta = 0
         revenue_delta4 = 0
+        # Updated revenue stored in variable revenue4
         revenue4 = revenue3 + revenue_delta4
+        # No impact to costs in this scenario therefore expense delta = 0
         expense_delta4 = 0
+        # Calculate updated expenses4
         expenses4 = expenses3 + expense_delta4
+        # Calculate updated profit delta
         profit_delta4 = revenue_delta4 - expense_delta4
+        # Calculate scenario's closing profit
         profits4 = revenue4 - expenses4
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta4 = shareholder_delta3 + 0
+        # Updated Shareholder section of dashboard
         shareholders4 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta4)
+        # Impact to customer sentiment of decision path chosen
         customer_delta4 = customer_delta3 + 0
+        # Updated Customer section of dashboard
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
+        # Impact to employee sentiment of decision path chosen
         employee_delta4 = employee_delta3 + 0
+        # Updated Employee section of dashboard
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue4, revenue_delta4)
         expense_plug = formatting_plug(expenses4, expense_delta4)
         profit_plug = formatting_plug(profits4, profit_delta4)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta4 + customer_delta4 + employee_delta4
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_4 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -994,29 +1045,55 @@ def question_4(
   {employee_delta4}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_4_answer_2, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_4, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
 
     elif input1 == "C":
+        # No change to revenue
         revenue_delta4 = 0
+        # Updated revenue stored in variable revenue4
         revenue4 = revenue3 + revenue_delta4
+        # Costs impact in this scenario is negative €50,000
         expense_delta4 = -50000
+        # Calculate updated expenses4
         expenses4 = expenses3 + expense_delta4
+        # Calculate updated profit delta
         profit_delta4 = revenue_delta4 - expense_delta4
+        # Calculate scenario's closing profit
         profits4 = revenue4 - expenses4
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta4 = shareholder_delta3 + 1
+        # Updated Shareholder section of dashboard
         shareholders4 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta4)
+        # Impact to customer sentiment of decision path chosen
         customer_delta4 = customer_delta3 + 0
+        # Updated Customer section of dashboard
         customers4 = "Customers:         " + emoji_assignment(customer_delta4)
+        # Impact to employee sentiment of decision path chosen
         employee_delta4 = employee_delta3 - 2
+        # Updated Employee section of dashboard
         employees4 = "Employees:         " + emoji_assignment(employee_delta4)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue4, revenue_delta4)
         expense_plug = formatting_plug(expenses4, expense_delta4)
         profit_plug = formatting_plug(profits4, profit_delta4)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta4 + customer_delta4 + employee_delta4
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_4 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -1028,11 +1105,18 @@ def question_4(
   {employee_delta4}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_4_answer_3, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_4, 0.003)
+        # Request user to press the enter key to proceed to next scenario when
+        # ready
         input("\nPress Enter To Proceed to Next Scenario")
-
+    # Pass on key values (depending on user's chosen decision path) for use as
+    # opening balances/figures/dashboards & scores in the next scenario
     return revenue4, revenue_delta4, expenses4, expense_delta4, profits4,\
         profit_delta4, shareholders4, shareholder_delta4, customers4,\
         customer_delta4, employees4, employee_delta4, dashboard_4
@@ -1056,19 +1140,24 @@ def question_5(
     also display to the user their final score
     """
     clear()
+    # Print opening dashboard, use typewriter effect to enhance UX
     typewriter(dashboard_4, 0.003)
+    # Text outlining scenario details for the user stored as string variable:
     scenario_5 = "\n    Scenario 5: You must now choose a 'Workplace Improvement Strategy'\n\
     expenditure level for the coming year:\n\
     \n    A. Increase (Increasing Expenditure) \n\
     B. Maintain - (Maintaining Expenditure) \n\
     C. Reduce - (Decreasing Expenditure) \n"
     typewriter(scenario_5, 0.01)
+    # Request input from the user - choice between A, B or C
     while True:
         input1 = input("\n    Please select an option - A, B or C: ").upper()
+        # Input validation to ensure no invalid data entered into program
         if input1.upper() not in ('A', 'B', 'C'):
             print("Please Enter A Valid Choice - A, B or C")
         else:
             break
+    # Answers A, B & C stored in strings in 3x variables below:
     scenario_5_answer_1 = "\nYou have chosen Option A\
     \n \n\
     - Increasing the Workplace Improvement budget results in an increase\n\
@@ -1090,25 +1179,45 @@ def question_5(
     have decreased\n\
     - Profit projections for the year have improved as a result, however -\n\
     employees are not happy!\n"
-
+    # Code dealing with Decision Path "A"
     if input1 == "A":
+        # No change to revenue
         revenue_delta5 = 0
+        # Updated revenue stored in variable revenue5
         revenue5 = revenue4 + revenue_delta5
+        # Costs increased in this scenario therefore expense delta = €50,000
         expense_delta5 = 50000
+        # Calculate updated expenses5
         expenses5 = expenses4 + expense_delta5
+        # Calculate updated profit delta
         profit_delta5 = revenue_delta5 - expense_delta5
+        # Calculate scenario's closing profit
         profits5 = revenue5 - expenses5
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta5 = shareholder_delta4 - 1
+        # Updated Shareholder section of dashboard
         shareholders5 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta5)
+        # Impact to customer sentiment of decision path chosen
         customer_delta5 = customer_delta4 + 0
+        # Updated Customer section of dashboard
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
+        # Impact to employee sentiment of decision path chosen
         employee_delta5 = employee_delta4 + 2
+        # Updated Employee section of dashboard
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue5, revenue_delta5)
         expense_plug = formatting_plug(expenses5, expense_delta5)
         profit_plug = formatting_plug(profits5, profit_delta5)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta5 + customer_delta5 + employee_delta5
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_5 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -1120,32 +1229,59 @@ def question_5(
   {employee_delta5}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_5_answer_1, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_5, 0.003)
+        # Calculate final cumulative score & store in variable below
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
+        # Display to user the final cumulative score from this round 
         print(f"\nThis completes the final scenario - you have scored {final}")
+        # Add small sleep delay for positive UX
         sleep(0.5)
 
     elif input1 == "B":
+        # No impact to revenue therefore revenue delta = 0
         revenue_delta5 = 0
+        # Updated revenue stored in variable revenue5
         revenue5 = revenue + revenue_delta5
+        # No impact to costs in this scenario therefore expense delta = 0
         expense_delta5 = 0
+        # Calculate updated expenses5
         expenses5 = expenses4 + expense_delta5
+        # Calculate updated profit delta
         profit_delta5 = revenue_delta5 - expense_delta5
+        # Calculate scenario's closing profit
         profits5 = revenue5 - expenses5
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta5 = shareholder_delta4 + 0
+        # Updated Shareholder section of dashboard
         shareholders5 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta5)
+        # Impact to customer sentiment of decision path chosen
         customer_delta5 = customer_delta4 + 0
+        # Updated Customer section of dashboard
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
+        # Impact to employee sentiment of decision path chosen
         employee_delta5 = employee_delta4 + 0
+        # Updated Employee section of dashboard
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue5, revenue_delta5)
         expense_plug = formatting_plug(expenses5, expense_delta5)
         profit_plug = formatting_plug(profits5, profit_delta5)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta5 + customer_delta5 + employee_delta5
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_5 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -1157,32 +1293,59 @@ def question_5(
   {employee_delta5}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_5_answer_2, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_5, 0.003)
+        # Calculate final cumulative score & store in variable below
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
+        # Display to user the final cumulative score from this round
         print(f"\nThis completes the final scenario - you have scored {final}")
+        # Add small sleep delay for positive UX
         sleep(0.5)
 
     elif input1 == "C":
+        # No change to revenue
         revenue_delta5 = 0
+        # Updated revenue stored in variable revenue5
         revenue5 = revenue4 + revenue_delta5
+        # Costs impact in this scenario is negative €50,000
         expense_delta5 = -50000
+        # Calculate updated expenses5
         expenses5 = expenses4 + expense_delta5
+        # Calculate updated profit delta
         profit_delta5 = revenue_delta5 - expense_delta5
+        # Calculate scenario's closing profit
         profits5 = revenue5 - expenses5
+        # Impact to shareholder sentiment of decision path chosen
         shareholder_delta5 = shareholder_delta4 + 1
+        # Updated Shareholder section of dashboard
         shareholders5 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta5)
+        # Impact to customer sentiment of decision path chosen
         customer_delta5 = customer_delta4 + 0
+        # Updated Customer section of dashboard
         customers5 = "Customers:         " + emoji_assignment(customer_delta5)
+        # Impact to employee sentiment of decision path chosen
         employee_delta5 = employee_delta4 - 2
+        # Updated Employee section of dashboard
         employees5 = "Employees:         " + emoji_assignment(employee_delta5)
+        # Plugs to visually align the revenue, expenses & profits in
+        # dashboard displays for terminal width ensuring consistency
+        # of formatting
         revenue_plug = formatting_plug(revenue5, revenue_delta5)
         expense_plug = formatting_plug(expenses5, expense_delta5)
         profit_plug = formatting_plug(profits5, profit_delta5)
+        # Points calculation to be displayed in scenario's closing dashboard
+        # And to be carried forward as opening points for subsequent scenario
         points = shareholder_delta5 + customer_delta5 + employee_delta5
+        # Updated dashboard/closing dashboard for current scenario
+        # Reflects the impact of user's chosen decision on financials &
+        # stakeholder sentiment - stored in variable below
         dashboard_5 = f"\n    ------------------------------------------------------------\n\
     Financial Projections:      |    Stakeholder Sentiment :  \n\
     ------------------------------------------------------------\n\
@@ -1194,14 +1357,22 @@ def question_5(
   {employee_delta5}    \n\
     ------------------------------------------------------------\n\
                                             Total Points: {points}\n"
+        # Clear display for formatting purposes
         clear()
+        # Display to the user the explanation of the impacts of their chosen
+        # decision path using typewriter method to enhance UX
         typewriter(scenario_5_answer_3, 0.01)
+        # Also display updated/closing dashboard with scenario results
         typewriter(dashboard_5, 0.003)
+        # Calculate final cumulative score & store in variable below
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
+        # Display to user the final cumulative score from this round
         print(f"\nThis completes the final scenario - you have scored {final}")
+        # Add small sleep delay for positive UX
         sleep(0.5)
-
+    # Pass on key values (depending on user's chosen decision path) for use as
+    # opening balances/figures/dashboards & scores in the next scenario
     return revenue5, revenue_delta5, expenses5, expense_delta5, profits5,\
         profit_delta5, shareholders5, shareholder_delta5, customers5,\
         customer_delta5, employees5, employee_delta5, dashboard_5
