@@ -60,6 +60,12 @@ Below illustrates the "Worst Case" decision path through the game - if the user 
 
 ![Wireframe](readme/images/fictcorp/worst-case-path.png)
 
+### - Inidividual Scenario/Path Impacts Summary
+
+The final diagram below illustrates the impacts to all financial & stakeholder metrics of each decision path from each scenario throughout the game. In the stakeholder section, the positive impacts on stakeholder sentiment are highlighted in green, with the negative impacts highlighted in red, and the neutral impacts highlighted in grey:
+
+![Wireframe](readme/images/fictcorp/scenario-paths.png)
+
 ## Surface
 Finally, the evolution of the first four Planes of User Experience above allowed the Surface Plane to take shape in terms of arriving at the visual look & feel of the application to be experienced by the User
 

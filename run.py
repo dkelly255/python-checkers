@@ -574,7 +574,7 @@ def question_2(
         revenue_delta2 = -50000
         # Updated revenue stored in variable revenue2
         revenue2 = revenue1 + revenue_delta2
-        # Costs impact in this scenario is negative €50,000
+        # Costs decrease in this scenario by €50,000
         expense_delta2 = -50000
         # Calculate updated expenses2
         expenses2 = expenses1 + expense_delta2
@@ -706,7 +706,7 @@ def question_3(
         # Calculate scenario's closing profit
         profits3 = revenue3 - expenses3
         # Impact to shareholder sentiment of decision path chosen
-        shareholder_delta3 = shareholder_delta2 + 0
+        shareholder_delta3 = shareholder_delta2 - 1
         # Updated Shareholder section of dashboard
         shareholders3 = \
             "Shareholders:      " + emoji_assignment(shareholder_delta3)
@@ -817,7 +817,7 @@ def question_3(
         revenue_delta3 = 0
         # Updated revenue stored in variable revenue3
         revenue3 = revenue2 + revenue_delta2
-        # Costs impact in this scenario is negative €50,000
+        # Costs decrease in this scenario by €50,000
         expense_delta3 = -50000
         # Calculate updated expenses3
         expenses3 = expenses2 + expense_delta3
@@ -1061,7 +1061,7 @@ def question_4(
         revenue_delta4 = 0
         # Updated revenue stored in variable revenue4
         revenue4 = revenue3 + revenue_delta4
-        # Costs impact in this scenario is negative €50,000
+        # Costs decrease in this scenario by €50,000
         expense_delta4 = -50000
         # Calculate updated expenses4
         expenses4 = expenses3 + expense_delta4
@@ -1239,7 +1239,7 @@ def question_5(
         # Calculate final cumulative score & store in variable below
         final = \
             final_score(shareholder_delta5, customer_delta5, employee_delta5)
-        # Display to user the final cumulative score from this round 
+        # Display to user the final cumulative score from this round
         print(f"\nThis completes the final scenario - you have scored {final}")
         # Add small sleep delay for positive UX
         sleep(0.5)
